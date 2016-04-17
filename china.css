@@ -1,0 +1,17 @@
+nav li.right {
+    padding: 0px 10px 0px 10px;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+
+}
