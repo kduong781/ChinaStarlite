@@ -48,4 +48,15 @@ nav{
 
 footer{
 	clear: both;
+	text-align: center;
+}
+
+footer ul li{
+	list-style: none;
+	display: inline-block;
+}
+
+footer ul li a{
+	text-decoration: none;
+	margin: 0 0.4em 0 0.4em;
 }

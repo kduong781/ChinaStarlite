@@ -1,7 +1,14 @@
 
  <footer>
+ <hr>
+ <ul>
+      <li><a href="login.php">Sign In</a></li>
+      <li><a href="about.php">About Us</a></li>
+      <li><a href="order.php">Order Now</a></li>
+      <li><a href="menu.php">Menu</a></li>
+      <li><a href="index.php">Home</a></li>
+    </ul>
 	  <?php
-	    echo "<hr />";
 	    echo "<p>";
 	    echo "<br />";
 	    echo "<small>Last Modified: " . date ("F d Y H:i:s.", getlastmod())."</small>"; 
