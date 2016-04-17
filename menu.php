@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>Menu</title>
+	<link rel="stylesheet" type="text/css" href="china.css">
 </head>
 <body>
 <?php session_start(); ?>

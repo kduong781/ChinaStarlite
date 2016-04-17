@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Home</title>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="china.css">
 </head>
 <body>
 <?php session_start(); ?>
