@@ -1,17 +1,51 @@
-nav li.right {
-    padding: 0px 10px 0px 10px;
-}
-
-ul {
+nav ul {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
   list-style: none;
 }
+
+nav ul li a{
+	background: #CCC;
+	display: block;
+	padding: 1.5em;
+	text-decoration: none;
+	color: #000;
+}
+
+nav ul li.left a{
+padding:0;
+margin:0;
+}
+
+nav ul li a:hover{
+	background: #9a9a9a;
+}
+
+nav ul li a.active{
+	background: #707070;
+}
+
+nav{
+	background: #CCC;
+	overflow: auto;
+}
+
 
 .left {
   float: left;
 }
 
-.right {
+.right {	
   float: right;
 
+}
+
+#content{
+	clear: both;
+}
+
+
+footer{
+	clear: both;
 }
