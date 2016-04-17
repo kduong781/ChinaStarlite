@@ -1,10 +1,4 @@
-<!doctype html>
-<html>
-<head>
-<title='home'>
-</head>
-<body>
-  <nav>
+<nav>
     <ul>
       <li class='left'>China Starlite</li>
       <li class='right'>Home</li>
@@ -13,9 +7,3 @@
       <li class='right'>About Us</li>
     </ul>
   </nav>
-test
-  <footer>
-  </footer>
-</body>
-
-</html>
