@@ -11,7 +11,7 @@
 <?php include 'navbar.php' ?><br>
   	<div id="content">
   		<main>
-  			
+  			<img src="images/logo.png" alt="logo">
   		</main>
   	</div><!-- end #content -->
   <?php include 'footer.php' ?>
