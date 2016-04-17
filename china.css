@@ -14,28 +14,28 @@ nav ul li a{
 
 nav ul li.left a{	/*this controls menu logo*/
 padding:0 0 0.5em 0;
-margin:0;
+margin:0 0 0 3em;
 /*position: absolute;*/  /*this will make nav logo pop out of its container if it has to*/
 /*background: #010214;*/ /*provides good contrast, but looks ugly*/
 }
 
 nav ul li.right{
-	margin: 3em 0 3em 0;
+	margin: 4.5em 0 3em 0;
 	border-top: 1px solid #FDFDCE;
 	border-bottom: 1px solid #FDFDCE;
 }
 
 nav ul li.right a{						/*this controls how the nav menu links look, excluding the pic*/
-	padding: 1.5em 2.5em 1.5em 2.5em;
+	padding: 1.5em 3.5em 1.5em 3.5em;
 	font-weight: bold;
 	color: #FDFDCE;
 }
 
-nav ul li:last-child{					/*make lines stick out in the nav links*/
+/*nav ul li:last-child{					make lines stick out in the nav links
 	padding-left: 5em;
 }
-
-nav ul li a:hover{
+*/
+nav ul li.right a:hover{
 	background: #2B2A2A;
 }
 
@@ -58,28 +58,29 @@ nav{
 
 }
 
-/*#pad{
-	height: 20px;
-	border-top: 1px solid red;
-	//position: absolute;
+#pad{							/*extra padding at end of nav for decorative putposes*/
+	height: 2em;
+	border-top: 1px solid white;
+	position: relative;
 	top:0;
-	margin-bottom: 30px;
-}*/
+	margin-top: 15em;
+	clear:both;
+}
 
 #social{
-	margin:-4em 2em 0 0;
+	margin:-6em 0 0 0;
 	position: absolute;
 	right: 0;
 }
 
-ul li.secondary{
+ul li.secondary{			/*removes ul bullets from social media links*/
 	list-style: none;
 }
 
 ul li img.social{
 	margin-right: 2em;
 	border-radius: 25px;
-	box-shadow: inset -1px -1px 4px rgba(255,255,255,0.2);
+	box-shadow: inset -1px -1px 1px rgba(255,255,255,0.5),inset 1px 1px 1px rgba(255,255,255,0.1) ;
 }
 
 .absolute{

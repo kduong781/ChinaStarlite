@@ -8,7 +8,6 @@
 </head>
 <body>
 <?php session_start(); ?>
-<span class="absolute right"><p>Call Us: +1 (562) 123-4567</p></span>
 <?php include 'navbar.php' ?><br>
   	<div id="content">
   		<main>
