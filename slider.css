@@ -1,0 +1,91 @@
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding:0;
+  clear:both; /*custom*/
+  /*display: block;*/ /*custom*/
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 500px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+ /* width: 100%;*//*custom*/
+  height: 500px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+.control_prev, .control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 2% 1%;
+  width: auto;
+  height: auto;
+  background: rgba(42,42,42,0.8 );
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  opacity:0.5;
+}
+
+.control_prev:hover, .control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+}
+
+.control_prev img, .control_next img{
+  position:relative;
+  top:20%;
+  left:10%;
+}
+
+.control_next {
+  right: 0;
+}
+
+#pagination{
+  height: 3em;
+  position: relative;
+  background: #151515;/* darkish black*/
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+}
+
+
+#toggle{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 100px;
+   position: absolute;
+  z-index:99;
+  margin: 2em 0 0 2em;
+}
+
+
+.play{
+  background: url(images/play.png);
+}
+
+.pause{
+  background: url(images/pause.png);
+}
+
