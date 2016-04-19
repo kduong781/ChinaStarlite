@@ -1,4 +1,4 @@
-
+#!/usr/local/php5/bin/php-cgi
  <footer>
  <hr>
  <ul>
@@ -11,7 +11,7 @@
 	  <?php
 	    echo "<p>";
 	    echo "<br />";
-	    echo "<small>Last Modified: " . date ("F d Y H:i:s.", getlastmod())."</small>"; 
+	    echo "<small>Last Modified: " . date ("F d Y H:i:s.", getlastmod())."</small>";
 	    echo "<br />";
 	    echo "<small> &copy; 2016 by Mingtau Li, Kevin Duong, Rohit Sehdev, Khai Nguyen";
 	    echo" <br />";

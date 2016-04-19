@@ -1,3 +1,4 @@
+#!/usr/local/php5/bin/php-cgi
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,7 +21,7 @@
 				    <li><img src="img/test2.jpg" alt="test2" id="2"></li>
 				    <li><img src="img/test3.jpg" alt="test3" id="3"></li>
 				    <li><img src="img/test4.jpg" alt="test4" id="4"></li>
-				  </ul>  
+				  </ul>
 			</div><!-- end slider -->
   		<main>
 
