@@ -16,10 +16,10 @@
 				<div class="next"><img src="images/next.png" alt="next"></div>
 			  	<div id="toggle" class="play"></div>
 				<ul>
-				    <li><img src="img/test1.jpg" alt=""></li>
-				    <li><img src="img/test2.jpg" alt=""></li>
-				    <li><img src="img/test3.jpg" alt=""></li>
-				    <li><img src="img/test4.jpg" alt=""></li>
+				    <li><img src="img/test1.jpg" alt="test1" id="1"></li>
+				    <li><img src="img/test2.jpg" alt="test2" id="2"></li>
+				    <li><img src="img/test3.jpg" alt="test3" id="3"></li>
+				    <li><img src="img/test4.jpg" alt="test4" id="4"></li>
 				  </ul>  
 			</div><!-- end slider -->
   		<main>
