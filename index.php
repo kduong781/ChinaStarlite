@@ -12,22 +12,22 @@
 <?php include 'navbar.php' ?>
   	<div id="content">
   			<div id="slider">
-				<div class="control_prev"><img src="images/prev.png" alt="previous"></div>
-				<div class="control_next"><img src="images/next.png" alt="next"></div>
+				<div class="previous"><img src="images/prev.png" alt="previous"></div>
+				<div class="next"><img src="images/next.png" alt="next"></div>
 			  	<div id="toggle" class="play"></div>
 				<ul>
+				    <li><img src="img/test1.jpg" alt=""></li>
+				    <li><img src="img/test2.jpg" alt=""></li>
 				    <li><img src="img/test3.jpg" alt=""></li>
 				    <li><img src="img/test4.jpg" alt=""></li>
-				    <li><img src="img/test2.jpg" alt=""></li>
-				    <li><img src="img/test1.jpg" alt=""></li>
 				  </ul>  
 			</div><!-- end slider -->
   		<main>
-  			<!-- <img src="images/logo.png" alt="logo"> -->
 
 
 
-			<div id="pagination"></div>
+			<div id="pagination"><div id="select"><ul></ul></div></div>
+  			<br><img src="img/shrek.jpg" alt="shrek">
 
 
 

@@ -31,7 +31,7 @@
 
 /*-------------------------------------------------------------------------------------------*/
 
-.control_prev, .control_next {
+.previous, .next {
   position: absolute;
   top: 40%;
   z-index: 999;
@@ -46,18 +46,18 @@
   opacity:0.5;
 }
 
-.control_prev:hover, .control_next:hover {
+.previous:hover, .next:hover {
   opacity: 1;
   -webkit-transition: all 0.3s ease;
 }
 
-.control_prev img, .control_next img{
+.previous img, .next img{
   position:relative;
   top:20%;
   left:10%;
 }
 
-.control_next {
+.next {
   right: 0;
 }
 
@@ -67,6 +67,21 @@
   background: #151515;/* darkish black*/
   border-top: 1px solid red;
   border-bottom: 1px solid red;
+  text-align: center;
+}
+
+#pagination #select ul li{
+  display: inline-block;
+  padding:5px;
+  margin: 1em 0.3em 0 0.3em;
+  background: url(images/dot.png);
+  background-repeat: no-repeat;
+  overflow:auto;
+}
+
+#pagination #select ul li.selected{
+  background: url(images/dot2.png);
+  background-repeat: no-repeat;
 }
 
 
