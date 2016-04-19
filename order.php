@@ -1,3 +1,4 @@
+#!/usr/local/php5/bin/php-cgi
 <!DOCTYPE html>
 <html lang="en">
 <head>
