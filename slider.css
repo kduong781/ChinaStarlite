@@ -4,7 +4,6 @@
   margin: 0 auto 0 auto;
   padding:0;
   clear:both; /*custom*/
-  /*display: block;*/ /*custom*/
 }
 
 #slider ul {
@@ -21,9 +20,8 @@
   float: left;
   margin: 0;
   padding: 0;
- /* width: 100%;*//*custom*/
   height: 500px;
-  background: #ccc;
+  background: #000  ;
   text-align: center;
   line-height: 300px;
 }
@@ -72,16 +70,21 @@
 
 #pagination #select ul li{
   display: inline-block;
-  padding:5px;
   margin: 1em 0.3em 0 0.3em;
+  padding:6px;
   background: url(images/dot.png);
+  background-size: cover;
   background-repeat: no-repeat;
   overflow:auto;
+  cursor: pointer;
 }
 
 #pagination #select ul li.selected{
   background: url(images/dot2.png);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding:6px;
 }
 
 

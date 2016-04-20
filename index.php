@@ -1,3 +1,4 @@
+#!/usr/local/php5/bin/php-cgi
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,29 +17,23 @@
 				<div class="next"><img src="images/next.png" alt="next"></div>
 			  	<div id="toggle" class="play"></div>
 				<ul>
-				    <li><img src="img/test1.jpg" alt="test1" id="1"></li>
-				    <li><img src="img/test2.jpg" alt="test2" id="2"></li>
-				    <li><img src="img/test3.jpg" alt="test3" id="3"></li>
-				    <li><img src="img/test4.jpg" alt="test4" id="4"></li>
+				    <li><img src="img/test1.jpg" alt="test1"></li>
+				    <li><img src="img/test2.jpg" alt="test2"></li>
+				    <li><img src="img/test3.jpg" alt="test3"></li>
+				    <li><img src="img/test4.jpg" alt="test4"></li>
 				  </ul>  
 			</div><!-- end slider -->
+			<div id="pagination"><div id="select"><ul></ul></div></div>
   		<main>
 
 
 
-			<div id="pagination"><div id="select"><ul></ul></div></div>
   			<br><img src="img/shrek.jpg" alt="shrek">
-
-
-
-
-
-
 
   		</main>
   	</div><!-- end #content -->
   <?php include 'footer.php' ?>
-	<script type="text/javascript" src="slider.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
 
  </body>
 
