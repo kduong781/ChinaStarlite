@@ -1,3 +1,4 @@
+#!/usr/local/php5/bin/php-cgi
  <span class="absolute right"><p>Call Us: +1 (562) 123-4567</p></span>
 <nav>
     <ul>
@@ -28,5 +29,3 @@
 	         })
 	    });
  </script>
-
- 

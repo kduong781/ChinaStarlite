@@ -22,6 +22,7 @@
 				    <li><img src="img/test3.jpg" alt="test3"></li>
 				    <li><img src="img/test4.jpg" alt="test4"></li>
 				  </ul>  
+
 			</div><!-- end slider -->
 			<div id="pagination"><div id="select"><ul></ul></div></div>
   		<main>

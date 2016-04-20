@@ -1,16 +1,16 @@
 jQuery(document).ready(function ($) {
     var slideCount = $('#slider ul li').length;
     //var slideWidth = $('#slider ul li').width();
-    var slideWidth = window.innerWidth-17; 
+    var slideWidth = window.innerWidth-17;
     $('#slider ul li img').css({width: slideWidth});
     var slideHeight = $('#slider ul li').height();
     var sliderWidth = slideCount * slideWidth;
     var pagIndex = 0;
-                    
+
     $('#slider').css({ width: slideWidth, height: slideHeight });
-                    
+
     $('#slider ul').css({ width: sliderWidth, marginLeft: - slideWidth });
-                    
+
     $('#slider ul li:last-child').prependTo('#slider ul');
 
 var interval;
@@ -23,7 +23,7 @@ function start(){
     interval = setInterval(function(){slideLeft()}, 3000);
  $('#toggle').removeClass('play').addClass('pause');
 }
- 
+
  function pause(){
     clearInterval(interval);
     $('#toggle').removeClass('pause').addClass('play');
@@ -57,6 +57,7 @@ $('#toggle').bind('click', function(){
             $('#slider ul li:last-child').prependTo('#slider ul');
             $('#slider ul').css('left', '');
         });
+
         pageRight();
     };
 
@@ -67,6 +68,7 @@ $('#toggle').bind('click', function(){
             $('#slider ul li:first-child').appendTo('#slider ul');
             $('#slider ul').css('left', '');
         });
+
         pageLeft();
     };
 
@@ -101,7 +103,7 @@ $('#toggle').bind('click', function(){
             $('#slider ul li:first-child').appendTo('#slider ul');
             $('#slider ul').css('left', '');
         });
-    };////////////////////////////
+    };
 
     $('.previous').click(function () {
         slideLeft();
@@ -115,21 +117,21 @@ $('#toggle').bind('click', function(){
         play=true;
     });
 
-    function pagination(){  
+    function pagination(){
         for(var i=0;i<2;i++){
             zoomRight();
        }
-        
+
     }
 
       $('#pagination').click(function(){pagination();});
 
     window.onresize = function(){
-        slideWidth = window.innerWidth-17; 
+        slideWidth = window.innerWidth-17;
         $('#slider ul li img').css({width: slideWidth});
 $('#slider').css({ width: slideWidth, height: slideHeight });
  $('#slider ul').css({ width: sliderWidth, marginLeft: - slideWidth });
-                    
+
     }
 
-});    
+});
