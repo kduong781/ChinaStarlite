@@ -64,7 +64,7 @@
   position: relative;
   background: #151515;/* darkish black*/
   border-top: 1px solid red;
-  border-bottom: 1px solid red;
+  /*border-bottom: 1px solid red;*/
   text-align: center;
 }
 

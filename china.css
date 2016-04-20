@@ -12,7 +12,7 @@ nav ul li a{
 	color: #FFF;
 }
 
-nav ul li.left a{	/*this controls menu logo*/
+nav ul li.left a{	/*this controls menu logo (logo font is agency FB)*/ 
 padding:0 0 0.5em 0;
 margin:0 0 0 3em;
 /*position: absolute;*/  /*this will make nav logo pop out of its container if it has to*/
