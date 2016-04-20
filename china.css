@@ -41,6 +41,8 @@ nav ul li.right a:hover{
 
 nav ul li a.active{
 	background: #0B0B0B;/*dark black*/
+	border-right: 1px solid white;
+	border-left: 1px solid white;
 }
 
 nav{
