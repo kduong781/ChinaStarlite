@@ -1,7 +1,8 @@
 jQuery(document).ready(function ($) {
     var slideCount = $('#slider ul li').length;
     //var slideWidth = $('#slider ul li').width();
-    var slideWidth = window.innerWidth-17; 
+    var slideWidth = window.clientWidth; 
+    //var slideWidth = window.innerWidth-15; 
     $('#slider ul li img').css({width: slideWidth});
     var slideHeight = $('#slider ul li').height();
     var sliderWidth = slideCount * slideWidth;
@@ -174,3 +175,4 @@ $('#toggle').bind('click', function(){
     }
 
 });    
+
