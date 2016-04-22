@@ -11,7 +11,6 @@
 <body>
 <?php session_start(); ?>
 <?php include 'navbar.php' ?>
-  	<div id="content">
   	<div id="carousel"><!-- noscript: get rid of carousel -->
   			<div id="slider">
 				<div class="previous"><img src="images/prev.png" alt="previous"></div>
@@ -26,14 +25,18 @@
 			</div><!-- end slider -->
 			<div id="pagination"><div id="select"><ul></ul></div></div>
 	</div><!-- end carousel -->
+		<div id="leftBar">
+			<strong>I am a nav bar. Delete me</strong>
+		</div><!-- end leftBar -->
   		<main>
+  	<div id="content">
 
 
 
   			<br><img src="img/shrek.jpg" alt="shrek">
 
-  		</main>
   	</div><!-- end #content -->
+  		</main>
   <?php include 'footer.php' ?>
 	<script type="text/javascript" src="js/slider.js"></script>
 
