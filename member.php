@@ -10,9 +10,10 @@
 <?php 
 session_start();
 if($_SESSION['loginusername']){
-echo "Welcome, ".$_SESSION['loginusername'];
+	echo "Welcome, ".$_SESSION['loginusername'];
 }else{
-	die("You must be logged in to view this page");
+
+	echo "You must be logged in to view this page";
 }
 ?>
 </body>

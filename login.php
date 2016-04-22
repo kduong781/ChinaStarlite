@@ -11,7 +11,7 @@
 session_start();
 include 'navbar.php';
 if(!$_SESSION['loginusername']){
-
+	echo "Welcome back, ".$_SESSION['loginusername'];
 ?>
 <div id="leftBar">
 			<strong>I am a nav bar. Delete me</strong>
@@ -23,9 +23,9 @@ if(!$_SESSION['loginusername']){
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 <div class="formFields">
 	<label for="loginusername">Username:</label> <input type="text" name="loginusername" id="loginusername"><br>
-	<?php echo $loginUsernameMessage ?>
+	<?php /*echo $loginUsernameMessage*/ ?>
 	<label for="loginpassword">Password:</label> <input type="password" name="loginpassword" id="loginpassword"><br>
-	<?php echo $loginPasswordMessage ?>
+	<?php /*echo $loginPasswordMessage*/ ?>
 	<input type="submit" name="submit" value="Log In">
 	<button name="forgot">Forgot Password</button><br>
 </div><!-- end formfields -->
@@ -64,7 +64,6 @@ define('DBPASS','nijeek');
 
 
 	if($username && $password){
-
 		$connect=mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME) or die("couldn't connect");	
 		$sql="SELECT * FROM users WHERE  username='$username'";
 		$query=mysqli_query($connect,$sql);
