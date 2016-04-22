@@ -9,7 +9,10 @@
 <body>
 <?php session_start(); ?>
 <?php include 'navbar.php' ?>
-
+<div id="leftBar"></div><!-- end leftBar -->
+<main>
+<div id="content"></div><!-- end content -->
+</main>
 <?php include 'footer.php' ?>
 
 </body>

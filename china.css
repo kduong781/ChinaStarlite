@@ -97,10 +97,94 @@ ul li img.social{
 	padding: 1.5em 1.5em 0 0;
 }
 
-#content{
-	clear: both;
+#leftBar{
+	width: 20em;
+	background: orange;
+	height: 100vh;
+	float: left;
+	margin-right: 2em;
+
 }
 
+form{
+	display: inline-block;
+}
+
+.formFields{
+	padding-top: 2em;
+	display: inline-block;		/*will not take up whole space, only what is needed*/
+	text-align: center;
+}
+
+.formFields input{
+	height: 2em;
+	border-radius: 2px;
+	margin: 1em 0 1em 0;
+}
+
+.formFields label{
+	font-weight: bold;
+	display: inline-block;
+	width: 7em;
+	text-align: right;
+}
+
+.formFields input[type=submit], .formFields input[type=reset],button{
+	background: rgba(0,0,0,.9);
+	color: white;
+	height: 3em;
+	width: 10em;
+	margin: 0 0.5em 0 0.5em;
+	cursor: pointer;
+	border: 1px solid white;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+.formFields .dateSection{
+	font-size: 2em; 
+	vertical-align: -0.2em;
+}
+
+#registerInfo{
+	display: block;
+	float: right;
+	margin-right: 10em;
+	padding: 0 2em 4em 2em;
+	border-left: 1px solid rgba(0,0,0,0.2);
+}
+
+#registerInfo h2{
+	text-align: center;
+}
+
+#registerInfo #benefits{
+	width: 90%;
+	margin: auto;
+}
+
+ #registerInfo #signUp{
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	text-align: center;
+ }
+
+ #registerInfo #signUp a{
+ 	text-decoration: none;
+ 	color: white;
+ 	display: inline-block;
+ 	background: rgba(0,0,0,.9);
+ 	padding: 0.85em 2em 0.85em 2em;
+ 	font-weight: bold;
+ 	font-family: Arial;
+ 	font-size: 0.8em;
+ }
+
+ #registerInfo ul {
+ 	list-style: url(images/list.png);
+ 	margin-left: 2em;
+ }
 
 footer{
 	clear: both;

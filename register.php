@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<?php session_start(); ?>
+<head>
+	<title>Register</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
+	<script src="js/jquery-1.12.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="china.css">
+</head>
+<body>
+<?php include 'navbar.php' ?>
+<div id="leftBar">
+      <strong>I am a nav bar. Delete me</strong>
+</div><!-- end leftBar -->
+
+<main>
+<div id="content">
+<div class="formFields">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" required="required">
+	<label for="registerfname">First Name:</label> <input type="text" name="registerfname" placeholder="eg: John" required="required"><br>
+	<label for="registerlname">Last Name:</label> <input type="text" name="registerlname" placeholder="eg: Smith" required="required"><br>
+	<label for="registerusername">Username:</label> <input type="text" name="registerusername" placeholder="username" required="required"><br>
+	<label for="registermonth">Date of Birth:</label> <input type="text" name="registermonth" placeholder="mm" maxlength="2" required="required" size="2"> <span class="dateSection">/</span> <input type="text" name="registerday" placeholder="dd" maxlength="2" required="required" size="2"> <span class="dateSection">/</span> <input type="text" name="registeryear" placeholder="yyyy" maxlength="4" required="required" size="4"><br>
+	<label for="registeremail">Email Address:</label> <input type="email" name="registeremail" placeholder="user@example.com" required="required"><br>
+	<label for="registerpassword">Password:</label> <input type="password" name="registerpassword" placeholder="password" required="required"><br>
+	<input type="submit" name="registersubmit" value="Register" required="required">
+	<input type="reset" name="reset"><br>
+</form>
+</div><!-- end formfields -->
+<?php
+$fname = $_POST['registerfname'];
+$lname = $_POST['registerlname'];
+$username = $_POST['registerusername'];//no duplicate usernames
+$dob = $_POST['registerdob'];
+$email = $_POST['registeremail']; //no duplicate emails
+$password = $_POST['registerpassword'];
+?>
+
+<?php 
+
+
+
+define('DBHOST','localhost');
+define('DBNAME','chinalogin');
+define('DBUSER','root');
+define('DBPASS','password');
+/*$connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o29","nijeek","CECS 470");*/
+$connection = mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME);
+// mysqli_connect_error returns string description of the last
+
+//check for connection error
+$error = mysqli_connect_error();
+//if there is a connection error...
+if ($error != null) {
+  $output = "<p>Unable to connect to database<p>" . $error;
+  // Outputs a message and terminates the current script
+  exit($output);
+  }
+  $sql = "SELECT * FROM users";
+
+  $result = mysqli_query($connection, $sql);
+
+  //find out how many rows are in the result set
+ 	 $numrows=mysqli_num_rows($result);
+ 	 echo "The number of rows is: ".$numrows."<br>";
+
+  //loop through the result set
+  if ($result=mysqli_query($connection,$sql)){
+    $allow=true;
+
+    while ($row=mysqli_fetch_assoc($result)){
+                if($row['username']==$username){
+                	echo "Username already exists<br>";
+                	$allow=false;
+                	break;
+                }
+                if($row['email']==$email){
+                	echo "Your email address is already being used by another account in our system<br>";
+                	$allow=false;
+                	break;
+                }
+      }
+
+      if($allow){
+      	 $sql = "INSERT INTO `chinalogin`.`users` (`id`, `fname`, `lname`, `dob`, `username`, `password`, `email`) VALUES (NULL, '$fname', '$lname', '$dob', '$username', '$password', '$email');";
+         $result = mysqli_query($connection, $sql);
+         echo "Registration Successful!Click <a href='login.php'>here</a> to log in"; 
+      }
+
+  
+
+  }
+  else { echo "no result<br>";}
+  ?>
+<script type="text/javascript" src="registrationscript.js"></script>
+<?php   mysqli_free_result($result); ?>
+<?php mysqli_close($connection); ?>
+</div><!-- end content -->
+</main>
+<?php include 'footer.php' ?>
+</body>
+</html>
+
