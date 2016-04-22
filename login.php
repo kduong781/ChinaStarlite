@@ -11,17 +11,21 @@
 session_start();
 include 'navbar.php';
 if(!$_SESSION['loginusername']){
+
 ?>
 <div id="leftBar">
 			<strong>I am a nav bar. Delete me</strong>
 		</div><!-- end leftBar -->
 <main>
 	<div id="content">
+<div id="noUser">
 		<h1>Log In or Sign Up</h1>
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 <div class="formFields">
 	<label for="loginusername">Username:</label> <input type="text" name="loginusername" id="loginusername"><br>
+	<?php echo $loginUsernameMessage ?>
 	<label for="loginpassword">Password:</label> <input type="password" name="loginpassword" id="loginpassword"><br>
+	<?php echo $loginPasswordMessage ?>
 	<input type="submit" name="submit" value="Log In">
 	<button name="forgot">Forgot Password</button><br>
 </div><!-- end formfields -->
@@ -35,7 +39,7 @@ if(!$_SESSION['loginusername']){
 <h3>Create an account with us for these great benefits:</h3>
 <div id="benefits">
 <ul>
-	<li>Make orders online</li>
+	<li>Get priority orders/catering</li>
 	<li>Get special offers and exclusive discounts</li>
 	<li>Get invites to members-only events and exclusives</li>
 	<li>Pay with your phone at the register</li>
@@ -47,17 +51,21 @@ if(!$_SESSION['loginusername']){
 </ul>
 </div><!-- end benefits -->
 </div><!-- end registerInfo -->
-
+</div><!-- end noUser -->
 
 <?php
 $username = $_POST['loginusername'];
 $password = $_POST['loginpassword'];
 
+define('DBHOST','cecs-db01.coe.csulb.edu');
+define('DBNAME','cecs323o29');
+define('DBUSER','cecs323o29');
+define('DBPASS','nijeek');
 
 
 	if($username && $password){
 
-		$connect=mysqli_connect("localhost","root","password","chinalogin") or die("couldn't connect");	
+		$connect=mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME) or die("couldn't connect");	
 		$sql="SELECT * FROM users WHERE  username='$username'";
 		$query=mysqli_query($connect,$sql);
 
@@ -72,15 +80,21 @@ $password = $_POST['loginpassword'];
 			}
 			//check if username and password matches
 			if($username==$dbusername && $password==$dbpassword){
-				echo "Login successful! Go to the <a href='member.php'>member page</a>";
+				?>
+				<script>
+					document.getElementById('noUser').style.display="none";
+				</script>
+				<?php
+				echo "Login successful! Go to the <a href='member.php'>member page</a><br>";
+				echo "Click <a href='logout.php'>here</a> to log out";
 				$_SESSION['loginusername']=$dbusername; //set our session
 
 			}else{
-				echo "incorrect password";
+				echo "<br><span class='error'>Incorrect password</span><br>";
 			}
 
 		}else{	
-			die("This user does not exist<br>");
+			die("<br><span class='error'>This user does not exist</span><br>");
 
 		}
 
@@ -91,7 +105,8 @@ $password = $_POST['loginpassword'];
 	}
 }else{//end if session
 	echo "You are already logged in as ".$_SESSION['loginusername']."<br>";
-	echo "Click <a href='logout.php'>here</a> to log out.";
+	echo "Click <a href='logout.php'>here</a> to log out.<br>";
+	echo "Click <a href='logout.php'>here</a> to go to the member page.";
 }
 
 ?>

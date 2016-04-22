@@ -186,6 +186,11 @@ form{
  	margin-left: 2em;
  }
 
+.error{
+	font-weight: bold;
+	color: #9F0000;
+}
+
 footer{
 	clear: both;
 	text-align: center;
