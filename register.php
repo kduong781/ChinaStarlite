@@ -100,7 +100,7 @@ if ($error != null) {
       if (!$result) { //check if query is successful
           mysqli_free_result($result);
           unset($_POST['registersubmit']);
-          die('<br>Registration was unsuccessful. Please try again ' . mysqli_error());
+          echo '<br>Registration was unsuccessful. Please try again ';
           /*die(mysql_error());*/
       }else{
           echo "<br>Registration Successful!Click <a href='login.php'>here</a> to log in"; 

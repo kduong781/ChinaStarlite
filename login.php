@@ -101,7 +101,8 @@ define('DBPASS','nijeek');
 		mysqli_free_result($query);
 		mysqli_close($connect);
 	}else{
-		die("<br>Please enter a username and password");//stops executing anything else afte this point
+		/*die("<br>Please enter a username and password");//stops executing anything else afte this point*/
+		echo "<br>Please enter a username and password";
 	}
 }else{//end if session
 	echo "You are already logged in as ".$_SESSION['loginusername']."<br>";
