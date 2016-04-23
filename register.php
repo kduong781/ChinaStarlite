@@ -1,3 +1,4 @@
+#!/usr/local/php5/bin/php-cgi
 <!DOCTYPE html>
 <html lang="en">
 <?php session_start(); ?>
@@ -23,7 +24,8 @@
 	<label for="registerlname">Last Name:</label> <input type="text" name="registerlname" placeholder="eg: Smith" required="required"><br>
 	<label for="registerusername">Username:</label> <input type="text" name="registerusername" placeholder="username" required="required"><br>
 	<label for="registermonth">Date of Birth:</label> <input type="text" id="registermonth" class="autoAdvance" name="registermonth" placeholder="mm" maxlength="2" required="required" size="2"> <span class="dateSection">/</span> <input type="text" id="registerday" class="autoAdvance" name="registerday" placeholder="dd" maxlength="2" required="required" size="2"> <span class="dateSection">/</span> <input type="text" id="registeryear" name="registeryear" placeholder="yyyy" maxlength="4" required="required" size="4"><br>
-	<label for="registeremail">Email Address:</label> <input type="email" name="registeremail" placeholder="user@example.com" required="required"><br>
+  <label for="registeremail">Email Address:</label> <input type="email" name="registeremail" placeholder="user@example.com" required="required"><br>
+	<label for="registerphone">Phone Number:</label> <input type="tel" name="registerphone" placeholder="909-903-9000" required="required"><br>
 	<label for="registerpassword">Password:</label> <input type="password" name="registerpassword" placeholder="password" required="required"><br>
 	<input type="submit" name="registersubmit" value="Register" required="required">
 	<input type="reset" name="reset"><br>
@@ -38,7 +40,9 @@ $password = $_POST['registerpassword'];
 $month = $_POST['registermonth'];
 $day = $_POST['registerday'];
 $year = $_POST['registeryear'];
-(string)$dob = $year.'-'.$month.'-'.$day;
+$dob = (string)($year.'-'.$month.'-'.$day);
+$phone = $_POST['registerphone'];
+
 ?>
 
 <?php 
@@ -92,7 +96,7 @@ if ($error != null) {
 <?php
   if(isset($_POST['registersubmit'])){
       if($allow){
-         $sql = "INSERT INTO users(`id`, `fname`, `lname`, `dob`, `username`, `password`, `email`) VALUES (NULL, '$fname', '$lname', '$dob', '$username', '$password', '$email');";
+         $sql = "INSERT INTO users(`id`, `fname`, `lname`, `dob`, `username`, `password`, `email`,`phone`) VALUES (NULL, '$fname', '$lname', '$dob', '$username', '$password', '$email', '$phone');";
 
          $result = mysqli_query($connection, $sql);
       }
@@ -100,7 +104,7 @@ if ($error != null) {
       if (!$result) { //check if query is successful
           mysqli_free_result($result);
           unset($_POST['registersubmit']);
-          die('<br>Registration was unsuccessful. Please try again ' . mysqli_error());
+          echo '<br>Registration was unsuccessful. Please try again ' . mysqli_error();
           /*die(mysql_error());*/
       }else{
           echo "<br>Registration Successful!Click <a href='login.php'>here</a> to log in"; 
