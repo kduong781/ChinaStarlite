@@ -191,6 +191,10 @@ form{
 	color: #9F0000;
 }
 
+#msgBox{
+	display: inline;
+}
+
 footer{
 	clear: both;
 	text-align: center;
@@ -204,4 +208,28 @@ footer ul li{
 footer ul li a{
 	text-decoration: none;
 	margin: 0 0.4em 0 0.4em;
+}
+
+/*------------------media queries------------------------------------------*/
+@media screen and (max-width: 1291px){
+	#leftBar{
+		height: 45em;
+	}
+	#registerInfo{
+		border-left: none;
+		left:0;
+		border-top: 1px solid rgba(0,0,0,0.2);
+		float: left;
+		margin:0;
+
+	}
+
+}
+
+@media screen and (max-width: 1245px){
+	#leftBar{
+		height: 50em;
+	}
+
+	
 }
