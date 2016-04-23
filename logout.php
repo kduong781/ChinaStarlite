@@ -10,6 +10,7 @@ session_start();
 
 session_destroy();
 
-echo "You have been logged out. Click <a href='index.php'>here</a> to return to the home page.</br>";
-//echo "<a href='logout.php'>Log out</a>";
+echo "You have been logged out.<br>Click <a href='index.php'>here</a> to return to the home page.<br>";
+echo "Click <a href='login.php'>here</a> to sign in</br>";
+
 ?>
