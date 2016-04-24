@@ -1,9 +1,13 @@
+*{
+  font-family: 'Source Sans Pro';
+}
+
 nav{
     -webkit-transition: all 0.3s;
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
  	z-index: 205;
 }
 
@@ -16,7 +20,7 @@ nav ul {
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
 nav ul li a{
@@ -28,17 +32,17 @@ nav ul li a{
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
-nav ul li.left a{	/*this controls menu logo (logo font is agency FB)*/ 
+nav ul li.left a{	/*this controls menu logo (logo font is agency FB)*/
 padding:0 0 0.5em 0;
 margin:0 0 0 3em;
 -webkit-transition: all 0.3s;
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 /*position: absolute;*/  /*this will make nav logo pop out of its container if it has to*/
 /*background: #010214;*/ /*provides good contrast, but looks ugly*/
 
@@ -49,7 +53,7 @@ nav ul li.left img{
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
 nav ul li.right{
@@ -60,7 +64,7 @@ nav ul li.right{
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
 nav ul li.right a{						/*this controls how the nav menu links look, excluding the pic*/
@@ -71,7 +75,7 @@ nav ul li.right a{						/*this controls how the nav menu links look, excluding t
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
 /*nav ul li:last-child{					make lines stick out in the nav links
@@ -96,7 +100,7 @@ nav{
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
 
@@ -106,16 +110,16 @@ nav{
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
-.right {	
+.right {
 	float: right;
 	-webkit-transition: all 0.3s;
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 
 }
 
@@ -130,7 +134,7 @@ nav{
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
 #social{
@@ -141,7 +145,7 @@ nav{
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
 ul li.secondary{			/*removes ul bullets from social media links*/
@@ -157,7 +161,7 @@ ul li img.social{
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
 .absolute{
@@ -168,7 +172,7 @@ ul li img.social{
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 
 .absolute p{
@@ -193,7 +197,7 @@ ul li img.social{
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
- 	transition: all 0.3s; 
+ 	transition: all 0.3s;
 }
 /*---------------------------------------start shrink------------------------------------*/
 
@@ -276,7 +280,7 @@ form{
 }
 
 .formFields .dateSection{
-	font-size: 2em; 
+	font-size: 2em;
 	vertical-align: -0.2em;
 }
 
@@ -421,5 +425,5 @@ footer ul li a{
 		height: 50em;
 	}
 
-	
+
 }
