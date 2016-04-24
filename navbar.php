@@ -54,6 +54,8 @@
                 }
                 else{
                     nav.style.position="relative";
+                    navPlacement.style.display="none";
+
                 }
         });
     }

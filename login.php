@@ -38,15 +38,15 @@ include 'navbar.php';
 
 		<?php
 
-		/*define('DBHOST','cecs-db01.coe.csulb.edu');
+		define('DBHOST','cecs-db01.coe.csulb.edu');
 		define('DBNAME','cecs323o29');
 		define('DBUSER','cecs323o29');
 		define('DBPASS','nijeek');
-*/
-		define('DBHOST','localhost');
-		define('DBNAME','cecs323o29');
-		define('DBUSER','root');
-		define('DBPASS','password');
+
+		/*define('DBHOST','localhost'); //test
+		define('DBNAME','cecs323o29');  //test
+		define('DBUSER','root');        //test
+		define('DBPASS','password');    //test  */
 
 		$username = $_POST['loginusername'];
 		$password = $_POST['loginpassword'];
