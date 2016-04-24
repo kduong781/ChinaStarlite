@@ -1,3 +1,8 @@
+* {
+    font-family: 'Source Sans Pro';
+}
+
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -12,7 +17,7 @@ nav ul li a{
 	color: #FFF;
 }
 
-nav ul li.left a{	/*this controls menu logo (logo font is agency FB)*/ 
+nav ul li.left a{	/*this controls menu logo (logo font is agency FB)*/
 padding:0 0 0.5em 0;
 margin:0 0 0 3em;
 /*position: absolute;*/  /*this will make nav logo pop out of its container if it has to*/
@@ -55,7 +60,7 @@ nav{
 	float: left;
 }
 
-.right {	
+.right {
 	float: right;
 
 }
@@ -69,10 +74,8 @@ nav{
 	clear:both;
 }
 
-#social{
-	margin:-6em 0 0 0;
-	position: absolute;
-	right: 0;
+.social{
+
 }
 
 ul li.secondary{			/*removes ul bullets from social media links*/
@@ -142,7 +145,7 @@ form{
 }
 
 .formFields .dateSection{
-	font-size: 2em; 
+	font-size: 2em;
 	vertical-align: -0.2em;
 }
 
@@ -263,7 +266,11 @@ footer ul li{
 
 footer ul li a{
 	text-decoration: none;
-	margin: 0 0.4em 0 0.4em;
+	margin: 0 0.5em 0 0.5em;
+}
+
+#footerNav {
+	padding: 10px;
 }
 
 /*------------------media queries------------------------------------------*/
@@ -287,5 +294,5 @@ footer ul li a{
 		height: 50em;
 	}
 
-	
+
 }

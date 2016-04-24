@@ -3,13 +3,12 @@
 <html lang="en">
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="china.css">
+  <?php include 'header.php' ?>
 </head>
 <body>
-<?php 
+<?php
 session_start();
-include 'navbar.php' 
+include 'navbar.php'
 ?>
 <div id="leftBar"></div><!-- end leftBar -->
 <main>

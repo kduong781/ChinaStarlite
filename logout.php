@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="china.css">
-<?php 
+	<?php include 'header.php' ?>
+</head>
+<?php
 session_start();
 
 session_destroy();

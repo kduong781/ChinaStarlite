@@ -3,8 +3,7 @@
 <html lang="en">
 <head>
 	<title>Log In</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="china.css">
+  <?php include 'header.php' ?>
 </head>
 <body>
 <?php
@@ -52,7 +51,7 @@ include 'navbar.php';
 		$password = $_POST['loginpassword'];
 		echo "<div id='msgBox'>";
 		if($username && $password){
-			$connect=mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME) or die("couldn't connect");	
+			$connect=mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME) or die("couldn't connect");
 			$sql="SELECT * FROM users WHERE  username='$username'";
 			$query=mysqli_query($connect,$sql);
 			$numrows=mysqli_num_rows($query);
@@ -70,7 +69,7 @@ include 'navbar.php';
 				}else{
 					echo "<br><span class='error'>Incorrect password</span><br>";
 				}
-			}else{	
+			}else{
 				echo "<br><span class='error'>This user does not exist</span><br>";
 			}
 			mysqli_free_result($query);
