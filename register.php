@@ -20,13 +20,20 @@
 <h1>Sign Up For a China Starlite Account</h1>
 <div class="formFields">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" required="required">
-  <label for="registerfname">First Name:</label> <input type="text" name="registerfname" placeholder="eg: John" required="required"><br>
-  <label for="registerlname">Last Name:</label> <input type="text" name="registerlname" placeholder="eg: Smith" required="required"><br>
-  <label for="registerusername">Username:</label> <input type="text" name="registerusername" placeholder="username" required="required"><br>
-  <label for="registermonth">Date of Birth:</label> <input type="text" id="registermonth" class="autoAdvance" name="registermonth" placeholder="mm" maxlength="2" required="required" size="2"> <span class="dateSection">/</span> <input type="text" id="registerday" class="autoAdvance" name="registerday" placeholder="dd" maxlength="2" required="required" size="2"> <span class="dateSection">/</span> <input type="text" id="registeryear" name="registeryear" placeholder="yyyy" maxlength="4" required="required" size="4"><br>
-  <label for="registeremail">Email Address:</label> <input type="email" name="registeremail" placeholder="user@example.com" required="required"><br>
-  <label for="registerphone">Phone Number:</label> <input type="tel" name="registerphone" placeholder="909-903-9000" required="required"><br>
-  <label for="registerpassword">Password:</label> <input type="password" name="registerpassword" placeholder="password" required="required"><br>
+  <label for="registerfname">First Name:</label> 
+  <input type="text" name="registerfname" placeholder="eg: John" required="required"><br>
+  <label for="registerlname">Last Name:</label> 
+  <input type="text" name="registerlname" placeholder="eg: Smith" required="required"><br>
+  <label for="registerusername">Username:</label> 
+  <input type="text" name="registerusername" placeholder="username" required="required"><br>
+  <label for="registermonth">Date of Birth:</label> 
+  <input type="text" id="registermonth" class="autoAdvance" name="registermonth" placeholder="mm" maxlength="2" required="required" size="2"> <span class="dateSection">/</span> <input type="text" id="registerday" class="autoAdvance" name="registerday" placeholder="dd" maxlength="2" required="required" size="2"> <span class="dateSection">/</span> <input type="text" id="registeryear" name="registeryear" placeholder="yyyy" maxlength="4" required="required" size="4"><br>
+  <label for="registeremail">Email Address:</label> 
+  <input type="email" name="registeremail" placeholder="user@example.com" required="required"><br>
+  <label for="registerphone">Phone Number:</label> 
+  <input type="tel" name="registerphone" placeholder="909-903-9000" required="required"><br>
+  <label for="registerpassword">Password:</label> 
+  <input type="password" name="registerpassword" placeholder="password" required="required"><br>
   <input type="submit" name="registersubmit" value="Register" required="required">
   <input type="reset" name="reset"><br>
 </form>
