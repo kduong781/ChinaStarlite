@@ -2,9 +2,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Home</title>
+	<title>Log Out</title>
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="china.css">
+</head>
+<body>
+<?php include 'navbar.php' ?>
+<div id="leftBar"></div><!-- end leftBar -->
+<main>
+<div id="content">
 <?php 
 session_start();
 
@@ -14,3 +20,8 @@ echo "You have been logged out.<br>Click <a href='index.php'>here</a> to return 
 echo "Click <a href='login.php'>here</a> to sign in</br>";
 
 ?>
+</div><!-- end content -->
+</main>
+<?php include 'footer.php' ?>
+</body>
+</html>

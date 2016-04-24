@@ -51,11 +51,11 @@ include 'navbar.php';
 		$username = $_POST['loginusername'];
 		$password = $_POST['loginpassword'];
 		echo "<div id='msgBox'>";
-		if($username && $password){
 			$connect=mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME) or die("couldn't connect");	
 			$sql="SELECT * FROM users WHERE  username='$username'";
 			$query=mysqli_query($connect,$sql);
 			$numrows=mysqli_num_rows($query);
+		if($username && $password){
 
 			if($numrows!=0){//if there is data in query
 				while($row = mysqli_fetch_assoc($query)){
@@ -64,9 +64,10 @@ include 'navbar.php';
 				}
 				//check if username and password matches
 				if($username==$dbusername && $password==$dbpassword){
-					echo "Login successful! Go to the <a href='member.php'>member page</a><br>";
-					echo "Click <a href='logout.php'>here</a> to log out";
+					/*echo "Login successful! Go to the <a href='member.php'>member page</a><br>";*/
+					/*echo "Click <a href='logout.php'>here</a> to log out";*/
 					$_SESSION['loginusername']=$dbusername; //set our session
+					header( 'Location: member.php' ) ;//redirect to member page
 				}else{
 					echo "<br><span class='error'>Incorrect password</span><br>";
 				}
@@ -74,11 +75,12 @@ include 'navbar.php';
 				echo "<br><span class='error'>This user does not exist</span><br>";
 			}
 			mysqli_free_result($query);
-			mysqli_close($connect);
+			//mysqli_close($connect);
 		}else{
 			echo "<br>Please enter a username and password";//stops executing anything else afte this point
 		}
 		echo "</div>";//end msgBox
+
 		?>
 				</div><!-- end formfields -->
 			</form>
@@ -116,14 +118,32 @@ include 'navbar.php';
 				</div> <!-- #modal_window -->
 			</div> <!-- #modal_background -->
 
-
 		<?php
+		if(isset($_POST['feedback'])){
+			$forgottenEmail =  $_POST['forgotemail'];
+			$sql="SELECT * FROM users WHERE  email='$forgottenEmail'";
+				$query=mysqli_query($connect,$sql);
+				$numrows=mysqli_num_rows($query);
+				if($numrows == 0){
+					echo "<span class='error'><br>This email is not associated with any accounts on this site.<br></span>";
+				}else{
+
+					while($row = mysqli_fetch_assoc($query)){
+						$forgotEmailUsername = $row['username'];
+						$forgotEmailPassword = $row['password'];
+					}
+					$msg = "Username:".$forgotEmailUsername."\n Password:".$forgotEmailPassword."";
+					mail($forgottenEmail,"Your ChinaStarlite Credentials",$msg);
+				}
+				mysqli_free_result($query);
+		}
 	}//end else not username
 	?>
 <!-- ////////////////////////////////////////////////////////END////////////////////////////////////////////////////////////// -->
 </div><!-- end content -->
 </main>
 <script src="js/forgot.js"></script>
-<?php include 'footer.php'; ?>
+<?php include 'footer.php'; 
+mysqli_close($connect); ?>
 </body>
 </html>

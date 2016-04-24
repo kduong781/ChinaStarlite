@@ -16,9 +16,10 @@ include 'navbar.php'
 <div id="content">
 	<?php
 	if($_SESSION['loginusername']){
-	echo "Welcome, ".$_SESSION['loginusername'];
+	echo "Welcome, ".ucfirst($_SESSION['loginusername']);
 	}else{
-		die("You must be logged in to view this page");
+		echo"You must be logged in to view this page<br>";
+		echo "Click <a href='login.php'>here</a> to sign in";
 	}
 	?>
 </div><!-- end content -->

@@ -49,20 +49,23 @@ $phone = $_POST['registerphone'];
 
 
 
+/*define('DBHOST','localhost'); //test
+define('DBNAME','cecs323o29');  //test
+define('DBUSER','root');        //test
+define('DBPASS','password');    //test
+*/ 
+
 define('DBHOST','cecs-db01.coe.csulb.edu');
 define('DBNAME','cecs323o29');
 define('DBUSER','cecs323o29');
 define('DBPASS','nijeek');
-/*$connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o29","nijeek","CECS 470");*/
-$connection = mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME);
-// mysqli_connect_error returns string description of the last
 
-//check for connection error
+$connection = mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME);
+
+
 $error = mysqli_connect_error();
-//if there is a connection error...
 if ($error != null) {
   $output = "<p>Unable to connect to database<p>" . $error;
-  // Outputs a message and terminates the current script
   exit($output);
   }
   $sql = "SELECT * FROM users";

@@ -15,7 +15,7 @@
 <?php
 		echo "<h1>Make an order</h1>";
 	if($_SESSION['loginusername']){//if user in session, say hi
-		echo "Welcome back, ".$_SESSION['loginusername']."<br>";
+		echo "Welcome back, ".ucfirst($_SESSION['loginusername'])."<br>";
 	}
 	else{
 		echo "Make an order by signing up for a free account or check out as a guest.";

@@ -2,8 +2,6 @@
 	var modalWindow = document.getElementById('modal_window');
 	var modalClose = document.getElementById('modal_close');
 	var forgotButton = document.getElementsByName('forgot')[0];
-	var feedBack = document.getElementsByName('feedback')[0];
-
 
 function showModal(){
 	modalBackground.style.display="block";
@@ -31,6 +29,3 @@ modalBackground.onclick = function(e){
 	}
 }
 
-feedBack.onclick = function(){
-	alert("Your email has been sent");
-}
