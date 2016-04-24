@@ -3,10 +3,7 @@
 <html lang="en">
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="china.css">
-	<link rel="stylesheet" type="text/css" href="slider.css">
-
+  <?php include 'header.php' ?>
 </head>
 <body>
 <?php session_start(); ?>
@@ -21,7 +18,7 @@
 				    <li><img src="img/test2.jpg" alt="test2"></li>
 				    <li><img src="img/test3.jpg" alt="test3"></li>
 				    <li><img src="img/test4.jpg" alt="test4"></li>
-				  </ul>  
+				  </ul>
 			</div><!-- end slider -->
 			<div id="pagination"><div id="select"><ul></ul></div></div>
 	</div><!-- end carousel -->

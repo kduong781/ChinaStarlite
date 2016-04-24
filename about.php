@@ -3,8 +3,7 @@
 <html lang="en">
 <head>
 	<title>About Us</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="china.css">
+  <?php include 'header.php' ?>
 </head>
 <body>
 <?php session_start(); ?>
