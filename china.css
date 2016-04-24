@@ -20,13 +20,13 @@ margin:0 0 0 3em;
 }
 
 nav ul li.right{
-	margin: 4.5em 0 3em 0;
+	margin: 4.5em 0 0;
 	border-top: 1px solid #FDFDCE;
 	border-bottom: 1px solid #FDFDCE;
 }
 
 nav ul li.right a{						/*this controls how the nav menu links look, excluding the pic*/
-	padding: 1.5em 3.5em 1.5em 3.5em;
+	padding: 1.3em 2em 1.3em 2em;
 	font-weight: bold;
 	color: #FDFDCE;
 }
@@ -193,6 +193,62 @@ form{
 
 #msgBox{
 	display: inline;
+}
+
+#modal_background{
+   width: 100%;
+   height: 100%;
+   top: 0px;
+   left: 0px;
+   position: fixed;
+   display: block;
+   background-color: rgba(0,0,0,0.8);
+   z-index: 98;
+   text-align: center;
+   display: none;
+}
+
+#modal_window{
+	display: none;
+	position: fixed;
+	position: relative;
+	z-index: 202;
+	background: white;
+	width: 50%;
+	left: 25%;
+	margin-top: 10em;
+	border: 6px solid black;
+	padding: 0.5em 0.5em 1em 1em;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#modal_window input[type=submit]{
+	background: rgba(0,0,0,.9);
+	color: white;
+	height: 3em;
+	width: 10em;
+	margin: 0 0.5em 0 0.5em;
+	cursor: pointer;
+	border: 1px solid white;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+#modal_window input[type=text]{
+	height: 2em;
+	margin-top: 1em;
+	font-weight: bold;
+}
+
+#modal_close{
+	text-decoration: none;
+	color: #555555;
+	font-weight: bold;
+}
+
+#modal_close:hover{
+	color: red;
 }
 
 footer{

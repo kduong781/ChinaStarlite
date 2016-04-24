@@ -105,6 +105,17 @@ include 'navbar.php';
 
 			</div><!-- end registerInfo -->
 
+			<div id="modal_background" class="overlay">
+				<div id="modal_window" >
+					<div style="text-align: right;"><a id="modal_close" href="#">close <b>[X]</b></a></div>
+					<form id="modal_feedback" method="POST" action="#" accept-charset="UTF-8">
+						<p>Enter your email address to retrieve your username/password</p>
+						<input type="text" name="forgotemail"><br><br>
+						<input type="submit" name="feedback" value="Send Message">
+					</form>
+				</div> <!-- #modal_window -->
+			</div> <!-- #modal_background -->
+
 
 		<?php
 	}//end else not username
@@ -112,6 +123,7 @@ include 'navbar.php';
 <!-- ////////////////////////////////////////////////////////END////////////////////////////////////////////////////////////// -->
 </div><!-- end content -->
 </main>
+<script src="js/forgot.js"></script>
 <?php include 'footer.php'; ?>
 </body>
 </html>
