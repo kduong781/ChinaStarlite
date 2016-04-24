@@ -1,13 +1,22 @@
-* {
-    font-family: 'Source Sans Pro';
+nav{
+    -webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
+ 	z-index: 205;
 }
-
 
 nav ul {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
+  	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
 nav ul li a{
@@ -15,34 +24,60 @@ nav ul li a{
 	display: block;
 	text-decoration: none;
 	color: #FFF;
+	 -webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
-nav ul li.left a{	/*this controls menu logo (logo font is agency FB)*/
+nav ul li.left a{	/*this controls menu logo (logo font is agency FB)*/ 
 padding:0 0 0.5em 0;
 margin:0 0 0 3em;
+-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 /*position: absolute;*/  /*this will make nav logo pop out of its container if it has to*/
 /*background: #010214;*/ /*provides good contrast, but looks ugly*/
+
+}
+
+nav ul li.left img{
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
 nav ul li.right{
 	margin: 4.5em 0 0;
 	border-top: 1px solid #FDFDCE;
 	border-bottom: 1px solid #FDFDCE;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
 nav ul li.right a{						/*this controls how the nav menu links look, excluding the pic*/
 	padding: 1.3em 2em 1.3em 2em;
 	font-weight: bold;
 	color: #FDFDCE;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
 /*nav ul li:last-child{					make lines stick out in the nav links
 	padding-left: 5em;
 }
 */
-nav ul li.right a:hover{
-	background: #2B2A2A;
-}
 
 nav ul li a.active{
 	background: #0B0B0B;/*dark black*/
@@ -53,15 +88,34 @@ nav ul li a.active{
 nav{
 	background: #151515;/* darkish black*/
 	overflow: auto;
+	position: fixed;
+	width: 100%;
+	top:0;
+	clear: both;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
 
 .left {
 	float: left;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
-.right {
+.right {	
 	float: right;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 
 }
 
@@ -72,26 +126,49 @@ nav{
 	top:0;
 	margin-top: 15em;
 	clear:both;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
-.social{
-
+#social{
+	margin:-6em 0 0 0;
+	position: absolute;
+	right: 0;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
 ul li.secondary{			/*removes ul bullets from social media links*/
 	list-style: none;
+
 }
 
 ul li img.social{
 	margin-right: 2em;
 	border-radius: 25px;
 	box-shadow: inset -1px -1px 1px rgba(255,255,255,0.5),inset 1px 1px 1px rgba(255,255,255,0.1) ;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
 .absolute{
 	position: absolute;
 	right: 0;
 	background: transparent;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
 }
 
 .absolute p{
@@ -109,6 +186,56 @@ ul li img.social{
 
 }
 
+#navPlacement{
+	position: relative;
+	height: 17em;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s; 
+}
+/*---------------------------------------start shrink------------------------------------*/
+
+nav.smaller{
+position: fixed;
+width: 100%;
+top:0;
+}
+
+nav.smaller ul li.right{
+	margin-top: 0;
+	border-top: none;
+	border-bottom: none;
+}
+
+nav.smaller ul li.right a{
+	padding-bottom: 1.7em;
+	padding-top: 1.7em;
+	border:none;
+}
+
+ul.smaller li img.social{
+	display: none;
+}
+
+nav.smaller #pad{
+	display: none;
+}
+
+nav.smaller ul li.left img{
+	height: 60px;
+}
+
+nav.smaller ul li.left a{
+	padding-left:0;
+	margin-left:1em;
+}
+
+nav.smaller .absolute{
+	display: none;
+}
+/*----------------------------------------stop shrink------------------------------------*/
 form{
 	display: inline-block;
 }
@@ -117,6 +244,10 @@ form{
 	padding-top: 2em;
 	display: inline-block;		/*will not take up whole space, only what is needed*/
 	text-align: center;
+}
+
+.formFields p{
+	display: inline;
 }
 
 .formFields input{
@@ -145,7 +276,7 @@ form{
 }
 
 .formFields .dateSection{
-	font-size: 2em;
+	font-size: 2em; 
 	vertical-align: -0.2em;
 }
 
@@ -266,11 +397,7 @@ footer ul li{
 
 footer ul li a{
 	text-decoration: none;
-	margin: 0 0.5em 0 0.5em;
-}
-
-#footerNav {
-	padding: 10px;
+	margin: 0 0.4em 0 0.4em;
 }
 
 /*------------------media queries------------------------------------------*/
@@ -294,5 +421,5 @@ footer ul li a{
 		height: 50em;
 	}
 
-
+	
 }
