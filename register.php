@@ -117,7 +117,9 @@ if ($error != null) {
           echo '<br>Registration was unsuccessful. Please try again ' . mysqli_error();
           /*die(mysql_error());*/
       }else{
-          echo "<br>Registration Successful!Click <a href='login.php'>here</a> to log in"; 
+          ?>
+          <script>document.getElementById('content').innerHTML = "<br>Registration Successful! Click <a href='login.php'>here</a> to log in";</script>
+          <?php
       }
 
 }

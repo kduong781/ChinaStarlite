@@ -263,8 +263,12 @@ form{
 .formFields label{
 	font-weight: bold;
 	display: inline-block;
-	width: 7em;
+	width: 8em;
 	text-align: right;
+}
+
+.formFields label[for="registermonth"]{
+	padding-left: 2em;
 }
 
 .formFields input[type=submit], .formFields input[type=reset],button{
@@ -405,15 +409,12 @@ footer ul li a{
 }
 
 /*------------------media queries------------------------------------------*/
-@media screen and (max-width: 1291px){
+@media screen and (max-width: 1293px){
 	#leftBar{
 		height: 45em;
 	}
 	#registerInfo{
-		border-left: none;
 		left:0;
-		border-top: 1px solid rgba(0,0,0,0.2);
-		float: left;
 		margin:0;
 
 	}
@@ -424,6 +425,20 @@ footer ul li a{
 	#leftBar{
 		height: 50em;
 	}
+}
 
+@media screen and (max-width: 1293px){
+	#registerInfo{
+		border-left: none;
+		border-top: 1px solid rgba(0,0,0,0.2);
+		float: left;
+		width: 45%;
+	}
+}
 
+@media screen and (max-width: 835px){
+	#registerInfo{
+		width: auto;
+		float:none;
+	}
 }
