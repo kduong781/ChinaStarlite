@@ -181,23 +181,25 @@ ul li img.social{
 	padding: 1.5em 1.5em 0 0;
 }
 
-/*#leftBar{
-	width: 20em;
-	background: orange;
-	height: 100vh;
-	float: left;
-	margin-right: 2em;
-
-}*/
-
 #navPlacement{
 	position: relative;
 	height: 17em;
-	-webkit-transition: all 0.3s;
- 	-moz-transition: all 0.3s;
- 	-ms-transition: all 0.3s;
- 	-o-transition: all 0.3s;
- 	transition: all 0.3s;
+	-webkit-transition: all 0.2s;
+ 	-moz-transition: all 0.2s;
+ 	-ms-transition: all 0.2s;
+ 	-o-transition: all 0.2s;
+ 	transition: all 0.2s;
+}
+
+nav.smaller li#title::after{
+	content: "CHINA STARLITE";
+	color: #B80606;
+	font-family: "Agency FB";
+	font-weight: bold;
+	font-size: 3em;
+	margin-left: 0.4em;
+	vertical-align: -0.8em;
+	position: relative;
 }
 /*---------------------------------------start shrink------------------------------------*/
 
@@ -243,6 +245,7 @@ nav.smaller .absolute{
 #content{
 	margin-left: 10%;
 	margin-right: 10%;
+	padding-bottom: 2em;
 }
 
 form{
@@ -396,6 +399,20 @@ form{
 
 #modal_close:hover{
 	color: red;
+}
+
+#button{
+	background: #151515;
+	display: inline;
+	margin-top: -1.2em;
+	float: right;
+}
+
+#button a{
+	color: white;
+	text-decoration: none;
+	padding: 0.4em;
+	background: #151515;
 }
 
 footer{

@@ -13,3 +13,15 @@ $dateFields[0].onkeyup = function(){
 $dateFields[1].onkeyup = function(){
 	autoFormAdvance(2,'registerday','registeryear');
 }
+
+
+ 	jQuery('input[name="registerphone"]').bind('keyup',function(event){//formats registration phone number
+    var key = event.keyCode || event.charCode;
+    if (key == 8 || key == 46) return false;
+    	var strokes = $(this).val().length;
+    if(strokes === 3 || strokes === 7){
+        var thisVal = $(this).val();
+        thisVal += '-';
+        $(this).val(thisVal);
+    }
+});

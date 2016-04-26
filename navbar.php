@@ -2,6 +2,7 @@
  <span class="absolute right"><p>Call Us: +1 (562) 123-4567</p></span>
     <ul>
         <li class='left'><a href="index.php"><img src="images/logo-head.png" alt="logo"></a></li>
+        <li id="title" class='left'></li>
         <li class='right'><a href="login.php">Sign In</a></li>
         <li class='right'><a href="member.php">Member</a></li>
         <li class='right'><a href="about.php">About Us</a></li>

@@ -12,13 +12,19 @@ include 'navbar.php'
 ?>
 <main>
 <div id="content">
+<?php 
+$memberMsg = '';
+?>
 	<?php
 	if($_SESSION['loginusername']){
-	echo "Welcome, ".ucfirst($_SESSION['loginusername']);
+		$memberMsg = "<a href='logout.php'>Log Out</a>";
+		echo "Welcome, ".ucfirst($_SESSION['loginusername'])."<br>";
 	}else{
+		$memberMsg = "<a href='login.php'>Sign In</a>";
 		echo"You must be logged in to view this page<br>";
-		echo "Click <a href='login.php'>here</a> to sign in";
+		//echo "Click <a href='login.php'>here</a> to sign in";
 	}
+	echo "<div id='button'>".$memberMsg."</div>";
 	?>
 </div><!-- end content -->
 </main>

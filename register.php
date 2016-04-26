@@ -20,26 +20,27 @@
   <label for="registerfname">First Name:</label> 
   <input type="text" name="registerfname" placeholder="eg: John" required="required" <?php if($_POST['registerfname'])echo 'value='.$_POST['registerfname']; ?>><br>
   <label for="registerlname">Last Name:</label> 
-  <input type="text" name="registerlname" placeholder="eg: Smith" required="required" value=" <?php echo $_POST['registerlname']; ?>"><br>
+  <input type="text" name="registerlname" placeholder="eg: Smith" required="required" <?php if($_POST['registerlname'])echo 'value='.$_POST['registerlname']; ?>><br>
   <label for="registerusername">Username:</label> 
-  <input type="text" name="registerusername" placeholder="username" required="required" value=" <?php echo $_POST['registerusername']; ?>"><br>
+  <input type="text" name="registerusername" placeholder="username" required="required" <?php if($_POST['registerusername'])echo 'value='.$_POST['registerusername']; ?>><br>
   <label for="registermonth">Date of Birth:</label> 
-  <input type="text" id="registermonth" class="autoAdvance" name="registermonth" placeholder="mm" maxlength="2" required="required" size="2" value=" <?php echo $_POST['registermonth']; ?>"> <span class="dateSection">/</span> <input type="text" id="registerday" class="autoAdvance" name="registerday" placeholder="dd" maxlength="2" required="required" size="2" value=" <?php echo $_POST['registerday']; ?>"> <span class="dateSection">/</span> <input type="text" id="registeryear" name="registeryear" placeholder="yyyy" maxlength="4" required="required" size="4" value=" <?php echo $_POST['registeryear']; ?>"><br>
+  <input type="text" id="registermonth" class="autoAdvance" name="registermonth" placeholder="mm" maxlength="2" required="required" size="2" <?php if($_POST['registermonth'])echo 'value='.$_POST['registermonth']; ?>> <span class="dateSection">/</span> <input type="text" id="registerday" class="autoAdvance" name="registerday" placeholder="dd" maxlength="2" required="required" size="2" <?php if($_POST['registerday'])echo 'value='.$_POST['registerday']; ?>> <span class="dateSection">/</span> <input type="text" id="registeryear" name="registeryear" placeholder="yyyy" maxlength="4" required="required" size="4" <?php if($_POST['registeryear'])echo 'value='.$_POST['registeryear']; ?>><br>
   <label for="registeremail">Email Address:</label> 
-  <input type="email" name="registeremail" placeholder="user@example.com" required="required" value=" <?php echo $_POST['registeremail']; ?>"><br>
+  <input type="email" name="registeremail" placeholder="user@example.com" required="required" <?php if($_POST['registeremail'])echo 'value='.$_POST['registeremail']; ?>><br>
   <label for="registerphone">Phone Number:</label> 
-  <input type="tel" name="registerphone" placeholder="909-903-9000" required="required" value=" <?php echo $_POST['registerphone']; ?>"><br>
+  <input type="tel" name="registerphone" placeholder="909-903-9000" maxlength="12" required="required" <?php if($_POST['registerphone'])echo 'value='.$_POST['registerphone']; ?>><br>
   <label for="registerpassword">Password:</label> 
-  <input type="password" name="registerpassword" placeholder="password" required="required" value=" <?php echo $_POST['registerpassword']; ?>"><br>
+  <input type="password" name="registerpassword" placeholder="password" required="required" <?php if($_POST['registerpassword'])echo 'value='.$_POST['registerpassword']; ?>><br>
   <input type="submit" name="registersubmit" value="Register" required="required">
   <input type="reset" name="reset"><br>
 </form>
 </div><!-- end formfields -->
 <?php
-$fname = $_POST['registerfname'];
-$lname = $_POST['registerlname'];
-$username = $_POST['registerusername'];//no duplicate usernames
-$email = $_POST['registeremail']; //no duplicate emails
+//initialize and sanitize inputs
+$fname = ucfirst(trim($_POST['registerfname']));
+$lname = ucfirst(trim($_POST['registerlname']));
+$username = trim($_POST['registerusername']);//no duplicate usernames
+$email = trim($_POST['registeremail']); //no duplicate emails
 $password = $_POST['registerpassword'];
 $month = $_POST['registermonth'];
 $day = $_POST['registerday'];
