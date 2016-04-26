@@ -404,8 +404,10 @@ form{
 #button{
 	background: #151515;
 	display: inline;
+}
+
+#button.right{
 	margin-top: -1.2em;
-	float: right;
 }
 
 #button a{
@@ -420,6 +422,7 @@ footer{
 	text-align: center;
     background: #151515;
     color: white;
+    padding-bottom: 1.5em;
 }
 
 footer a{
@@ -472,7 +475,6 @@ footer ul li a:hover{
 		border-left: none;
 		border-top: 1px solid rgba(0,0,0,0.2);
 		float: left;
-		//width: 45%;
 	}
 }
 

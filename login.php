@@ -19,8 +19,8 @@ include 'navbar.php';
 	<?php
 	if($_SESSION['loginusername']){//if loginusername
 		echo "You are already logged in as ".$_SESSION['loginusername']."<br>";
-		echo "Click <a href='logout.php'>here</a> to log out.<br>";
-		echo "Click <a href='logout.php'>here</a> to go to the member page.";
+		echo "<br><div id='button'><a href='logout.php'>Log Out</a></div><br>";
+		echo "<br><div id='button'><a href='member.php'>Member Page</a></div>";
 
 	}else{//else if not loginusename
 		?>
@@ -45,8 +45,9 @@ include 'navbar.php';
 		define('DBUSER','root');        //test
 		define('DBPASS','password');    //test  */
 
-		$username = $_POST['loginusername'];
-		$password = $_POST['loginpassword'];
+		//initialize and sanitize inputs
+		$username = trim($_POST['loginusername']);
+		$password = trim($_POST['loginpassword']);
 		echo "<div id='msgBox'>";
 			$connect=mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME) or die("couldn't connect");	
 			$sql="SELECT * FROM users WHERE  username='$username'";
