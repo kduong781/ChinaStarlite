@@ -11,9 +11,6 @@
 </head>
 <body>
 <?php include 'navbar.php' ?>
-<div id="leftBar">
-      <strong>I am a nav bar. Delete me</strong>
-</div><!-- end leftBar -->
 
 <main>
 <div id="content">
@@ -21,19 +18,19 @@
 <div class="formFields">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" required="required">
   <label for="registerfname">First Name:</label> 
-  <input type="text" name="registerfname" placeholder="eg: John" required="required"><br>
+  <input type="text" name="registerfname" placeholder="eg: John" required="required" <?php if($_POST['registerfname'])echo 'value='.$_POST['registerfname']; ?>><br>
   <label for="registerlname">Last Name:</label> 
-  <input type="text" name="registerlname" placeholder="eg: Smith" required="required"><br>
+  <input type="text" name="registerlname" placeholder="eg: Smith" required="required" value=" <?php echo $_POST['registerlname']; ?>"><br>
   <label for="registerusername">Username:</label> 
-  <input type="text" name="registerusername" placeholder="username" required="required"><br>
+  <input type="text" name="registerusername" placeholder="username" required="required" value=" <?php echo $_POST['registerusername']; ?>"><br>
   <label for="registermonth">Date of Birth:</label> 
-  <input type="text" id="registermonth" class="autoAdvance" name="registermonth" placeholder="mm" maxlength="2" required="required" size="2"> <span class="dateSection">/</span> <input type="text" id="registerday" class="autoAdvance" name="registerday" placeholder="dd" maxlength="2" required="required" size="2"> <span class="dateSection">/</span> <input type="text" id="registeryear" name="registeryear" placeholder="yyyy" maxlength="4" required="required" size="4"><br>
+  <input type="text" id="registermonth" class="autoAdvance" name="registermonth" placeholder="mm" maxlength="2" required="required" size="2" value=" <?php echo $_POST['registermonth']; ?>"> <span class="dateSection">/</span> <input type="text" id="registerday" class="autoAdvance" name="registerday" placeholder="dd" maxlength="2" required="required" size="2" value=" <?php echo $_POST['registerday']; ?>"> <span class="dateSection">/</span> <input type="text" id="registeryear" name="registeryear" placeholder="yyyy" maxlength="4" required="required" size="4" value=" <?php echo $_POST['registeryear']; ?>"><br>
   <label for="registeremail">Email Address:</label> 
-  <input type="email" name="registeremail" placeholder="user@example.com" required="required"><br>
+  <input type="email" name="registeremail" placeholder="user@example.com" required="required" value=" <?php echo $_POST['registeremail']; ?>"><br>
   <label for="registerphone">Phone Number:</label> 
-  <input type="tel" name="registerphone" placeholder="909-903-9000" required="required"><br>
+  <input type="tel" name="registerphone" placeholder="909-903-9000" required="required" value=" <?php echo $_POST['registerphone']; ?>"><br>
   <label for="registerpassword">Password:</label> 
-  <input type="password" name="registerpassword" placeholder="password" required="required"><br>
+  <input type="password" name="registerpassword" placeholder="password" required="required" value=" <?php echo $_POST['registerpassword']; ?>"><br>
   <input type="submit" name="registersubmit" value="Register" required="required">
   <input type="reset" name="reset"><br>
 </form>

@@ -10,7 +10,6 @@
 session_start();
 include 'navbar.php'
 ?>
-<div id="leftBar"></div><!-- end leftBar -->
 <main>
 <div id="content">
 	<?php

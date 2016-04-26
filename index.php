@@ -22,9 +22,6 @@
 			</div><!-- end slider -->
 			<div id="pagination"><div id="select"><ul></ul></div></div>
 	</div><!-- end carousel -->
-		<div id="leftBar">
-			<strong>I am a nav bar. Delete me</strong>
-		</div><!-- end leftBar -->
   		<main>
   	<div id="content">
 

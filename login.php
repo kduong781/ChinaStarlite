@@ -12,9 +12,6 @@ session_start();
 include 'navbar.php';
 ?>
 
-<div id="leftBar">
-			<strong>I am a nav bar. Delete me</strong>
-</div><!-- end leftBar -->
 <main>
 	<div id="content">
 
