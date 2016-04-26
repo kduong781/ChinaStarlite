@@ -240,6 +240,11 @@ nav.smaller .absolute{
 	display: none;
 }
 /*----------------------------------------stop shrink------------------------------------*/
+#content{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
 form{
 	display: inline-block;
 }
