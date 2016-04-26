@@ -37,7 +37,7 @@
     function init() {
         window.addEventListener('scroll', function(e){
             var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-                shrinkOn = 50,
+                shrinkOn = 30,
                 nav = document.querySelector("nav");
             var currentPage = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
                 if(currentPage != 'index.php'){

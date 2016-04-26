@@ -450,12 +450,12 @@ footer ul li a:hover{
 	}
 }
 
-@media screen and (max-width: 1293px){
+@media screen and (max-width: 968px){
 	#registerInfo{
 		border-left: none;
 		border-top: 1px solid rgba(0,0,0,0.2);
 		float: left;
-		width: 45%;
+		//width: 45%;
 	}
 }
 
