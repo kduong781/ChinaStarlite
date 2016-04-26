@@ -156,7 +156,7 @@ ul li.secondary{			/*removes ul bullets from social media links*/
 ul li img.social{
 	margin-right: 2em;
 	border-radius: 25px;
-	box-shadow: inset -1px -1px 1px rgba(255,255,255,0.5),inset 1px 1px 1px rgba(255,255,255,0.1) ;
+	/*box-shadow: inset -1px -1px 1px rgba(255,255,255,0.5),inset 1px 1px 1px rgba(255,255,255,0.1) ;*/
 	-webkit-transition: all 0.3s;
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
@@ -336,13 +336,23 @@ form{
  	margin-left: 2em;
  }
 
+ .registermsg{
+ 	color: #840000;
+ 	margin-left: 2em;
+ 	margin-top: 1em;
+ 	position: absolute;
+ 	font-weight: bold;
+ }
+
 .error{
 	font-weight: bold;
 	color: #9F0000;
 }
 
-#msgBox{
+.msgBox{
 	display: inline;
+	/*background: rgba(255,0,0,0.6);*/
+	padding: 0.5em;
 }
 
 #modal_background{

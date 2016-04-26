@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 	<title>About Us</title>
+	<meta charset="UTF-8">
   <?php include 'header.php' ?>
 </head>
 <body>

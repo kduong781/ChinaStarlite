@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
 	<title>Log In</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="china.css">
+  <?php include 'header.php' ?>
+	<meta charset="UTF-8">
 </head>
 <body>
 <?php
@@ -48,7 +48,7 @@ include 'navbar.php';
 		//initialize and sanitize inputs
 		$username = trim($_POST['loginusername']);
 		$password = trim($_POST['loginpassword']);
-		echo "<div id='msgBox'>";
+		echo "<div class='msgBox'>";
 			$connect=mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME) or die("couldn't connect");	
 			$sql="SELECT * FROM users WHERE  username='$username'";
 			$query=mysqli_query($connect,$sql);

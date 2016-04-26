@@ -4,6 +4,7 @@
 <head>
 	<title>Order Now</title>
   <?php include 'header.php' ?>
+  <meta charset="UTF-8">
 </head>
 <body>
 <?php session_start(); ?>

@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
 	<title>Log Out</title>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="china.css">
+  <?php include 'header.php' ?>
+	<meta charset="UTF-8">
 </head>
 <body>
 <?php include 'navbar.php' ?>
