@@ -1,3 +1,11 @@
+body{
+	background: url(images/bkgrnd.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    /*background-size: 90%;*/
+}
+
 *{
   font-family: 'Source Sans Pro';
 }
@@ -242,10 +250,40 @@ nav.smaller .absolute{
 	display: none;
 }
 /*----------------------------------------stop shrink------------------------------------*/
+hr{
+	margin:0;
+	padding:0;
+}
+
+#transparent{
+	background: transparent;
+	height: 30em;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#transparent p{
+	font-size: 5em;
+	padding: 1.5em;
+	vertical-align: center;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+}
+
+
+#wrapper{
+width: 100%;
+background: white;
+}
+
 #content{
+	padding-top: 2em;
 	margin-left: 10%;
 	margin-right: 10%;
 	padding-bottom: 2em;
+	background: white;
 }
 
 form{

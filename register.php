@@ -46,7 +46,6 @@ $phone = $_POST['registerphone'];
 <?php 
 
 
-
 /*define('DBHOST','localhost'); //test
 define('DBNAME','cecs323o29');  //test
 define('DBUSER','root');        //test
@@ -202,11 +201,11 @@ if(!$_POST['registersubmit'] || !($success && $pass && $allow)){
   <input type="reset" name="reset"><br>
 </form>
 </div><!-- end formfields -->
-</div><!-- end content -->
-</main>
 <?php 
 }//end if !pass/success/allow
 ?>
+</div><!-- end content -->
+</main>
 <?php   mysqli_free_result($result); ?>
 <?php mysqli_close($connection); ?>
 <script type="text/javascript" src="js/registrationscript.js"></script>
