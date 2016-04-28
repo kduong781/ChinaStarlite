@@ -48,8 +48,8 @@ There are many variations of passages of Lorem Ipsum available, but the majority
   			</p>
 
   	</div><!-- end #content -->
-</div><!-- end wrapper -->
   		</main>
+</div><!-- end wrapper -->
   <?php include 'footer.php' ?>
 	<script type="text/javascript" src="js/slider.js"></script>
 

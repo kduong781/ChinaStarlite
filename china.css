@@ -183,10 +183,15 @@ ul li img.social{
  	transition: all 0.3s;
 }
 
-.absolute p{
+p.absolute{
 	font-weight: bold;
 	color: #F3EB72;			/*yellow*/
 	padding: 1.5em 1.5em 0 0;
+	-webkit-transition: all 0.3s;
+ 	-moz-transition: all 0.3s;
+ 	-ms-transition: all 0.3s;
+ 	-o-transition: all 0.3s;
+ 	transition: all 0.3s;
 }
 
 #navPlacement{
@@ -257,7 +262,7 @@ hr{
 
 #transparent{
 	background: transparent;
-	height: 30em;
+	height: 25em;
 	width: 90%;
 	margin-right: auto;
 	margin-left: auto;
@@ -270,6 +275,7 @@ hr{
 	font-weight: bolder;
 	text-align: center;
 	color: white;
+	text-shadow: 2px 0 white;
 }
 
 

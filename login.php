@@ -75,7 +75,7 @@ include 'navbar.php';
 			mysqli_free_result($query);
 			//mysqli_close($connect);
 		}else{
-			echo "<br>Please enter a username and password";//stops executing anything else afte this point
+			echo "<br>Please enter your username and password";//stops executing anything else afte this point
 		}
 		echo "</div>";//end msgBox
 

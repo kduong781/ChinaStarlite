@@ -1,5 +1,5 @@
 <nav>
- <span class="absolute right"><p>Call Us: +1 (562) 123-4567</p></span>
+    <p class="absolute right">Call Us: +1 (562) 123-4567</p>
     <ul>
         <li class='left'><a href="index.php"><img src="images/logo-head.png" alt="logo"></a></li>
         <li id="title" class='left'></li>
