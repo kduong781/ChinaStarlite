@@ -62,7 +62,8 @@
 #pagination{
   height: 3em;
   position: relative;
-  background: #151515;/* darkish black*/
+  /*background: #151515;*//* darkish black*/
+  background: rgba(0,0,0,0.9);
   border-top: 1px solid red;
   text-align: center;
 }
