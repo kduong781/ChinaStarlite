@@ -1,4 +1,4 @@
-body{
+.bkgrnd{
 	background: url(images/bkgrnd.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -267,7 +267,7 @@ hr{
 	font-size: 5em;
 	padding: 1.5em;
 	vertical-align: center;
-	font-weight: bold;
+	font-weight: bolder;
 	text-align: center;
 	color: white;
 }
@@ -487,6 +487,7 @@ footer ul li{
 	list-style: none;
 	display: inline-block;
 	margin-bottom: 1em;
+	margin-top: 1em;
 }
 
 footer ul li a{

@@ -6,7 +6,7 @@
   <?php include 'header.php' ?>
   <meta charset="UTF-8">
 </head>
-<body>
+<body class="bkgrnd">
 <?php session_start(); ?>
 <?php include 'navbar.php' ?>
   	<div id="carousel"><!-- noscript: get rid of carousel -->

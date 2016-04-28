@@ -9,7 +9,7 @@
 <body>
 <?php session_start(); ?>
 <?php include 'navbar.php' ?>
-
+<div id="wrapper">
 <main>
 <div id="content">
 <?php
@@ -24,6 +24,7 @@
 
 </div><!-- end content -->
 </main>
+</div><!-- end wrapper -->
 <?php include 'footer.php' ?>
 </body>
 </html>

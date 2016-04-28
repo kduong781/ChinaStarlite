@@ -11,6 +11,7 @@
 session_start();
 include 'navbar.php'
 ?>
+<div id="wrapper">
 <main>
 <div id="content">
 <?php 
@@ -29,6 +30,7 @@ $memberMsg = '';
 	?>
 </div><!-- end content -->
 </main>
+</div><!-- end wrapper -->
 <?php include 'footer.php'; ?>
 </body>
 </html>

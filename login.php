@@ -11,7 +11,7 @@
 session_start();
 include 'navbar.php';
 ?>
-
+<div id="wrapper">
 <main>
 	<div id="content">
 
@@ -140,6 +140,7 @@ include 'navbar.php';
 <!-- ////////////////////////////////////////////////////////END////////////////////////////////////////////////////////////// -->
 </div><!-- end content -->
 </main>
+</div><!-- end wrapper -->
 <script src="js/forgot.js"></script>
 <?php include 'footer.php'; 
 mysqli_close($connect); ?>

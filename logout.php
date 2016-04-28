@@ -8,6 +8,7 @@
 </head>
 <body>
 <?php include 'navbar.php' ?>
+<div id="wrapper">
 <main>
 <div id="content">
 <?php 
@@ -22,6 +23,7 @@ header('Location: login.php');
 ?>
 </div><!-- end content -->
 </main>
+</div><!-- end wrapper -->
 <?php include 'footer.php' ?>
 </body>
 </html>

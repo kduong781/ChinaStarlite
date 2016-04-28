@@ -23,6 +23,7 @@ $registerphonemsg = '';
 
 
 ?>
+<div id="wrapper">
 <main>
 <div id="content">
 <h1>Sign Up For a China Starlite Account</h1>
@@ -206,6 +207,7 @@ if(!$_POST['registersubmit'] || !($success && $pass && $allow)){
 ?>
 </div><!-- end content -->
 </main>
+</div><!-- end wrapper -->
 <?php   mysqli_free_result($result); ?>
 <?php mysqli_close($connection); ?>
 <script type="text/javascript" src="js/registrationscript.js"></script>
