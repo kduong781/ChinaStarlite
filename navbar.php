@@ -1,6 +1,6 @@
 <nav>
     <p class="absolute right">Call Us: +1 (562) 123-4567</p>
-    <ul>
+    <ul id="primary">
         <li class='left'><a href="index.php"><img src="images/logo-head.png" alt="logo"></a></li>
         <li id="title" class='left'></li>
         <li class='right'><a href="login.php">Sign In</a></li>
@@ -35,7 +35,7 @@
  </script>
 
 <script>
-    function init() {
+    function shrinkNav() {
         window.addEventListener('scroll', function(e){
             var distanceY = window.pageYOffset || document.documentElement.scrollTop,
                 shrinkOn = 30,
@@ -60,5 +60,41 @@
                 }
         });
     }
-    window.onload = init();
+
+
+    function reverseNavOrder(){
+        var $menuItems = document.getElementById("primary");
+        var $i = $menuItems.childNodes.length;
+        var $tags = $menuItems.getElementsByTagName('LI');
+
+        //if(window.innerWidth<=1057){ //if resized back, change back
+            $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
+            $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
+            $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
+            $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
+            while ($i--){
+                $menuItems.appendChild($menuItems.childNodes[$i]);
+            }
+        
+       // }
+       return window.innerWidth;
+
+       /* alert($tags[2].innerHTML.indexOf('Sign In') > -1);*/
+    }
+
+
+
+    window.onload = shrinkNav();
+
+    window.onload = function(){//initialize global var, know when to switch back
+        alert(window.innerWidth)
+        if(window.innerWidth<=1057){
+            reverseNavOrder();
+        }
+    }
+    
+    /*window.onresize = function(){
+        reverseNavOrder();
+    }*/
+
 </script>

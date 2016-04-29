@@ -525,6 +525,71 @@ footer ul li a:hover{
 	}
 }
 
+@media screen and (max-width: 1054px){
+	#slider{
+		display: none;
+	}
+
+	#pagination{
+		display: none;
+	}
+
+	nav{
+		float: none;
+		text-align: center;
+		margin: 0 auto 0 auto;
+	}
+
+	nav ul li.left{	/*float none*/
+		float: none;
+	}
+
+	nav ul li.left a{
+		padding:0;
+		margin:0;
+	}
+
+	nav ul li.left img{
+		float: none;
+		text-align: center;
+		margin:0;
+		margin-left:2em;
+	}
+
+	nav ul li.right{/*float: none, inline-block*/
+		float: none;
+		display: inline-block;
+		border: none;
+		margin-top: 2em;
+	}
+
+	nav ul li.right a{
+		border:none;
+	}
+
+	nav .absolute{
+		/*display: none;*/
+		display:inline-block;
+		position:absolute;
+		margin-top: 205px;
+		text-align: center;
+		right:0;
+		left:0;
+		margin-right: auto;
+		margin-left:auto;
+	}
+
+	#pad{
+		display: none;
+	}
+
+	/*--------------------------------smaller class--------------------------------*/
+	nav.smaller ul li.left img{
+		display:none;
+	}
+
+}
+
 @media screen and (max-width: 968px){
 	#registerInfo{
 		border-left: none;
@@ -537,5 +602,58 @@ footer ul li a:hover{
 	#registerInfo{
 		width: auto;
 		float:none;
+	}
+}
+
+@media screen and (max-width: 740px){
+/*	#content .formFields{
+		text-align: center;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		display: inline;
+		background: green
+		padding: none;	
+	}*/
+
+/*	#registerInfo{
+		margin:0;
+		padding: none;
+	}*/
+
+
+	nav ul li.left img{
+		margin-bottom: 2em;
+
+	}
+
+	nav ul li.right{
+		display: block;
+		margin:0;
+
+	}
+
+	nav ul li.right a{
+		padding: 1em 0;
+	}
+
+	nav .absolute{
+		display: none;
+	}
+
+	nav.smaller{
+		position: relative;
+	}
+
+	nav.smaller ul li.right a{
+		padding: 1em 0;
+	}
+
+	#navPlacement{
+		display: none;
+	}
+
+	#transparent p{
+		padding: 1em 0 0 0;
 	}
 }
