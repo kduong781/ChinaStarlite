@@ -292,6 +292,12 @@ background: white;
 	background: white;
 }
 
+#content p{
+	margin-right:0;
+	margin-left:0;
+	width:100%;
+}
+
 form{
 	display: inline-block;
 }
@@ -526,6 +532,9 @@ footer ul li a:hover{
 }
 
 @media screen and (max-width: 1054px){
+	#transparent p{
+		padding: 1em 0 0 0;
+	}
 	#slider{
 		display: none;
 	}
@@ -653,7 +662,4 @@ footer ul li a:hover{
 		display: none;
 	}
 
-	#transparent p{
-		padding: 1em 0 0 0;
-	}
 }

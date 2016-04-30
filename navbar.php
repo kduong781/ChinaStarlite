@@ -87,7 +87,7 @@
     window.onload = shrinkNav();
 
     window.onload = function(){//initialize global var, know when to switch back
-        alert(window.innerWidth)
+        //alert(window.innerWidth)
         if(window.innerWidth<=1057){
             reverseNavOrder();
         }
