@@ -4,27 +4,37 @@
 <head>
 	<title>Order Now</title>
   <?php include 'header.php' ?>
+		<link rel="stylesheet" type="text/css" href="order.css">
   <meta charset="UTF-8">
 </head>
 <body>
 <?php session_start(); ?>
 <?php include 'navbar.php' ?>
-<div id="wrapper">
-<main>
-<div id="content">
-<?php
-		echo "<h1>Make an order</h1>";
-	if($_SESSION['loginusername']){//if user in session, say hi
-		echo "Welcome back, ".$_SESSION['loginusername']."<br>";
-	}
-	else{
-		echo "Make an order by signing up for a free account or check out as a guest.";
-	}
-?>
+<div class="wrapper">
+	<div class="leftCol">
+		<ul class="tabs">
+			<li id="lunchTab" class="active">Lunch</li>
+			<li id="dinnerTab" >Dinner</li>
+			<li id="appetizerTab" >Appetizer</li>
+		</ul>
+	</div>
+	<div class="content">
+		Menu
+	</div>
 
-</div><!-- end content -->
-</main>
-</div><!-- end wrapper -->
+</div>
+
+	<div id="lunch" class="hide">
+		lunch
+	</div>
+	<div id="dinner" class="hide">
+		dinner
+	</div>
+	<div id="appetizer" class="hide">
+		appetizer
+	</div>
+
+<script src="js/order.js"></script>
 <?php include 'footer.php' ?>
 </body>
 </html>

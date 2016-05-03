@@ -2,7 +2,7 @@
 	background: url(images/bkgrnd.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;
     /*background-size: 90%;*/
 }
 
@@ -512,6 +512,16 @@ footer ul li a:hover{
 	font-weight:bold;
 }
 
+
+
+
+
+
+
+
+
+
+
 /*------------------media queries------------------------------------------*/
 @media screen and (max-width: 1293px){
 	#leftBar{
@@ -599,6 +609,7 @@ footer ul li a:hover{
 
 }
 
+
 @media screen and (max-width: 968px){
 	#registerInfo{
 		border-left: none;
@@ -622,7 +633,7 @@ footer ul li a:hover{
 		margin-right: auto;
 		display: inline;
 		background: green
-		padding: none;	
+		padding: none;
 	}*/
 
 /*	#registerInfo{
