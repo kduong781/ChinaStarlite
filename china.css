@@ -341,6 +341,44 @@ form{
 	font-family: Arial;
 }
 
+label.terms{
+
+	display: absolute;
+	padding: 0;
+	width: 16em;
+	text-align: center;
+	vertical-align: 0.6em;
+}
+
+#termsandconditions{
+	border: 1px solid rgba(0,0,0,0.5);
+	height: 90vh;
+	width: 30em;
+	margin-right: 10em;
+	position: absolute;
+	margin-top: -85vh;
+	right: 0;
+	overflow-y: scroll;
+	padding: 0 1em 0 1em;
+}
+
+#termsandconditions h1{
+	font-size: 2em;
+}
+
+#termsandconditions p, #termsandconditions blockquote{
+	text-align: left;
+	display: inline-block;
+}
+
+#termsandconditions ol{
+	text-align: left;
+}
+
+#termsandconditions ol li:nth-child(2){
+	margin-top: 1em;
+}
+
 .formFields .dateSection{
 	font-size: 2em;
 	vertical-align: -0.2em;
@@ -538,6 +576,17 @@ footer ul li a:hover{
 @media screen and (max-width: 1245px){
 	#leftBar{
 		height: 50em;
+	}
+}
+
+@media screen and (max-width: 1106px){
+	#termsandconditions{
+		float: none;
+		right: initial;
+		position: relative;
+		margin:0;
+		height: 10em;
+		margin-bottom: 1em;
 	}
 }
 

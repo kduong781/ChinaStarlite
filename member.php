@@ -25,6 +25,7 @@ $memberMsg = '';
 		$memberMsg = "<a href='login.php'>Sign In</a>";
 		echo"You must be logged in to view this page<br>";
 		//echo "Click <a href='login.php'>here</a> to sign in";
+		/*$('#content').css('height','100vh');*/
 	}
 	echo "<div id='button' class='right'>".$memberMsg."</div>";
 	?>
