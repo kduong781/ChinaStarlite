@@ -16,6 +16,10 @@ function hideModal(){
 forgotButton.onclick = function(e){
 	e.preventDefault();
 	showModal();
+	var nav = document.getElementsByTagName("nav")[0];
+	var navPlacement = document.getElementById('navPlacement');
+	 nav.className="smaller";
+     navPlacement.style.height=nav.clientHeight;
 }
 	
 modalClose.onclick = function(e){

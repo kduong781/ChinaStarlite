@@ -117,7 +117,7 @@ include 'navbar.php';
 			</div> <!-- #modal_background -->
 
 		<?php
-		if(isset($_POST['feedback'])){
+		if(isset($_POST['feedback']) && $_POST['forgotemail']!=""){
 			$forgottenEmail =  $_POST['forgotemail'];
 			$sql="SELECT * FROM users WHERE  email='$forgottenEmail'";
 				$query=mysqli_query($connect,$sql);
