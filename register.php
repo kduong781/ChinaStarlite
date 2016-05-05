@@ -149,7 +149,7 @@ if(isset($_POST['registersubmit'])){
                   $registerdobmsg='Please enter a valid date (mm/dd/yyyy)';
                   unset($_POST['registersubmit']);
     }
-       if(empty($_POST["registeragree"])){
+       if(!isset($_POST["registeragree"])){
                   $pass=false;
                   $registeragreemsg='You need to agree to our terms and conditions in order to register for an account';
                   unset($_POST['registersubmit']);
@@ -186,7 +186,7 @@ if(isset($_POST['registersubmit'])){
   else { echo "no result<br>";}
 if(!$_POST['registersubmit'] || !($success && $pass && $allow)){
   ?>
-
+<?php echo $_POST['registeragree']; ?>
 <div class="formFields">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
   <label for="registerfname">First Name:</label> 
@@ -204,7 +204,7 @@ if(!$_POST['registersubmit'] || !($success && $pass && $allow)){
   <label for="registerpassword">Password:</label> 
   <input type="password" name="registerpassword" placeholder="password" required="required" <?php if($_POST['registerpassword'])echo 'value='.$_POST['registerpassword']; ?>><span class='registermsg'><?php echo $registerpasswordmsg; ?></span><br>
   <label for="registeragree" class="terms">I agree to the terms and conditions</label> 
-  <input type="checkbox" name="registerAgree" required="required" <?php if($_POST['registeragree'])echo 'value='.$_POST['registeragree']; ?>><span class='registermsg'><?php echo $registeragreemsg; ?></span><br>
+  <input type="checkbox" name="registeragree" required="required" <?php ///**/if(isset($_POST['registeragree'])) echo "checked='checked'"; ?>><span class='registermsg'><?php echo $registeragreemsg; ?></span><br>
   
   <section id="termsandconditions">
       <h1>Terms and Conditions</h1>
@@ -285,7 +285,7 @@ No Joint Venture, No Derogation of Rights. You agree that no joint venture, part
 </ol>
 
   </section>
-  <input type="submit" name="registersubmit" value="Register" required="required">
+  <input type="submit" name="registersubmit" value="Register">
   <input type="reset" name="reset"><br>
 </form>
 </div><!-- end formfields -->
