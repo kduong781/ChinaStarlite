@@ -186,29 +186,30 @@ if(isset($_POST['registersubmit'])){
   else { echo "no result<br>";}
 if(!$_POST['registersubmit'] || !($success && $pass && $allow)){
   ?>
-<?php echo $_POST['registeragree']; ?>
+<?php echo isset($_POST['registeragree']) ? '<h1>yes</h1>' :'<h1>no</h1>'; ?>
 <div class="formFields">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
   <label for="registerfname">First Name:</label> 
-  <input type="text" name="registerfname" placeholder="eg: John" required="required" <?php if($_POST['registerfname'])echo 'value='.$_POST['registerfname']; ?>><span class='registermsg'><?php echo $registerfnamemsg; ?></span><br>
+  <input type="text" id="registerfname" name="registerfname" placeholder="eg: John" required="required" <?php if($_POST['registerfname'])echo 'value='.$_POST['registerfname']; ?>><span class='registermsg'><?php echo $registerfnamemsg; ?></span><br>
   <label for="registerlname">Last Name:</label> 
-  <input type="text" name="registerlname" placeholder="eg: Smith" required="required" <?php if($_POST['registerlname'])echo 'value='.$_POST['registerlname']; ?>><span class='registermsg'><?php echo $registerlnamemsg; ?></span><br>
+  <input type="text" id="registerlname" name="registerlname" placeholder="eg: Smith" required="required" <?php if($_POST['registerlname'])echo 'value='.$_POST['registerlname']; ?>><span class='registermsg'><?php echo $registerlnamemsg; ?></span><br>
   <label for="registerusername">Username:</label> 
-  <input type="text" name="registerusername" placeholder="username" required="required" <?php if($_POST['registerusername'])echo 'value='.$_POST['registerusername']; ?>><span class='registermsg'><?php echo $registerusernamemsg; ?></span><br>
+  <input type="text" id="registerusername" name="registerusername" placeholder="username" required="required" <?php if($_POST['registerusername'])echo 'value='.$_POST['registerusername']; ?>><span class='registermsg'><?php echo $registerusernamemsg; ?></span><br>
   <label for="registermonth">Date of Birth:</label> 
   <input type="text" id="registermonth" class="autoAdvance" name="registermonth" placeholder="mm" maxlength="2" required="required" size="2" <?php if($_POST['registermonth'])echo 'value='.$_POST['registermonth']; ?>> <span class="dateSection">/</span> <input type="text" id="registerday" class="autoAdvance" name="registerday" placeholder="dd" maxlength="2" required="required" size="2" <?php if($_POST['registerday'])echo 'value='.$_POST['registerday']; ?>> <span class="dateSection">/</span> <input type="text" id="registeryear" name="registeryear" placeholder="yyyy" maxlength="4" required="required" size="4" <?php if($_POST['registeryear'])echo 'value='.$_POST['registeryear']; ?>><span class='registermsg'><?php echo $registerdobmsg; ?></span><br>
   <label for="registeremail">Email Address:</label> 
-  <input type="email" name="registeremail" placeholder="user@example.com" required="required" <?php if($_POST['registeremail'])echo 'value='.$_POST['registeremail']; ?>><span class='registermsg'><?php echo $registeremailmsg; ?></span><br>
+  <input type="email" id="registeremail" name="registeremail" placeholder="user@example.com" required="required" <?php if($_POST['registeremail'])echo 'value='.$_POST['registeremail']; ?>><span class='registermsg'><?php echo $registeremailmsg; ?></span><br>
   <label for="registerphone">Phone Number:</label> 
-  <input type="tel" name="registerphone" placeholder="909-903-9000" maxlength="12" required="required" <?php if($_POST['registerphone'])echo 'value='.$_POST['registerphone']; ?>><span class='registermsg'><?php echo $registerphonemsg; ?></span><br>
+  <input type="tel" id="registerphone" name="registerphone" placeholder="909-903-9000" maxlength="12" required="required" <?php if($_POST['registerphone'])echo 'value='.$_POST['registerphone']; ?>><span class='registermsg'><?php echo $registerphonemsg; ?></span><br>
   <label for="registerpassword">Password:</label> 
-  <input type="password" name="registerpassword" placeholder="password" required="required" <?php if($_POST['registerpassword'])echo 'value='.$_POST['registerpassword']; ?>><span class='registermsg'><?php echo $registerpasswordmsg; ?></span><br>
+  <input type="password" id="registerpassword" name="registerpassword" placeholder="password" required="required" <?php if($_POST['registerpassword'])echo 'value='.$_POST['registerpassword']; ?>><span class='registermsg'><?php echo $registerpasswordmsg; ?></span><br>
   <label for="registeragree" class="terms">I agree to the terms and conditions</label> 
-  <input type="checkbox" name="registeragree" required="required" <?php ///**/if(isset($_POST['registeragree'])) echo "checked='checked'"; ?>><span class='registermsg'><?php echo $registeragreemsg; ?></span><br>
+  <input type="checkbox" id="registeragree" name="registeragree" required="required" <?php if(isset($_POST['registeragree'])) echo "checked='checked'"; ?>><span class='registermsg'><?php echo $registeragreemsg; ?></span><br>
   
   <section id="termsandconditions">
+ 
       <h1>Terms and Conditions</h1>
-
+  
 <h2>1. YOUR AGREEMENT</h2>
 <p>
 By using this Site, you agree to be bound by, and to comply with, these Terms and Conditions. If you do not agree to these Terms and Conditions, please do not use this site.
@@ -262,7 +263,7 @@ Except our generated dummy copy, which is free to use for private and commercial
 <h2>10. INTELLECTUAL PROPERTY INFRINGEMENT CLAIMS</h2>
 <p>
 It is our policy to respond expeditiously to claims of intellectual property infringement. We will promptly process and investigate notices of alleged infringement and will take appropriate actions under the Digital Millennium Copyright Act ("DMCA") and other applicable intellectual property laws. Notices of claimed infringement should be directed to:
-<address>
+<br>
 126 Electricov St.<br>
 
 Kiev, Kiev 04176<br>
@@ -270,7 +271,7 @@ Kiev, Kiev 04176<br>
 United States<br>
 
 contact@chinaStarlite.info
-</address>
+
 </p>
 <h2>11. PLACE OF PERFORMANCE</h2>
 <p>

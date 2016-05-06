@@ -66,8 +66,8 @@ nav ul li.left img{
 
 nav ul li.right{
 	margin: 4.5em 0 0;
-	border-top: 1px solid #FDFDCE;
-	border-bottom: 1px solid #FDFDCE;
+	/*border-top: 1px solid #FDFDCE;*/
+	/*border-bottom: 1px solid #FDFDCE;*/
 	-webkit-transition: all 0.3s;
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
@@ -93,8 +93,8 @@ nav ul li.right a{						/*this controls how the nav menu links look, excluding t
 
 nav ul li a.active{
 	background: #0B0B0B;/*dark black*/
-	border-right: 1px solid white;
-	border-left: 1px solid white;
+	/*border-right: 1px solid white;
+	border-left: 1px solid white;*/
 }
 
 nav{
@@ -424,12 +424,16 @@ label.terms{
  	margin-left: 2em;
  }
 
- .registermsg{
- 	color: #840000;
+ .registermsg:not(:empty){
+ 	color: #A80202;
  	margin-left: 2em;
  	margin-top: 1em;
  	position: absolute;
  	font-weight: bold;
+ 	background: white;
+ 	z-index: 2;
+ 	padding: 0.5em;
+ 	background: pink;
  }
 
 .error{
