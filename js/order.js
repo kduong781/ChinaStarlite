@@ -120,4 +120,8 @@ $(document).ready(function() {
     $(".content").replaceWith('<div class="content">'+ content +'</div>');
   });
 
+  function addItem($name, $price) {
+
+  }
+
 });
