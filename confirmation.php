@@ -139,7 +139,7 @@ if(isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $emai
       }
 
 			foreach($_GET as $key => $val) {
-					if($key == "submit") {
+					if($val == "submit") {
 
 					}else {
 						echo "$val </br>";
@@ -157,14 +157,15 @@ echo '<div id="main">';
  <h3>Items</h3>
 <?php
 foreach($_GET as $key => $val) {
-		if($key == "submit") {
+	if($val == "Submit") {
 
-		}else {
-			echo "$val </br>";
-		}
+	}else {
+		echo "$val </br>";
+	}
 }
 
 ?>
+</div>
 <?php
  echo '<p><span class="error">* required field.</span></p>
 <form method="post" action="confirmation.php">
@@ -191,7 +192,6 @@ foreach($_GET as $key => $val) {
    <br><br>';
 	 ?>
 
- </div>
 	 <?php
    echo '<input type="checkbox" name="privacy" value="privacy">Accept Privacy Below
    <span class="error">* ' . $privacyErr . '</span>
