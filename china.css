@@ -555,9 +555,16 @@ footer ul li a:hover{
 }
 
 
+@font-face{
+	 font-family: agency;
+    src: url("fonts/AGENCYR.TTF");
+}
 
-
-
+@font-face{
+	 font-family: agency;
+    src: url("fonts/AGENCYB.TTF");
+    font-weight: bold;
+}
 
 
 
