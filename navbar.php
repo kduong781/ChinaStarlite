@@ -1,3 +1,4 @@
+<?php @ob_start(); ?>
 <nav>
     <p class="absolute right">Call Us: +1 (562) 123-4567</p>
     <ul id="primary">

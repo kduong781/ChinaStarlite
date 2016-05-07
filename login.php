@@ -70,7 +70,9 @@ include 'navbar.php';
 					/*echo "Login successful! Go to the <a href='member.php'>member page</a><br>";*/
 					/*echo "Click <a href='logout.php'>here</a> to log out";*/
 					$_SESSION['loginusername']=$dbusername; //set our session
-					header( 'Location: member.php' ) ;//redirect to member page
+
+					header('Location: member.php') ;//redirect to member page
+					exit();
 				}else{
 					echo "<br><span class='error'>Incorrect password</span><br>";
 				}
@@ -137,7 +139,7 @@ include 'navbar.php';
 					}
 
 
-$to = $forgottenEmail;
+/*$to = $forgottenEmail;
 $subject = 'Your ChinaStarlite Credentials';
 $email = $forgottenEmail;
 $messsage = "Username:".$forgotEmailUsername."\n Password:".$forgotEmailPassword."";
@@ -149,7 +151,7 @@ EMAIL;
 $header = 'Your ChinaStarlite Credentials';
 
 	mail($to, $subject, $body, $header);
-	
+	*/
 
 					//mail($forgottenEmail,"Your ChinaStarlite Credentials",$msg);
 				}

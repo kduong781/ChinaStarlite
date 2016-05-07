@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
 	<title>Order Now</title>
-  <?php include 'header.php' ?>
+  <?php  include 'header.php' ?>
 		<link rel="stylesheet" type="text/css" href="order.css">
     <link rel="stylesheet" type="text/css" href="modal.css">
   <meta charset="UTF-8">
