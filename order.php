@@ -8,6 +8,7 @@
 	<title>Order Now</title>
   <?php include 'header.php' ?>
 		<link rel="stylesheet" type="text/css" href="order.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
   <meta charset="UTF-8">
 </head>
 <body>
@@ -17,7 +18,7 @@
 	<div class="leftCol">
 		<ul class="tabs">
 			<?php
-					$sql = "SELECT * FROM cecs323o29.menu";
+					$sql = "SELECT DISTINCT menutype FROM cecs323o29.menu";
 					$result = mysqli_query($connection, $sql);
 					if ($result=mysqli_query($connection,$sql))
 					{
@@ -40,10 +41,24 @@
 			<li id="appetizerTab" >Appetizer</li>-->
 		</ul>
 	</div>
+  <div class="cart">
+    <form action="confirmation.php" method="get">
+      <h1>Order Contents</h1>
+      <ul id="cartList">
+      </ul>
+      <h4></h4>
+      <h4>Subtotal <span id="subTotal" class="price">$0.00</span></h4>
+      <h4>Tax <span id="tax" class="price">$0.00</span></h4>
+      <h4>Total <span id="total" class="price">$0.00</span></h4>
+      <input type="submit" name="submit" value="Submit">
+   </form>
+  </div>
+
 	<div class="content">
 		<div class="menu">
 			<span class="menuTitle">Chicken</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Chicken'";
 						$result = mysqli_query($connection, $sql);
@@ -55,9 +70,36 @@
 								$type = $row["menutype"];
 								$name = $row["foodName"];
 								$price = $row["price"];
+                $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt>".$name." <span class='price'>". $price ."</span></dt>";
+								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
 								echo "<dd>".$description . "</dd>";
+
+                ?>
+
+                <!-- The Modal -->
+                <div id="modal-<?php echo $id;?>" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close" onclick="closeModal(<?php echo $id?>)">×</span>
+                      <h2>Order</h2>
+                    </div>
+                    <div class="modal-body">
+                      <p><?php echo $name;?></p>
+                      <p><?php echo $description;?></p>
+                    </div>
+                    <div class="modal-footer">
+                      <h3>Quantity: </h3>
+                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                    </div>
+                  </div>
+
+                </div>
+
+                <?php
 							}
 							mysqli_free_result($result);
 						}
@@ -70,26 +112,59 @@
 
 
 
-<!-- Tab Info -->
 
+
+
+
+
+<!-- Tab Info -->
+<div class="hide">
 	<div id="Chicken" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Chicken</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Chicken'";
 						$result = mysqli_query($connection, $sql);
 						if ($result=mysqli_query($connection,$sql))
 						{
 						// Fetch one and one row
-						while ($row=mysqli_fetch_assoc($result))
+            while ($row=mysqli_fetch_assoc($result))
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
 								$price = $row["price"];
+                $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt>".$name." <span class='price'>". $price ."</span></dt>";
+								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
 								echo "<dd>".$description . "</dd>";
+
+                ?>
+
+                <!-- The Modal -->
+                <div id="modal-<?php echo $id;?>" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close" onclick="closeModal(<?php echo $id?>)">×</span>
+                      <h2>Order</h2>
+                    </div>
+                    <div class="modal-body">
+                      <p><?php echo $name;?></p>
+                      <p><?php echo $description;?></p>
+                    </div>
+                    <div class="modal-footer">
+                      <h3>Quantity: </h3>
+                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                    </div>
+                  </div>
+
+                </div>
+
+                <?php
 							}
 							mysqli_free_result($result);
 						}
@@ -101,21 +176,49 @@
 	<div id="Beef" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Dinner</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Beef'";
 						$result = mysqli_query($connection, $sql);
 						if ($result=mysqli_query($connection,$sql))
 						{
 						// Fetch one and one row
-						while ($row=mysqli_fetch_assoc($result))
+            while ($row=mysqli_fetch_assoc($result))
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
 								$price = $row["price"];
+                $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt>".$name." <span class='price'>". $price ."</span></dt>";
+								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
 								echo "<dd>".$description . "</dd>";
+
+                ?>
+
+                <!-- The Modal -->
+                <div id="modal-<?php echo $id;?>" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close" onclick="closeModal(<?php echo $id?>)">×</span>
+                      <h2>Order</h2>
+                    </div>
+                    <div class="modal-body">
+                      <p><?php echo $name;?></p>
+                      <p><?php echo $description;?></p>
+                    </div>
+                    <div class="modal-footer">
+                      <h3>Quantity: </h3>
+                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                    </div>
+                  </div>
+
+                </div>
+
+                <?php
 							}
 							mysqli_free_result($result);
 						}
@@ -127,21 +230,49 @@
 	<div id="Pork" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Pork</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Pork'";
 						$result = mysqli_query($connection, $sql);
 						if ($result=mysqli_query($connection,$sql))
 						{
 						// Fetch one and one row
-						while ($row=mysqli_fetch_assoc($result))
+            while ($row=mysqli_fetch_assoc($result))
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
 								$price = $row["price"];
+                $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt>".$name." <span class='price'>". $price ."</span></dt>";
+								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
 								echo "<dd>".$description . "</dd>";
+
+                ?>
+
+                <!-- The Modal -->
+                <div id="modal-<?php echo $id;?>" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close" onclick="closeModal(<?php echo $id?>)">×</span>
+                      <h2>Order</h2>
+                    </div>
+                    <div class="modal-body">
+                      <p><?php echo $name;?></p>
+                      <p><?php echo $description;?></p>
+                    </div>
+                    <div class="modal-footer">
+                      <h3>Quantity: </h3>
+                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                    </div>
+                  </div>
+
+                </div>
+
+                <?php
 							}
 							mysqli_free_result($result);
 						}
@@ -153,21 +284,49 @@
 	<div id="Drinks" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Drinks</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Drinks'";
 						$result = mysqli_query($connection, $sql);
 						if ($result=mysqli_query($connection,$sql))
 						{
 						// Fetch one and one row
-						while ($row=mysqli_fetch_assoc($result))
+            while ($row=mysqli_fetch_assoc($result))
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
 								$price = $row["price"];
+                $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt>".$name." <span class='price'>". $price ."</span></dt>";
+								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
 								echo "<dd>".$description . "</dd>";
+
+                ?>
+
+                <!-- The Modal -->
+                <div id="modal-<?php echo $id;?>" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close" onclick="closeModal(<?php echo $id?>)">×</span>
+                      <h2>Order</h2>
+                    </div>
+                    <div class="modal-body">
+                      <p><?php echo $name;?></p>
+                      <p><?php echo $description;?></p>
+                    </div>
+                    <div class="modal-footer">
+                      <h3>Quantity: </h3>
+                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                    </div>
+                  </div>
+
+                </div>
+
+                <?php
 							}
 							mysqli_free_result($result);
 						}
@@ -179,21 +338,49 @@
 	<div id="Seafood" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Seafood</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Seafood'";
 						$result = mysqli_query($connection, $sql);
 						if ($result=mysqli_query($connection,$sql))
 						{
 						// Fetch one and one row
-						while ($row=mysqli_fetch_assoc($result))
+            while ($row=mysqli_fetch_assoc($result))
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
 								$price = $row["price"];
+                $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt>".$name." <span class='price'>". $price ."</span></dt>";
+								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
 								echo "<dd>".$description . "</dd>";
+
+                ?>
+
+                <!-- The Modal -->
+                <div id="modal-<?php echo $id;?>" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close" onclick="closeModal(<?php echo $id?>)">×</span>
+                      <h2>Order</h2>
+                    </div>
+                    <div class="modal-body">
+                      <p><?php echo $name;?></p>
+                      <p><?php echo $description;?></p>
+                    </div>
+                    <div class="modal-footer">
+                      <h3>Quantity: </h3>
+                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                    </div>
+                  </div>
+
+                </div>
+
+                <?php
 							}
 							mysqli_free_result($result);
 						}
@@ -205,21 +392,49 @@
 	<div id="Soup" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Soup</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Soup'";
 						$result = mysqli_query($connection, $sql);
 						if ($result=mysqli_query($connection,$sql))
 						{
 						// Fetch one and one row
-						while ($row=mysqli_fetch_assoc($result))
+            while ($row=mysqli_fetch_assoc($result))
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
 								$price = $row["price"];
+                $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt>".$name." <span class='price'>". $price ."</span></dt>";
+								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
 								echo "<dd>".$description . "</dd>";
+
+                ?>
+
+                <!-- The Modal -->
+                <div id="modal-<?php echo $id;?>" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close" onclick="closeModal(<?php echo $id?>)">×</span>
+                      <h2>Order</h2>
+                    </div>
+                    <div class="modal-body">
+                      <p><?php echo $name;?></p>
+                      <p><?php echo $description;?></p>
+                    </div>
+                    <div class="modal-footer">
+                      <h3>Quantity: </h3>
+                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                    </div>
+                  </div>
+
+                </div>
+
+                <?php
 							}
 							mysqli_free_result($result);
 						}
@@ -231,21 +446,49 @@
 	<div id="Appetizer" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Appetizer</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Appetizer'";
 						$result = mysqli_query($connection, $sql);
 						if ($result=mysqli_query($connection,$sql))
 						{
 						// Fetch one and one row
-						while ($row=mysqli_fetch_assoc($result))
+            while ($row=mysqli_fetch_assoc($result))
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
 								$price = $row["price"];
+                $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt>".$name." <span class='price'>". $price ."</span></dt>";
+								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
 								echo "<dd>".$description . "</dd>";
+
+                ?>
+
+                <!-- The Modal -->
+                <div id="modal-<?php echo $id;?>" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="close" onclick="closeModal(<?php echo $id?>)">×</span>
+                      <h2>Order</h2>
+                    </div>
+                    <div class="modal-body">
+                      <p><?php echo $name;?></p>
+                      <p><?php echo $description;?></p>
+                    </div>
+                    <div class="modal-footer">
+                      <h3>Quantity: </h3>
+                      <input pattern="[1-9]{1}[0-9]{0,1}" required oninvalid="this.setCustomValidity('Please input a positive integer (Max 2 digits)')" id="quantity-<?php echo $id;?>" type="text" value="1"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                    </div>
+                  </div>
+
+                </div>
+
+                <?php
 							}
 							mysqli_free_result($result);
 						}
@@ -253,10 +496,11 @@
 			</dl>
 		</div>
 	</div>
-
+</div>
 
 <!-- End of Tab Info -->
 <script src="js/order.js"></script>
+<script src="js/modal.js"></script>
 <?php include 'footer.php' ?>
 </body>
 </html>

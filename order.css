@@ -1,3 +1,7 @@
+* {
+	margin-bottom: 0;
+}
+
 .leftCol {
 	float: left;
 	background: white;
@@ -7,16 +11,16 @@
 }
 
 .wrapper {
-  background: gray;
+  background: #6BCFFA;
 	margin-left: 10%;
 	margin-right: 10%;
-	height: 100vh;
+  min-height: 100vh;
 
 }
 
 .leftCol {
 	background:black;
-	height: 100vh;
+
 }
 .tabs {
 	list-style: none;
@@ -27,14 +31,15 @@
 	padding: 10px 30px 10px 30px;
   border-style: groove solid 1px black;
 	border:1px solid black;
+	font-style: italic;
 }
 
 .tabs li.active {
-	background: gray;
+	  background: #6BCFFA;
 }
 
 .tabs li:hover {
-	background: gray;
+	  background: #6BCFFA;
 }
 
 .hide {
@@ -52,4 +57,55 @@
 .menuTitle {
 	font-size: 1.4em;
 	font-weight: bold;
+}
+
+dt {
+	padding: 20px 30px 20px 10px;
+}
+
+dd {
+	width: 35%;
+}
+
+.price {
+	margin-top: 8px;
+	padding-left: 20px;
+	float: right;
+	text-align: justify;
+}
+
+.content div {
+  padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.cart {
+	float: right;
+	padding-right: 5%;
+	padding-left: 5%;
+	background: orange;
+	min-height: 100vh;
+	height: 100%;
+}
+
+.cart li {
+	list-style: none;
+}
+
+.menu a {
+	color: red;
+}
+
+.menu a:visited {
+	color: red;
+}
+
+.typeHr {
+	width: 40%;
+}
+
+#main {
+	margin-left: 10%;
+	margin-right: 10%;
+
 }
