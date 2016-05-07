@@ -12,7 +12,9 @@
 	<link rel="stylesheet" type="text/css" href="modal.css">
 </head>
 <body>
+<?php session_start(); ?>
 <?php include 'navbar.php' ?>
+
 <?php
 // define variables and set to empty values
 $firstnameErr = $lastnameErr = $emailErr = $stateErr = $cityErr = $streetErr = $zipErr  = $privacyErr = "";
@@ -107,8 +109,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 <?php
-if(isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $emailErr == ""
-  && $stateErr== "" &&  $cityErr == "" && $streetErr == "" && $zipErr == "" &&  $deliveryErr == "" && $privacyErr == "") {
+if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $emailErr == ""
+  && $stateErr== "" &&  $cityErr == "" && $streetErr == "" && $zipErr == "" &&  $deliveryErr == "" && $privacyErr == "") || isset($_SESSION['loginusername'])) {
       echo "<div id='main'>";
       echo "<h1>Order Confirmation (Pickup)</h1>";
       				echo "<div class='orderInfo'><fieldset><legend>Order Information</legend>";
@@ -134,12 +136,22 @@ if(isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $emai
             echo "Item: $val </br>";
             fwrite($myfile, "Item: $val \n");
           }
-
-
       }
 
+			if (isset($_SESSION['loginusername'])) {
+				echo "Username: ". $_SESSION['loginusername']."</br>";
+				if(isset($_SESSION['fname']) ){
+					echo "First Name: ". $_SESSION['fname']."</br>";
+				}
+				if(isset($_SESSION['lname']) ){
+						echo "Last Name: ". $_SESSION['lname']."</br>";
+				}if(isset($_SESSION['email']) ){
+					echo "Email: ". $_SESSION['email']."</br>";
+				}
+			}
+
 			foreach($_GET as $key => $val) {
-					if($val == "submit") {
+					if($val == "Submit") {
 
 					}else {
 						echo "$val </br>";
@@ -195,8 +207,20 @@ foreach($_GET as $key => $val) {
 	 <?php
    echo '<input type="checkbox" name="privacy" value="privacy">Accept Privacy Below
    <span class="error">* ' . $privacyErr . '</span>
-   <br><br>
-   <input type="submit" name="submit" value="Submit">
+   <br><br>';
+	 ?>
+	 <?php
+/*	 foreach($_GET as $key => $val) {
+		 if($val == "Submit") {
+
+		 }else {
+			 echo "$val </br>";
+		 }
+	 }
+*/
+	 ?>
+	 <?php
+   echo '<input type="submit" name="submit" value="Submit">
 </form>
 
 
@@ -210,5 +234,6 @@ foreach($_GET as $key => $val) {
 }
 ?>
 <?php include 'footer.php' ?>
+<script src="modal.js"></script>
 </body>
 </html>

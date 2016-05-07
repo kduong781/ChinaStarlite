@@ -4,7 +4,13 @@
     <ul id="primary">
         <li class='left'><a href="index.php"><img src="images/logo-head.png" alt="logo"></a></li>
         <li id="title" class='left'></li>
-        <li class='right'><a href="login.php">Sign In</a></li>
+        <?php
+          if(isset($_SESSION['loginusername'])) {
+            echo   '<li class="right"><a href="logout.php">Log Out</a></li>';
+          } else {
+            echo   '<li class="right"><a href="login.php">Sign In</a></li>';
+          }
+         ?>
         <li class='right'><a href="member.php">Member</a></li>
         <li class='right'><a href="about.php">About Us</a></li>
         <li class='right'><a href="order.php">Order Now</a></li>
@@ -76,7 +82,7 @@
             while ($i--){
                 $menuItems.appendChild($menuItems.childNodes[$i]);
             }
-        
+
        // }
        return window.innerWidth;
 
@@ -93,7 +99,7 @@
             reverseNavOrder();
         }
     }
-    
+
     /*window.onresize = function(){
         reverseNavOrder();
     }*/

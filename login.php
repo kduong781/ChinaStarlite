@@ -17,11 +17,6 @@ include 'navbar.php';
 
 <!-- ////////////////////////////////////////////////////////START//////////////////////////////////////////////////////// -->
 	<?php
-
-
-
-
-
 	if($_SESSION['loginusername']){//if loginusername
 		echo "You are already logged in as ".$_SESSION['loginusername']."<br>";
 		echo "<br><div id='button'><a href='logout.php'>Log Out</a></div><br>";
@@ -54,7 +49,7 @@ include 'navbar.php';
 		$username = trim($_POST['loginusername']);
 		$password = trim($_POST['loginpassword']);
 		echo "<div class='msgBox'>";
-			$connect=mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME) or die("couldn't connect");	
+			$connect=mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME) or die("couldn't connect");
 			$sql="SELECT * FROM users WHERE  username='$username'";
 			$query=mysqli_query($connect,$sql);
 			$numrows=mysqli_num_rows($query);
@@ -64,6 +59,9 @@ include 'navbar.php';
 				while($row = mysqli_fetch_assoc($query)){
 					$dbusername = $row['username'];
 					$dbpassword = $row['password'];
+					$dbfname = $row['fname'];
+					$dblname = $row['lname'];
+					$dbemail = $row['email'];
 				}
 				//check if username and password matches
 				if($username==$dbusername && $password==$dbpassword){
@@ -73,10 +71,16 @@ include 'navbar.php';
 
 					header('Location: member.php') ;//redirect to member page
 					exit();
+
+					$_SESSION['fname'] = $dbfname;
+					$_SESSION['lname'] = $dblname;
+					$_SESSION['email'] = $dbemail;
+
+					header( 'Location: member.php' ) ;//redirect to member page
 				}else{
 					echo "<br><span class='error'>Incorrect password</span><br>";
 				}
-			}else{	
+			}else{
 				echo "<br><span class='error'>This user does not exist</span><br>";
 			}
 			mysqli_free_result($query);
@@ -139,6 +143,7 @@ include 'navbar.php';
 					}
 
 
+
 /*$to = $forgottenEmail;
 $subject = 'Your ChinaStarlite Credentials';
 $email = $forgottenEmail;
@@ -154,6 +159,9 @@ $header = 'Your ChinaStarlite Credentials';
 	*/
 
 					//mail($forgottenEmail,"Your ChinaStarlite Credentials",$msg);
+
+				//	$msg = "Username:".$forgotEmailUsername."\n Password:".$forgotEmailPassword."";
+				//	mail($forgottenEmail,"Your ChinaStarlite Credentials",$msg);
 				}
 				mysqli_free_result($query);
 		}
@@ -164,7 +172,7 @@ $header = 'Your ChinaStarlite Credentials';
 </main>
 </div><!-- end wrapper -->
 <script src="js/forgot.js"></script>
-<?php include 'footer.php'; 
+<?php include 'footer.php';
 mysqli_close($connect); ?>
 </body>
 </html>
