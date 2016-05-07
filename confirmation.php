@@ -12,9 +12,10 @@
 	<link rel="stylesheet" type="text/css" href="modal.css">
 </head>
 <body>
+<?php session_start(); ?>
 <?php include 'navbar.php' ?>
+
 <?php
-session_start();
 // define variables and set to empty values
 $firstnameErr = $lastnameErr = $emailErr = $stateErr = $cityErr = $streetErr = $zipErr  = $privacyErr = "";
 $firstname = $lastname = $email = $state = $city = $street = $zip = $privacy = "";

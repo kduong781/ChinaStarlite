@@ -11,13 +11,13 @@
 <div id="wrapper">
 <main>
 <div id="content">
-<?php 
+<?php
 session_start();
 
 session_destroy();
 
-/*echo "You have been logged out.<br>Click <a href='index.php'>here</a> to return to the home page.<br>";
-echo "Click <a href='login.php'>here</a> to sign in</br>";*/
+echo "You have been logged out.<br>Click <a href='index.php'>here</a> to return to the home page.<br>";
+echo "Click <a href='login.php'>here</a> to sign in</br>";
 header('Location: login.php');
 
 ?>
