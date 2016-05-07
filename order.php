@@ -57,7 +57,8 @@
 	<div class="content">
 		<div class="menu">
 			<span class="menuTitle">Chicken</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Chicken'";
 						$result = mysqli_query($connection, $sql);
@@ -121,7 +122,8 @@
 	<div id="Chicken" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Chicken</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Chicken'";
 						$result = mysqli_query($connection, $sql);
@@ -174,7 +176,8 @@
 	<div id="Beef" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Dinner</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Beef'";
 						$result = mysqli_query($connection, $sql);
@@ -227,7 +230,8 @@
 	<div id="Pork" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Pork</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Pork'";
 						$result = mysqli_query($connection, $sql);
@@ -280,7 +284,8 @@
 	<div id="Drinks" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Drinks</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Drinks'";
 						$result = mysqli_query($connection, $sql);
@@ -333,7 +338,8 @@
 	<div id="Seafood" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Seafood</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Seafood'";
 						$result = mysqli_query($connection, $sql);
@@ -386,7 +392,8 @@
 	<div id="Soup" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Soup</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Soup'";
 						$result = mysqli_query($connection, $sql);
@@ -439,7 +446,8 @@
 	<div id="Appetizer" class="hide">
 		<div class="menu">
 			<span class="menuTitle">Appetizer</span>
-			<dl>
+      <hr class="typeHr">
+      <dl>
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Appetizer'";
 						$result = mysqli_query($connection, $sql);
