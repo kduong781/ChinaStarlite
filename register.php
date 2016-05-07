@@ -186,7 +186,6 @@ if(isset($_POST['registersubmit'])){
   else { echo "no result<br>";}
 if(!$_POST['registersubmit'] || !($success && $pass && $allow)){
   ?>
-<?php echo isset($_POST['registeragree']) ? '<h1>yes</h1>' :'<h1>no</h1>'; ?>
 <div class="formFields">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
   <label for="registerfname">First Name:</label> 
