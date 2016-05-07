@@ -1,0 +1,223 @@
+.upper {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	text-align: center;
+	font-size: 3em;
+   
+}
+
+.sub{
+    display: inline;
+	text-align: center;
+	border-right: 1px solid #000000;
+	color: black;
+}
+
+
+.sub a {
+    display: inline-block;
+    padding: .5em;
+    text-decoration: none;
+	font-weight: bold;
+	
+}
+
+.sub:last-child { 
+	border-right: none 
+}
+
+
+#ourStory{
+	color: #B80606;
+	font-size:1.7em;
+	
+}
+
+#locations{
+	color: black;
+	font-size:.35em;
+}
+
+#locations:hover{
+	color: #B80606 !important;
+
+	
+}
+
+#ourStory:hover{
+	color: #B80606 !important;
+	
+}
+
+
+.writing{
+	text-align: center;
+	font-size: 1.5em;
+	padding-top: 1.5em;
+	padding-right: 3em;
+	padding-left: 3em;
+	padding-bottom:3em;
+	color: white;
+	background-color: black;
+	
+}
+.border{
+	margin: auto;
+	width: 70%;
+	border-bottom: 2px solid #B80606;
+}
+
+#locationsDescription{
+	overflow:auto;
+	display:none;
+
+	
+	
+}
+
+#locationOptions{
+	padding-top: 3em;
+	float: left;
+	
+}
+
+.actualLocations{
+	list-style-type: none;
+}
+
+
+.subActualLocations{
+	font-size: 1em;
+	list-style-type: none;
+	border-bottom: 1px solid #000000;
+	color: black;
+}
+
+.subActualLocations:last-child{
+	border-bottom: none 
+}
+
+
+#hongkongLink{
+	color: #B80606;
+	text-decoration: none;
+	font-size: 2.5em;
+	
+	
+}
+
+#longbeachLink{
+	color: black;
+	text-decoration: none;
+	font-size: 1.5em;
+	
+}
+
+#hongkongLink:hover{
+	color: #B80606 !important;
+
+	
+}
+
+#longbeachLink:hover{
+	color: #B80606 !important;
+	
+}
+
+#locationsBlock{
+	margin-left: 10em;
+	margin-right: 10em;
+}
+
+#hongkong{
+	
+	padding-top: 3em;
+	padding-left: 15em;
+	
+}
+
+#longbeach{
+	padding-top: 3em;
+	padding-left: 15em;
+	display: none;
+}
+
+figure{
+	float:left;
+	padding-right: 1.5em;
+	padding-bottom: 3em;
+}
+
+#paddingAbout{
+	padding-top: 1.5em;
+	padding-bottom:1.5em;
+}
+
+#fieldsets{
+	padding-left:3em;
+	padding-right:3em;
+	
+	display: -webkit-flex; /* Safari */
+	display: -ms-flex: 1;
+    display: flex;
+}
+
+legend{
+	color: #B80606;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+fieldset{
+	border-color:#B80606;
+	font-weight: bold;
+}
+
+
+
+.writingSub{
+	text-align: center;
+	font-size: 1.5em;
+	font-weight:bold;
+	
+}
+
+@media only screen and (max-width: 1004px) {
+	#hongkong{
+		clear: both;
+		padding:0;
+	}
+
+	#hongkong .writingSub{
+		padding:0;
+		margin-right:auto;
+		margin-left:auto;
+	}
+
+	#longbeach{
+		clear: both;
+		padding:0;
+	}
+
+	#longbeach .writingSub{
+		padding:0;
+		margin-right:auto;
+		margin-left:auto;
+	}
+
+
+}
+
+@media only screen and (max-width: 700px) {
+    #fieldsets {
+		display:inline-block;
+		text-align:center;
+    }
+	#locationsDescription{
+		display:inline-block;
+	}
+}
+
+

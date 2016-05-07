@@ -26,13 +26,26 @@
   line-height: 300px;
 }
 
+#slider ul li p{
+  font-size: 4em;
+  color: white;
+  position: absolute;
+  top:60%;
+  line-height:1;
+  width: 50%;
+  left: 25%;
+  text-align: center;
+  font-weight: bold;
+  background: rgba(0,0,0,0.7);
+}
+
 
 /*-------------------------------------------------------------------------------------------*/
 
 .previous, .next {
   position: absolute;
   top: 40%;
-  z-index: 999;
+  z-index: 5;
   display: block;
   padding: 2% 1%;
   width: auto;
@@ -94,7 +107,7 @@
   cursor: pointer;
   border-radius: 100px;
    position: absolute;
-  z-index:99;
+  z-index:4;
   margin: 2em 0 0 2em;
 }
 

@@ -17,6 +17,7 @@ nav{
  	-o-transition: all 0.3s;
  	transition: all 0.3s;
  	z-index: 205;
+ 	background: #151515;
 }
 
 nav ul {

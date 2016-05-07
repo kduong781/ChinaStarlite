@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Home</title>
+	<title>Member</title>
   <?php include 'header.php' ?>
   <meta charset="UTF-8">
 </head>
