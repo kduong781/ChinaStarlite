@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <?php
   $connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o29","nijeek","cecs323o29");
+  mysqli_set_charset($connection,"utf8");
 ?>
 <html lang="en">
 <head>
@@ -22,25 +23,25 @@
 					$result = mysqli_query($connection, $sql);
 					if ($result=mysqli_query($connection,$sql))
 					{
-					// Fetch one and one row
-					while ($row=mysqli_fetch_assoc($result))
-						{
-							$type = $row["menutype"];
-							if($row[menutype] == "Chicken") {
-									echo "<li id='".$type."Tab' class='active'>".$type."</li>";
-							} else {
-								echo "<li id='".$type."Tab'>".$type."</li>";
-							}
-						}
-						mysqli_free_result($result);
-					}
-			 ?>
-			 <li id="viewTab">View All</li>
-	<!--		<li id="lunchTab" class="active">Lunch</li>
-			<li id="dinnerTab" >Dinner</li>
-			<li id="appetizerTab" >Appetizer</li>-->
-		</ul>
-	</div>
+          // Fetch one and one row
+          while ($row=mysqli_fetch_assoc($result))
+            {
+              $type = $row["menutype"];
+              if($row[menutype] == "Chicken") {
+                  echo "<li id='".$type."Tab' class='active'>".$type."</li>";
+              } else {
+                echo "<li id='".$type."Tab'>".$type."</li>";
+              }
+            }
+            mysqli_free_result($result);
+          }
+       ?>
+       <li id="viewTab">View All</li>
+  <!--    <li id="lunchTab" class="active">Lunch</li>
+      <li id="dinnerTab" >Dinner</li>
+      <li id="appetizerTab" >Appetizer</li>-->
+    </ul>
+  </div>
   <div class="cart">
     <form action="confirmation.php" method="get">
       <h1>Order Contents</h1>
@@ -54,26 +55,26 @@
    </form>
   </div>
 
-	<div class="content">
-		<div class="menu">
-			<span class="menuTitle">Chicken</span>
+  <div class="content">
+    <div class="menu">
+      <span class="menuTitle">Chicken</span>
       <hr class="typeHr">
       <dl>
-				<?php
-						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Chicken'";
-						$result = mysqli_query($connection, $sql);
-						if ($result=mysqli_query($connection,$sql))
-						{
-						// Fetch one and one row
-						while ($row=mysqli_fetch_assoc($result))
-							{
-								$type = $row["menutype"];
-								$name = $row["foodName"];
-								$price = $row["price"];
+        <?php
+            $sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Chicken'";
+            $result = mysqli_query($connection, $sql);
+            if ($result=mysqli_query($connection,$sql))
+            {
+            // Fetch one and one row
+            while ($row=mysqli_fetch_assoc($result))
+              {
+                $type = $row["menutype"];
+                $name = $row["foodName"];
+                $price = $row["price"];
                 $id = $row["menuid"];
-								$description = $row["description"];
-								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
-								echo "<dd>".$description . "</dd>";
+                $description = $row["description"];
+                echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
+                echo "<dd>".$description . "</dd>";
 
                 ?>
 
