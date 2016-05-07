@@ -16,10 +16,10 @@
 				<div class="next"><img src="images/next.png" alt="next"></div>
 			  	<div id="toggle" class="play"></div>
 				<ul>
-				    <li><img src="img/test1.jpg" alt="test1"><p>BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH </p></li>
-				    <li><img src="img/test2.jpg" alt="test2"></li>
-				    <li><img src="img/test3.jpg" alt="test3"></li>
-				    <li><img src="img/test4.jpg" alt="test4"></li>
+				    <li><img src="img/test1.jpg" alt="test1"></li>
+				    <li><img src="img/test2.jpg" alt="test2"><p>Made with the freshest ingredients</p></li>
+				    <li><img src="img/test3.jpg" alt="test3"><p>Enjoy a fantastic meal with the whole family</p></li>
+				    <li><img src="img/test4.jpg" alt="test4"><p>Unique flair with elegent simplicity</p></li>
 				  </ul>
 			</div><!-- end slider -->
 			<div id="pagination"><div id="select"><ul></ul></div></div>

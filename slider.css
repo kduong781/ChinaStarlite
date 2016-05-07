@@ -30,13 +30,14 @@
   font-size: 4em;
   color: white;
   position: absolute;
-  top:60%;
+  top:63%;
   line-height:1;
   width: 50%;
   left: 25%;
   text-align: center;
   font-weight: bold;
   background: rgba(0,0,0,0.7);
+  padding: 0.2em 0 0.2em 0;
 }
 
 
