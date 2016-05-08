@@ -227,7 +227,7 @@ foreach($_GET as $key => $val) {
 <fieldset>
   <legend>Privacy Issues</legend>
   <div>
-    Big Furniture respects the privacy of the personal information of its employees and customers. We are committed to protecting the privacy of personal information entrusted to us. In line with that commitment, we seek to be transparent and accountable with respect to the collection, use, disclosure, and security of personal information. Click Agree to proceed to the checkout.
+    We take your privacy very seriously. Any information given is solely used to complete your orders. Your information remains securely with only us.
   </div>
 </fieldset>
 </div>';
