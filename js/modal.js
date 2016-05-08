@@ -14,6 +14,10 @@ var listNumber = 0;
 // Get the <span> element that closes the modal
 
 function openModal(x) {
+  var nav = document.getElementsByTagName("nav")[0];
+	var navPlacement = document.getElementById('navPlacement');
+	 nav.className="smaller";
+     navPlacement.style.height=nav.clientHeight;
   var btn = document.getElementById("modal-".concat(x));
   modal = btn;
   btn.style.display = "block";
