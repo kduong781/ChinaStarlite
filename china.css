@@ -330,7 +330,7 @@ form{
 	padding-left: 2em;
 }
 
-.formFields input[type=submit], .formFields input[type=reset],button{
+.formFields input[type=submit], .formFields input[type=reset]{
 	background: rgba(0,0,0,.9);
 	color: white;
 	height: 3em;
@@ -340,6 +340,28 @@ form{
 	border: 1px solid white;
 	font-weight: bold;
 	font-family: Arial;
+}
+
+
+.formFields button.forgot{
+	border: 3px solid red;
+	background: rgba(0,0,0,.9);
+	color: white;
+	height: 3em;
+	width: 10em;
+	margin: 0 0.5em 0 0.5em;
+	cursor: pointer;
+	border: 1px solid white;
+	font-weight: bold;
+	font-family: Arial;
+	float: right;
+
+}
+
+
+.formFields .dateSection{
+	font-size: 2em;
+	vertical-align: -0.2em;
 }
 
 label.terms{
@@ -380,10 +402,6 @@ label.terms{
 	margin-top: 1em;
 }
 
-.formFields .dateSection{
-	font-size: 2em;
-	vertical-align: -0.2em;
-}
 
 #registerInfo{
 	display: block;

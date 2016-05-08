@@ -31,7 +31,7 @@ include 'navbar.php';
 					<label for="loginusername">Username:</label> <input type="text" name="loginusername" id="loginusername"><br>
 					<label for="loginpassword">Password:</label> <input type="password" name="loginpassword" id="loginpassword"><br>
 					<input type="submit" name="submit" value="Log In">
-					<button name="forgot">Forgot Password</button><br>
+					<button name="forgot" class="forgot">Forgot Password</button><br>
 
 		<?php
 
