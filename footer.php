@@ -21,7 +21,7 @@
 	    echo " Check us out on <a href='https://github.com/kduong781/ChinaStarlite/' target='_blank'>Github</a>";
 	    echo" </small>";
       echo "<br />";
-      echo "<small>Last Modified: " . date ("F d Y H:i:s.", getlastmod())."</small>";
+      echo "<small>Last Modified: " . date ("F d, Y", getlastmod())." at ". date ("g:i:s A", getlastmod())."</small>";
 	    echo" </div>";
 	    ?>
 </footer>
