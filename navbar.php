@@ -116,7 +116,6 @@
     }
     var showMenu = document.querySelector('nav > ul > li.menu');
     var menuItems = document.querySelectorAll('nav > ul > li.right');
-    var show = false;
 
     function menuShrink(){
         var id = setInterval(framer, 25);
@@ -126,7 +125,7 @@
                     clearInterval(id);
                 } else {
                     menuItems[i].style.display="none";
-                    i++
+                    i++;
                 }
             } 
     }
@@ -138,13 +137,14 @@
                     clearInterval(id);
                 } else {
                     menuItems[i].style.display="block";
-                    i++
+                    i++;
                 }
             } 
     }
 
+    var show = true;
     showMenu.onclick = function(){
-        if(show == true){
+        if(show){
            menuShrink();
            show = false;
 
