@@ -11,13 +11,13 @@
 }
 
 nav{
-    -webkit-transition: all 0.3s;
- 	-moz-transition: all 0.3s;
- 	-ms-transition: all 0.3s;
- 	-o-transition: all 0.3s;
- 	transition: all 0.3s;
- 	z-index: 205;
- 	background: #151515;
+	z-index: 4;
+	background: #151515;/* darkish black*/
+	overflow: auto;
+	position: fixed;
+	width: 100%;
+	top:0;
+	clear: both;
 }
 
 nav ul {
@@ -111,21 +111,6 @@ nav ul li.menu img{
 	margin-right:auto;
 	margin-left:auto;
 }
-
-nav{
-	background: #151515;/* darkish black*/
-	overflow: auto;
-	position: fixed;
-	width: 100%;
-	top:0;
-	clear: both;
-	-webkit-transition: all 0.3s;
- 	-moz-transition: all 0.3s;
- 	-ms-transition: all 0.3s;
- 	-o-transition: all 0.3s;
- 	transition: all 0.3s;
-}
-
 
 .left {
 	float: left;
