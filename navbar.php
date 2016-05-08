@@ -16,6 +16,7 @@
         <li class='right'><a href="order.php">Order Now</a></li>
         <li class='right'><a href="menu.php">Menu</a></li>
         <li class='right'><a href="index.php">Home</a></li>
+        <li class='right menu'><img src="images/menu.png" alt="menu"></li>
     </ul>
     <div id="pad"></div>
  </nav>
@@ -69,12 +70,14 @@
     }
 
 
-    function reverseNavOrder(){
+ /*   function reverseNavOrder(){
         var $menuItems = document.getElementById("primary");
         var $i = $menuItems.childNodes.length;
-        var $tags = $menuItems.getElementsByTagName('LI');
-
-        //if(window.innerWidth<=1057){ //if resized back, change back
+        var $tags = document.querySelectorAll('nav > ul > li');
+        //var $tags = $menuItems.getElementsByTagName('NAV')[0].getElementsByTagName('LI');
+            //alert($tags[2].getElementsByTagName('a')[0].innerHTML);
+          if(window.innerWidth<=1057){
+           
             $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
             $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
             $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
@@ -82,22 +85,85 @@
             while ($i--){
                 $menuItems.appendChild($menuItems.childNodes[$i]);
             }
+            $tags = document.querySelectorAll('nav > ul > li');
+       
+        }else{
+            if($tags[2].getElementsByTagName('a')[0].innerHTML != 'Sign In' || $tags[2].getElementsByTagName('a')[0].innerHTML == "undefined"){
+                $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
+                $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
+                $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
+                $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
+                while ($i--){
+                    $menuItems.appendChild($menuItems.childNodes[$i]);
+                }
+            $tags = document.querySelectorAll('nav > ul > li');
+            }
+        }
+       //return window.innerWidth;
 
-       // }
-       return window.innerWidth;
+       // alert($tags[2].innerHTML.indexOf('Sign In') > -1);
+    }
+*/
+    function dropDownMenu(){
+        var dropdown = document.querySelector("nav > ul > li.menu > img");
+        /*var dropdown = document.getElementsByClassName('menu')[0];*/
+       // alert(dropdown.tagName);
+        if(window.innerWidth>740){
+            dropdown.style.display = 'none';
+        }else{
+            dropdown.style.display = 'block';
+        }
+    }
+    var showMenu = document.querySelector('nav > ul > li.menu');
+    var menuItems = document.querySelectorAll('nav > ul > li.right');
+    var show = false;
 
-       /* alert($tags[2].innerHTML.indexOf('Sign In') > -1);*/
+    function menuShrink(){
+        var id = setInterval(framer, 25);
+           var i= 0;
+            function framer() {
+                if (i==6) {
+                    clearInterval(id);
+                } else {
+                    menuItems[i].style.display="none";
+                    i++
+                }
+            } 
+    }
+    function menuDrop(){
+        var id = setInterval(framer, 25);
+           var i= 0;
+            function framer() {
+                if (i==6) {
+                    clearInterval(id);
+                } else {
+                    menuItems[i].style.display="block";
+                    i++
+                }
+            } 
     }
 
+    showMenu.onclick = function(){
+        if(show == true){
+           menuShrink();
+           show = false;
 
+        }else{
+           menuDrop();
+           show=true;
+        }
+    }
 
     window.onload = shrinkNav();
 
     window.onload = function(){//initialize global var, know when to switch back
-        //alert(window.innerWidth)
-        if(window.innerWidth<=1057){
-            reverseNavOrder();
-        }
+            //reverseNavOrder();
+            dropDownMenu();
+    }
+
+    window.onresize = function(){
+       // reverseNavOrder();
+            dropDownMenu();
     }
 
     /*window.onresize = function(){

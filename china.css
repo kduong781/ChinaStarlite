@@ -98,6 +98,20 @@ nav ul li a.active{
 	border-left: 1px solid white;*/
 }
 
+nav ul li.menu{
+	cursor: pointer;
+	text-align: center;
+	padding:0;
+	background: #0B0B0B;
+}
+
+nav ul li.menu img{
+	display: none;
+	padding: 1em;
+	margin-right:auto;
+	margin-left:auto;
+}
+
 nav{
 	background: #151515;/* darkish black*/
 	overflow: auto;
@@ -620,7 +634,7 @@ footer ul li a:hover{
 	}
 }
 
-@media screen and (max-width: 1054px){
+@media screen and (max-width: 1097px){
 	#transparent p{
 		padding: 1em 0 0 0;
 	}
@@ -720,6 +734,9 @@ footer ul li a:hover{
 		padding: none;
 	}*/
 
+	nav{
+		position: relative;
+	}
 
 	nav ul li.left img{
 		margin-bottom: 2em;

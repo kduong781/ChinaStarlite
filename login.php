@@ -149,7 +149,7 @@ $msg
 
 EMAIL;*/
 
-$header = 'From: minijordon@gmail.com';
+$header = 'minijordon@gmail.com';
 
 	mail($to, $subject, $message, $header);
 	
