@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
 	<title>Order Now</title>
-  <?php  include 'header.php' ?>
+  <?php include 'header.php' ?>
 		<link rel="stylesheet" type="text/css" href="order.css">
     <link rel="stylesheet" type="text/css" href="modal.css">
   <meta charset="UTF-8">
@@ -70,8 +70,10 @@
               {
                 $type = $row["menutype"];
                 $name = $row["foodName"];
+                $url = $row["url"];
                 $price = $row["price"];
                 $id = $row["menuid"];
+                $url =$row["url"];
                 $description = $row["description"];
                 echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
                 echo "<dd>".$description . "</dd>";
@@ -88,7 +90,8 @@
                       <h2>Order</h2>
                     </div>
                     <div class="modal-body">
-                      <p><?php echo $name;?></p>
+                      <p><?php echo $name . " $" . round($price,2);?></p>
+                      <img src="<?php echo $url;?>"></img>
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
@@ -136,6 +139,7 @@
 								$type = $row["menutype"];
 								$name = $row["foodName"];
 								$price = $row["price"];
+                $url = $row["url"];
                 $id = $row["menuid"];
 								$description = $row["description"];
 								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
@@ -153,7 +157,8 @@
                       <h2>Order</h2>
                     </div>
                     <div class="modal-body">
-                      <p><?php echo $name;?></p>
+                      <p><?php echo $name . " $" . round($price,2);?></p>
+                      <img src="<?php echo $url;?>"></img>
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
@@ -189,6 +194,7 @@
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
+                $url = $row["url"];
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
@@ -207,7 +213,8 @@
                       <h2>Order</h2>
                     </div>
                     <div class="modal-body">
-                      <p><?php echo $name;?></p>
+                      <p><?php echo $name . " $" . round($price,2);?></p>
+                      <img src="<?php echo $url;?>"></img>
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
@@ -243,6 +250,7 @@
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
+                $url = $row["url"];
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
@@ -261,7 +269,8 @@
                       <h2>Order</h2>
                     </div>
                     <div class="modal-body">
-                      <p><?php echo $name;?></p>
+                      <p><?php echo $name . " $" . round($price,2);?></p>
+                      <img src="<?php echo $url;?>"></img>
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
@@ -297,6 +306,7 @@
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
+                $url = $row["url"];
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
@@ -315,7 +325,8 @@
                       <h2>Order</h2>
                     </div>
                     <div class="modal-body">
-                      <p><?php echo $name;?></p>
+                      <p><?php echo $name . " $" . round($price,2);?></p>
+                      <img src="<?php echo $url;?>"></img>
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
@@ -351,6 +362,7 @@
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
+                $url = $row["url"];
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
@@ -369,7 +381,8 @@
                       <h2>Order</h2>
                     </div>
                     <div class="modal-body">
-                      <p><?php echo $name;?></p>
+                      <p><?php echo $name . " $" . round($price,2);?></p>
+                      <img src="<?php echo $url;?>"></img>
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
@@ -405,6 +418,7 @@
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
+                $url = $row["url"];
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
@@ -423,7 +437,8 @@
                       <h2>Order</h2>
                     </div>
                     <div class="modal-body">
-                      <p><?php echo $name;?></p>
+                      <p><?php echo $name . " $" . round($price,2);?></p>
+                      <img src="<?php echo $url;?>"></img>
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
@@ -459,6 +474,7 @@
 							{
 								$type = $row["menutype"];
 								$name = $row["foodName"];
+                $url = $row["url"];
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
@@ -477,7 +493,8 @@
                       <h2>Order</h2>
                     </div>
                     <div class="modal-body">
-                      <p><?php echo $name;?></p>
+                      <p><?php echo $name . " $" . round($price,2);?></p>
+                      <img src="<?php echo $url;?>"></img>
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
