@@ -137,8 +137,29 @@ include 'navbar.php';
 						$forgotEmailUsername = $row['username'];
 						$forgotEmailPassword = $row['password'];
 					}
-					$msg = "Username:".$forgotEmailUsername."\n Password:".$forgotEmailPassword."";
-					mail($forgottenEmail,"Your ChinaStarlite Credentials",$msg);
+
+
+
+$to = $forgottenEmail;
+$subject = 'Your ChinaStarlite Credentials';
+$email = $forgottenEmail;
+$messsage = "Username:".$forgotEmailUsername."\n Password:".$forgotEmailPassword."";
+/*$body = <<<EMAIL
+$msg
+
+EMAIL;*/
+
+$header = 'From: minijordon@gmail.com';
+
+	mail($to, $subject, $message, $header);
+	
+
+					//mail($forgottenEmail,"Your ChinaStarlite Credentials",$msg);
+
+				//	$msg = "Username:".$forgotEmailUsername."\n Password:".$forgotEmailPassword."";
+				//	mail($forgottenEmail,"Your ChinaStarlite Credentials",$msg);
+
+
 				}
 				mysqli_free_result($query);
 		}
