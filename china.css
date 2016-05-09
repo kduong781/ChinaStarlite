@@ -588,24 +588,27 @@ label.terms{
 }
 
 #usernameUnderline{
-	display: inline-block;
-	float: left;
+	display: inline-block !important;
+	float: left !important;
 	padding-bottom: 0.3em;
 	margin: 0 0.2em 0 0.2em;
+	background: red;
 }
 
 #passwordUnderline{
-	display: inline-block;
-	float: left;
+	display: inline-block !important;
+	float: left !important;
 	padding-bottom: 0.3em;
 	margin: 0 0.2em 0 0.2em;
+	background: red;
 }
 
 #deactivateUnderline{
-	display: inline-block;
-	float: left;
+	display: inline-block !important;
+	float: left !important;
 	padding-bottom: 0.3em;
 	margin: 0 0.2em 0 0.2em;
+	background: red;
 }
 
 .profile{

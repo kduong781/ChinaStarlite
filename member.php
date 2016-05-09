@@ -93,7 +93,7 @@ var usernames = [];
 			<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="newusernameform">
 				<label for="newUsername">Enter your new username:</label>
 				<input type="text" name="newusername" id="newUsername"><br><div id='newusernamemsg'></div><br>
-				<label for="newUsernameassword">Enter your password to change your username: </label>
+				<label for="newUsernamepassword">Enter your password to change your username: </label>
 				<input type="password" name="newusernamepassword" id="newUsernamepassword"><br><div id='newusernamepasswordmsg'></div>
 				<br>
 				<input type="submit" name="newusernamesubmit" value="submit">

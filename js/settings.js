@@ -104,6 +104,19 @@ window.onload = function(){
   settingsContent.style.height = 0;
   settingsContent.style.border = 'none';
   usernameunderline.style.borderBottom ='3px solid black';
+
+  deactivateunderline.style.display = 'inline-block';
+ passwordunderline.style.display = 'inline-block';
+  usernameunderline.style.display ='inline-block';
+
+  deactivateunderline.style.float= 'left';
+  passwordunderline.style.float= 'left';
+  usernameunderline.style.float ='left';
+
+  deactivateunderline.style.paddingBottom= '0.3em';
+  passwordunderline.style.paddingBottom= '0.3em';
+  usernameunderline.style.paddingBottom ='0.3em';
+
   newusernameform.style.display = 'block';
   newpasswordform.style.display = 'none';
   deactivateform.style.display = 'none';
