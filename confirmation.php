@@ -117,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php
 if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $emailErr == ""
   && $stateErr== "" &&  $cityErr == "" && $streetErr == "" && $zipErr == "" &&  $deliveryErr == "" && $privacyErr == "") || isset($_SESSION['loginusername'])) {
-    $sql = "INSERT INTO cecs323o29.orders(oId,userID,date,menu_menuid,quantity) VALUES ";
+    $sql = "INSERT INTO orders(oId,userID,date,menu_menuid,quantity) VALUES ";
     $counter = 0;
     foreach($_GET as $key => $val) {
         if($val == "Submit") {
