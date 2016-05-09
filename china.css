@@ -537,6 +537,90 @@ label.terms{
 	background: #151515;
 }
 
+.settings{
+	background: #151515;
+	color: white;
+	font-family: Arial;
+	font-size: 1em;
+	font-weight: bold;
+	vertical-align: center;
+	padding:0.5em;
+	cursor: pointer;
+}
+
+.settings img{
+	padding: 0 0.5em 0 0;
+	margin-bottom: -0.3em;
+	border-right: 1px solid white;
+}
+
+#settingsContent{
+	clear: both;
+	/*border: 1px solid black;*/
+	overflow: hidden;
+	/*height: 300px;*/
+	padding: 0 1em 0 1em;
+}
+
+#userNameBox form,#passwordBox form,#deactivateBox form{
+	clear: both;
+	padding-top: 2em;
+}
+
+#userNameBox input[type=submit],#passwordBox input[type=submit],#deactivateBox input[type=submit]{
+	background: black;
+	color: white;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 1em;
+	padding: 0.5em;
+}
+
+#warningmessage{
+	font-weight: bold;
+	color: red;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+#userNameBox label,#passwordBox label,#deactivateBox label{
+	font-weight: bold;
+}
+
+#usernameUnderline{
+	display: inline-block;
+	float: left;
+	padding-bottom: 0.3em;
+	margin: 0 0.2em 0 0.2em;
+}
+
+#passwordUnderline{
+	display: inline-block;
+	float: left;
+	padding-bottom: 0.3em;
+	margin: 0 0.2em 0 0.2em;
+}
+
+#deactivateUnderline{
+	display: inline-block;
+	float: left;
+	padding-bottom: 0.3em;
+	margin: 0 0.2em 0 0.2em;
+}
+
+.profile{
+	background: #151515;
+	color: white;
+	font-family: Arial;
+	font-size: 1em;
+	font-weight: bold;
+	vertical-align: center;
+	padding:0.5em;
+	cursor: pointer;
+	border-radius: 10px;
+/*	box-shadow: 2px 5px 2px black;*/
+}
+
 footer{
 	clear: both;
 	text-align: center;
@@ -704,21 +788,6 @@ footer ul li a:hover{
 }
 
 @media screen and (max-width: 740px){
-/*	#content .formFields{
-		text-align: center;
-		float: none;
-		margin-left: auto;
-		margin-right: auto;
-		display: inline;
-		background: green
-		padding: none;
-	}*/
-
-/*	#registerInfo{
-		margin:0;
-		padding: none;
-	}*/
-
 	nav{
 		position: relative;
 	}

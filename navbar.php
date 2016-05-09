@@ -156,7 +156,7 @@
 
     window.onload = shrinkNav();
 
-    window.onload = function(){//initialize global var, know when to switch back
+    window.onload = function(){
             //reverseNavOrder();
             dropDownMenu();
     }
@@ -165,9 +165,5 @@
        // reverseNavOrder();
             dropDownMenu();
     }
-
-    /*window.onresize = function(){
-        reverseNavOrder();
-    }*/
 
 </script>

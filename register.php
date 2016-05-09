@@ -85,7 +85,7 @@ if ($error != null) {
                   /*break;*/
                 }
                 if($row['email'] == $email){
-                  echo "<br>Your email address is already being used by another account in our system<br>";
+                  /*echo "<br>Your email address is already being used by another account in our system<br>";*/
                   $registeremailmsg="Your email address is already being used by another account in our system";
                   $allow=false;
                   /*break;*/
