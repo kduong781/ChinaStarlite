@@ -2,6 +2,9 @@
 	var modalWindow = document.getElementById('modal_window');
 	var modalClose = document.getElementById('modal_close');
 	var forgotButton = document.getElementsByName('forgot')[0];
+	var modalFeedback = document.getElementById('modal_feedback');
+	var forgotemail = document.getElementById('forgotemail');
+	var forgotemailmessage = document.getElementById('forgotemailmessage');
 
 function showModal(){
 	modalBackground.style.display="block";
@@ -33,3 +36,19 @@ modalBackground.onclick = function(e){
 	}
 }
 
+forgotemail.onkeyup = function(){
+	forgotemailmessage.innerHTML = '';
+}
+
+modalFeedback.onsubmit = function(e){
+	if(forgotemail.value.trim() == ''){
+		e.preventDefault();
+		forgotemailmessage.innerHTML = 'Please enter your email address';
+	}
+	var emailpat = new RegExp("^(.+)@([^\.].*)\.([a-z]{2,})$");
+	if(!emailpat.test(forgotemail.value.trim())){
+		e.preventDefault();
+		forgotemailmessage.innerHTML = 'Please enter a valid email address';
+	}
+
+}

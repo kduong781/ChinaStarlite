@@ -117,7 +117,7 @@ include 'navbar.php';
 					<div style="text-align: right;"><a id="modal_close" href="#">close <b>[X]</b></a></div>
 					<form id="modal_feedback" method="POST" action="#" accept-charset="UTF-8">
 						<p>Enter your email address to retrieve your username/password</p>
-						<input type="text" name="forgotemail"><br><br>
+						<input type="text" name="forgotemail" id="forgotemail"><br><div id="forgotemailmessage"></div><br>
 						<input type="submit" name="feedback" value="Send Message">
 					</form>
 				</div> <!-- #modal_window -->
