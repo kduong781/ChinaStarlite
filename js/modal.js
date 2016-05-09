@@ -28,7 +28,7 @@ function closeModal(x) {
   btn.style.display = "none";
 }
 
-function addItem(name, price, id) {
+function addItem(name, price, id, menuid) {
    var re = /^[1-9]{1}[0-9]{0,1}$/;
    var cartList = document.getElementById("cartList");
    var li = document.createElement('li');
@@ -36,7 +36,7 @@ function addItem(name, price, id) {
    if(re.test(quantity)) {
      price = price * quantity;
      li.innerHTML = "<button class='remove' onclick='removeItem("+listNumber+","+price +")'>Remove</button>" + "x" + quantity + " " + name  + " <span class='price'>$" + parseFloat(price).toFixed(2) + "</span>"
-      + "<input type='hidden' name='" + listNumber+ "'value='x" + quantity + " " + name + " $" + parseFloat(price).toFixed(2) + "'></input>";
+      + "<input type='hidden' name='" + listNumber+ "'value='" + menuid + quantity + "'></input>";
      li.id = listNumber;
      listNumber++;
      cartList.parentNode.insertBefore(li,cartList);

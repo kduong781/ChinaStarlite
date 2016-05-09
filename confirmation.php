@@ -7,6 +7,11 @@
 </style>
 <title>Checkout</title>
 <meta charset="utf-8">
+<?php
+  $connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o29","nijeek","cecs323o29");
+	$sql = "";
+  mysqli_set_charset($connection,"utf8");
+?>
 <?php include 'header.php' ?>
 	<link rel="stylesheet" type="text/css" href="order.css">
 	<link rel="stylesheet" type="text/css" href="modal.css">
@@ -20,6 +25,7 @@
 $firstnameErr = $lastnameErr = $emailErr = $stateErr = $cityErr = $streetErr = $zipErr  = $privacyErr = "";
 $firstname = $lastname = $email = $state = $city = $street = $zip = $privacy = "";
 $price = "";
+$date = date ("F d, Y", getlastmod())." at ". date ("g:i:s A", getlastmod());
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
    if (empty($_POST["firstname"])) {
@@ -147,22 +153,43 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
 						echo "Last Name: ". $_SESSION['lname']."</br>";
 				}if(isset($_SESSION['email']) ){
 					echo "Email: ". $_SESSION['email']."</br>";
+			///		echo "INSERT INTO cecs323o29.orders VALUES(NULL,". $_SESSION['id'].",".$date.",".substr($val,0,4).",".substr($val,4).")"; //, $date, substr($val,0,4), substr($val,4))";
+								//echo "INSERT INTO orders VALUES ";//"(NULL, ";//.$_SESSION['id'].",";//. $date.",". substr($val,0,4).",". substr($val,4).")";
 				}
 			}
 
+      $sql = "INSERT INTO cecs323o29.orders('oId','userID','date','menu_menuid','quantity') VALUES ";
+      $counter = 0;
 			foreach($_GET as $key => $val) {
 					if($val == "Submit") {
 
 					}else {
-						echo "$val </br>";
+            if($counter > 0) {
+              $sql .= ", ";
+            }
+						$sql .= "(NULL,". $_SESSION['id'].",'".$date."',".substr($val,0,4).",".substr($val,4).")";
+            $counter++;
 					}
 			}
-
+      echo $sql;
+			$result = mysqli_query($connection, $sql);
+			if (!$result) { //check if query is successful
+				 mysqli_free_result($result);
+			}
+      mysqli_close($conn);
         	fclose($myfile);
         echo "</fieldset></div></div>";
 
   }else {
-echo '<div id="main">';
+		echo '<div id="main">';
+
+
+foreach($_GET as $key => $val) {
+		if($val == "Submit") {
+		}else {
+			echo "$val </br>"; // prints out list of items if not logged in
+		}
+}
 
 ?>
 <div id="itemConfirm">

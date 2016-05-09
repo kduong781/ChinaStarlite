@@ -97,7 +97,7 @@
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
                       <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
                     </div>
                   </div>
 
@@ -164,7 +164,7 @@
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
                       <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
                     </div>
                   </div>
 
@@ -220,7 +220,7 @@
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
                       <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
                     </div>
                   </div>
 
@@ -276,7 +276,7 @@
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
                       <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
                     </div>
                   </div>
 
@@ -332,7 +332,7 @@
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
                       <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
                     </div>
                   </div>
 
@@ -388,7 +388,7 @@
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
                       <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
                     </div>
                   </div>
 
@@ -444,7 +444,7 @@
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
                       <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
                     </div>
                   </div>
 
@@ -500,7 +500,7 @@
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
                       <input pattern="[1-9]{1}[0-9]{0,1}" required oninvalid="this.setCustomValidity('Please input a positive integer (Max 2 digits)')" id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>')"></input>
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
                     </div>
                   </div>
 

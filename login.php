@@ -62,6 +62,7 @@ include 'navbar.php';
 					$dbfname = $row['fname'];
 					$dblname = $row['lname'];
 					$dbemail = $row['email'];
+					$userid = $row["id"];
 				}
 				//check if username and password matches
 				if($username==$dbusername && $password==$dbpassword){
@@ -71,6 +72,7 @@ include 'navbar.php';
 					$_SESSION['fname'] = $dbfname;
 					$_SESSION['lname'] = $dblname;
 					$_SESSION['email'] = $dbemail;
+					$_SESSION['id'] = $userid;
 
 					header( 'Location: member.php' ) ;//redirect to member page
 				}else{
@@ -152,7 +154,7 @@ EMAIL;*/
 $header = 'minijordon@gmail.com';
 
 	mail($to, $subject, $message, $header);
-	
+
 
 					//mail($forgottenEmail,"Your ChinaStarlite Credentials",$msg);
 
