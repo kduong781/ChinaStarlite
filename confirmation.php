@@ -187,7 +187,7 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
             // Fetch one and one row
             while ($row=mysqli_fetch_assoc($result))
               {
-                  echo "x".substr($val,4)." ".$row['foodName']." ".$price."</br> ";
+                  echo "x".substr($val,4)." ".$row['foodName']." $".$row['price']."</br> ";
               }
               mysqli_free_result($result);
             }
@@ -211,7 +211,7 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
           // Fetch one and one row
           while ($row=mysqli_fetch_assoc($result))
             {
-                echo "x".substr($val,4)." ".$row['foodName']." ".$price."</br> ";
+                echo "x".substr($val,4)." ".$row['foodName']." ".$row['price']."</br> ";
             }
             mysqli_free_result($result);
           }
