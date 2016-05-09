@@ -117,6 +117,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php
 if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $emailErr == ""
   && $stateErr== "" &&  $cityErr == "" && $streetErr == "" && $zipErr == "" &&  $deliveryErr == "" && $privacyErr == "") || isset($_SESSION['loginusername'])) {
+    $sql = "INSERT INTO cecs323o29.orders(oId,userID,date,menu_menuid,quantity) VALUES ";
+    $counter = 0;
+    foreach($_GET as $key => $val) {
+        if($val == "Submit") {
+
+        }else {
+          if($counter > 0) {
+            $sql .= ", ";
+          }
+          $sql .= "(NULL,". $_SESSION['id'].",'".$date."',".substr($val,0,4).",".substr($val,4).")";
+          $counter++;
+        }
+    }
+    $result = mysqli_query($connection, $sql);
+    if (!$result) { //check if query is successful
+       mysqli_free_result($result);
+    }
+
+
       echo "<div id='main'>";
       echo "<h1>Order Confirmation (Pickup)</h1>";
       				echo "<div class='orderInfo'><fieldset><legend>Order Information</legend>";
@@ -157,25 +176,23 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
 								//echo "INSERT INTO orders VALUES ";//"(NULL, ";//.$_SESSION['id'].",";//. $date.",". substr($val,0,4).",". substr($val,4).")";
 				}
 			}
+      foreach($_GET as $key => $val) {
+          if($val == "Submit") {
 
-      $sql = "INSERT INTO cecs323o29.orders(oId,userID,date,menu_menuid,quantity) VALUES ";
-      $counter = 0;
-			foreach($_GET as $key => $val) {
-					if($val == "Submit") {
-
-					}else {
-            if($counter > 0) {
-              $sql .= ", ";
+          }else {
+            $sql = "SELECT * FROM menu WHERE menuid=".substr($val,0,4);
+            $result = mysqli_query($connection, $sql);
+            if ($result=mysqli_query($connection,$sql))
+            {
+            // Fetch one and one row
+            while ($row=mysqli_fetch_assoc($result))
+              {
+                  echo "x".substr($val,4)." ".$row['foodName']." ".$price."</br> ";
+              }
+              mysqli_free_result($result);
             }
-						$sql .= "(NULL,". $_SESSION['id'].",'".$date."',".substr($val,0,4).",".substr($val,4).")";
-            $counter++;
-					}
-			}
-			$result = mysqli_query($connection, $sql);
-			if (!$result) { //check if query is successful
-				 mysqli_free_result($result);
-			}
-      mysqli_close($conn);
+          }
+      }
         	fclose($myfile);
         echo "</fieldset></div></div>";
 
@@ -183,12 +200,23 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
 		echo '<div id="main">';
 
 
-foreach($_GET as $key => $val) {
-		if($val == "Submit") {
-		}else {
-			echo "$val </br>"; // prints out list of items if not logged in
-		}
-}
+    foreach($_GET as $key => $val) {
+        if($val == "Submit") {
+
+        }else {
+          $sql = "SELECT * FROM menu WHERE menuid=".substr($val,0,4);
+          $result = mysqli_query($connection, $sql);
+          if ($result=mysqli_query($connection,$sql))
+          {
+          // Fetch one and one row
+          while ($row=mysqli_fetch_assoc($result))
+            {
+                echo "x".substr($val,4)." ".$row['foodName']." ".$price."</br> ";
+            }
+            mysqli_free_result($result);
+          }
+        }
+    }
 
 ?>
 <div id="itemConfirm">
