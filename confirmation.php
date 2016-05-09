@@ -158,7 +158,7 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
 				}
 			}
 
-      $sql = "INSERT INTO cecs323o29.orders('oId','userID','date','menu_menuid','quantity') VALUES ";
+      $sql = "INSERT INTO cecs323o29.orders(oId,userID,date,menu_menuid,quantity) VALUES ";
       $counter = 0;
 			foreach($_GET as $key => $val) {
 					if($val == "Submit") {
@@ -171,7 +171,6 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
             $counter++;
 					}
 			}
-      echo $sql;
 			$result = mysqli_query($connection, $sql);
 			if (!$result) { //check if query is successful
 				 mysqli_free_result($result);
