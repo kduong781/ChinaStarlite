@@ -345,7 +345,6 @@ var usernames = [];
 		<h3>Your progress:</h3>
 			You are <?php echo $pointsleft; ?> points away from your next deal!
 		</p>
-		<br><br>
 		<div id="progressbar">
 			<div id="progress">
 				<div id="light">
