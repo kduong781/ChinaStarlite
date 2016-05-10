@@ -260,25 +260,45 @@ h3.clear{
 
 #leftBarr{
 	margin: 1em 0 1em 0;
-	width: 67%;
+	width: 69%;
 	float: left;
 }
 
 #leftBarr .floatingBoxLeft{
-	border: 3px solid green;
+	/*border: 3px solid green;*/
 	margin-bottom: 1.5em;
 	width: 95%;
 }
+#leftBarr .stats{
+	box-shadow: 1px 1px 0 rgba(0,0,0,0.2),-1px -1px 0 rgba(0,0,0,0.1);
+}
 
 #leftBarr .floatingBoxLeft h4{
-	background: rgba(0,255,6,0.5);
+	/*background: rgba(0,255,6,0.5);*/
+	background:  #DEDEDE; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, #DEDEDE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, #DEDEDE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, #DEDEDE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, #DEDEDE); /* Standard syntax */
 	margin-top:0;
 	padding: 0.5em;
 	margin-bottom:0;
 }
 
+#leftBarr .stats ul li{
+	/*border-bottom: 1px solid black;*/
+	padding: 0.5em;
+	list-style: none;
+}
+
+
+#leftBarr .stats ul li:nth-child(odd){
+	background: #DEDCDC;
+}
+
 #leftBarr .totalpoints{
-	background: rgba(0,255,6,0.5);
+	/*background: rgba(0,255,6,0.5);*/
+	background: rgba(0,0,0,0.3);
 }
 
 #leftBarr .totalpoints p{
@@ -289,14 +309,14 @@ h3.clear{
 	padding: 0.5em;
 }
 
-#leftBarr .floatingBoxLeft ul li{
-	border-bottom: 1px solid black;
-	padding: 0.5em;
-	list-style: none;
-}
 
 #leftBarr .announcements h4{
-	background: rgba(255,0,198,0.5);
+	/*background: rgba(255,0,198,0.5);*/
+	background:  #FF00AE; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, #FF00AE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, #FF00AE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, #FF00AE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, #FF00AE); /* Standard syntax */
 	margin:0;
 	padding: 0.5em 0 0.5em 0.5em;
 }
@@ -335,7 +355,12 @@ h3.clear{
 
 
 .progress h3{
-	background: rgba(255,192,0,0.5);
+	/*background: rgba(255,192,0,0.5);*/
+	background:  #FFC000; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, #FFC000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, #FFC000); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, #FFC000); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, #FFC000); /* Standard syntax */
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	text-align: center;
@@ -390,7 +415,12 @@ h3.clear{
 }
 
 .floatingBoxRight.dealBreakdown h3{
-	background: rgba(40,70,253,0.5);
+	/*background: rgba(40,70,253,0.5);*/
+	background:  #3651F8; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, #3651F8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, #3651F8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, #3651F8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, #3651F8); /* Standard syntax */
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 	padding-left: 0.5em;

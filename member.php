@@ -284,7 +284,7 @@ var usernames = [];
 	mysqli_free_result($result);
 	$totalpoints = 0;
 	for($numDate=0;$numDate<sizeof($dates);$numDate++){
-		echo "<div class='floatingBoxLeft'>";
+		echo "<div class='floatingBoxLeft stats'>";
 		echo "<h4>".$dates[$numDate]."<span class='right'>Points</span></h4><ul>";
 		 $sql="SELECT `date`,`quantity`,`foodName`,`price`,`point`,`category` 
 				FROM orders o
