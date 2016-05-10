@@ -255,6 +255,179 @@ nav.smaller .absolute{
 	display: none;
 }
 /*----------------------------------------stop shrink------------------------------------*/
+.clear{
+	clear: both;
+	width: 100vw;
+	position: relative;
+	float: none;
+}
+
+h3.clear{
+	font-size: 1.5em;
+	margin:0;
+}
+
+#leftBarr{
+	margin: 1em 0 1em 0;
+	/*border: 1px solid yellow;*/
+	width: 67%;
+	float: left;
+}
+
+#leftBarr .floatingBoxLeft{
+	border: 3px solid green;
+	margin-bottom: 1.5em;
+	width: 95%;
+}
+
+#leftBarr .floatingBoxLeft h4{
+	background: rgba(0,255,6,0.5);
+	margin-top:0;
+	padding: 0.5em;
+	margin-bottom:0;
+}
+
+#leftBarr .totalpoints{
+	background: rgba(0,255,6,0.5);
+}
+
+#leftBarr .totalpoints p{
+	width: 98%;
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: bold;
+	padding: 0.5em;
+}
+
+/*#leftBarr .floatingBoxLeft p{
+	padding: 0 1em 1em 1em;
+	width: 95%;
+}*/
+
+#leftBarr .floatingBoxLeft ul li{
+	border-bottom: 1px solid black;
+	padding: 0.5em;
+	list-style: none;
+}
+
+#leftBarr .floatingBoxLeft.announcements h4{
+	background: rgba(255,0,198,0.5);
+}
+
+#leftBarr .floatingBoxLeft.announcements{
+	border: 3px solid #FF00D2;
+	overflow: auto;
+}
+
+#leftBarr .floatingBoxLeft.announcements img{
+	width: 10em;
+	margin: 0 1em 1em 1em;
+	border: 2px solid black;
+}
+
+#leftBarr .floatingBoxLeft.announcements p{
+	margin-top: 1.5em;
+}
+
+#rightBarr{
+	margin: 1em 0 1em 0;
+	margin-bottom: 1em;
+	/*border: 1px solid blue;*/
+	width: 27%;
+	/*height: 300px;*/
+	float: right;
+}
+
+.floatingBoxRight{
+	width: 100%;
+	/*height: 200px;*/
+	margin-bottom: 1.5em;
+}
+
+.floatingBoxRight.progress{
+	border: 3px solid orange;
+}
+
+
+.floatingBoxRight.progress h3{
+	background: rgba(255,192,0,0.5);
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	text-align: center;
+	margin-top:0;
+}
+
+.floatingBoxRight.progress p{
+	padding: 0 0.5em 0 0.5em;
+	font-weight: 400;
+}
+
+.floatingBoxRight #progressBar{
+	height: 30px;
+	width: 90%;
+	margin: 2em auto 0 auto;
+	background:#EAEAEA;
+}
+
+.floatingBoxRight #progressBar #progress{
+	height: 30px;
+	width: 1%;
+	background: #02C033;
+}
+
+.floatingBoxRight #progressBar #progress #progressAmount{
+	color: black;
+	padding-top: 0.3em;
+	font-weight: bold;
+
+}
+
+.floatingBoxRight #progressBar #progress #light{
+	height: 30px;
+	background:  #02C033; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient( #02C033, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( #02C033, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( #02C033, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient( #02C033, white); /* Standard syntax */
+}
+
+.floatingBoxRight #dealname{
+	padding: 0.3em 0.6em 0 0.6em;
+	font-weight: bold;
+}
+
+.floatingBoxRight.dealBreakdown{
+	border: 3px solid #2846FD;
+}
+
+.floatingBoxRight.dealBreakdown h3{
+	background: rgba(40,70,253,0.5);
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 0.5em;
+	text-align: left;
+	margin-top:0;
+}
+
+.floatingBoxRight.dealBreakdown p{
+	padding: 0 0.5em 0 0.5em;
+	font-weight: 400;
+	margin-bottom: 1em;
+	width: 93% !important;
+}
+
+.floatingBoxRight.dealBreakdown h4{
+	margin:0;
+	padding:0.2em;
+	font-size: 1em;
+	background: rgba(62,80,250,0.2);
+}
+
+.red{
+	color: red;
+	font-weight: bold;
+}
+
 hr{
 	margin:0;
 	padding:0;
@@ -592,7 +765,6 @@ label.terms{
 	float: left !important;
 	padding-bottom: 0.3em;
 	margin: 0 0.2em 0 0.2em;
-	background: red;
 }
 
 #passwordUnderline{
@@ -600,7 +772,6 @@ label.terms{
 	float: left !important;
 	padding-bottom: 0.3em;
 	margin: 0 0.2em 0 0.2em;
-	background: red;
 }
 
 #deactivateUnderline{
@@ -608,7 +779,6 @@ label.terms{
 	float: left !important;
 	padding-bottom: 0.3em;
 	margin: 0 0.2em 0 0.2em;
-	background: red;
 }
 
 .profile{
