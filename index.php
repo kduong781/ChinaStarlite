@@ -1,4 +1,11 @@
 #!/usr/local/php5/bin/php-cgi
+<?php 
+/**
+*Author: Rohit Sehdev
+*Contributors: Mingtau Li (all carousel functionality except for images chosen)
+*Description: Home Page
+*/
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +17,7 @@
 <body class="bkgrnd">
 <?php session_start(); ?>
 <?php include 'navbar.php' ?>
-  	<div id="carousel"><!-- noscript: get rid of carousel -->
+  	<div id="carousel">
   			<div id="slider">
 				<div class="previous"><img src="images/prev.png" alt="previous"></div>
 				<div class="next"><img src="images/next.png" alt="next"></div>

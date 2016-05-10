@@ -1,3 +1,8 @@
+/**
+*Author: Mingtau Li
+*Description: custom scripts to handle user registration input
+*Functionalities: automatically adds dashes to phone numbers, automatically advances to next date field
+*/
 function autoFormAdvance(afterNumChars,currentFormId,nextFormId) {
 	if(document.getElementById(currentFormId).value.length==afterNumChars) {
 		document.getElementById(nextFormId).focus();

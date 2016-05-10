@@ -1,4 +1,12 @@
 #!/usr/local/php5/bin/php-cgi
+<?php 
+/**
+*Author: Mingtau Li
+*Description: Site registration page
+*Allows users to create user accounts on the website
+*all user data is stored in database
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php session_start(); ?>
@@ -45,13 +53,6 @@ $phone = $_POST['registerphone'];
 ?>
 
 <?php 
-
-
-/*define('DBHOST','localhost'); //test
-define('DBNAME','cecs323o29');  //test
-define('DBUSER','root');        //test
-define('DBPASS','password');    //test
-*/ 
 
 define('DBHOST','cecs-db01.coe.csulb.edu');
 define('DBNAME','cecs323o29');
@@ -175,8 +176,6 @@ if(isset($_POST['registersubmit'])){
                 <?php
                 $success=true;
             }
-      }else{
-        //echo "<br>kikllllllllllllllllplease try again";
       }
 
 }

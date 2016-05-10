@@ -1,3 +1,8 @@
+/**
+*Author: Mingtau Li
+*Description: custom script to handle forgotten password
+*This page asks user for email address in order to retrieve a forgotten username or password associated with the email
+*/
 	var modalBackground = document.getElementById('modal_background');
 	var modalWindow = document.getElementById('modal_window');
 	var modalClose = document.getElementById('modal_close');

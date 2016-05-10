@@ -1,8 +1,10 @@
+/**
+*Author: Mingtau Li
+*Description: custom scripts for user settings
+*Functionalities: Show/Hide user settings via slideUp()/slideDown() function, displays different forms depending on button clicked
+*/
 var settingsButton = document.getElementsByClassName('settings')[0];
 var settingsContent = document.getElementById('settingsContent');
-/*var usernameBox = document.getElementById('userNameBox');
-var passwordBox = document.getElementById('passwordBox');
-var deactivateBox = document.getElementById('deactivateBox');*/
 var changeusername = document.getElementById('changeusername');
 var changepassword= document.getElementById('changepassword');
 var deactivateaccount= document.getElementById('deactivateaccount');
@@ -62,7 +64,6 @@ settingsButton.onclick = function(){
   var navPlacement = document.getElementById('navPlacement');
   nav.className="smaller";
   navPlacement.style.height=nav.clientHeight;
-  //alert(settingsContent.clientHeight);
   if(settingsContent.clientHeight==0){
     slideSettingsDown();
   }else{

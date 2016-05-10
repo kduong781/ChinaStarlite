@@ -1,3 +1,10 @@
+/**
+*Author: Mingtau Li
+*Contributors: Kevin Duong (aided in pagination functionality)
+*Description: custom script for accessible image slider
+*This image slider has event handlers for right arrow(slide right), left arrow (slide left), and space bar(play/pause), and mouse click(all actions)
+*Includes pagination buttons, play button, pause button, slide right button, slide left button
+*/
 jQuery(document).ready(function ($) {
     var slideCount = $('#slider ul li').length;
     //var slideWidth = $('#slider ul li').width();

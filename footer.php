@@ -1,3 +1,10 @@
+<?php 
+/**
+*Author: Mingtau Li
+*Contributors: Kevin Duong (assisted in styling)
+*Description: site footer called by php includes
+*/
+?>
  <footer>
    <div>
    <hr>

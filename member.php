@@ -1,4 +1,13 @@
 #!/usr/local/php5/bin/php-cgi
+<?php 
+/**
+*Author: Mingtau Li
+*Description: member page
+*This is a user portal that shows user's current progress towards deals
+*Pulls past order data from database and accumulates points from past food orders
+*Has user settings, stat reports, order history, and announcements
+*/
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -273,7 +282,6 @@ var usernames = [];
 		    }
 		}
 	mysqli_free_result($result);
-	/////////////////////////////////////////////////////////////////////
 	$totalpoints = 0;
 	for($numDate=0;$numDate<sizeof($dates);$numDate++){
 		echo "<div class='floatingBoxLeft'>";

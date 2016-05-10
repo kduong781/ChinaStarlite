@@ -1,4 +1,12 @@
 #!/usr/local/php5/bin/php-cgi
+<?php
+/**
+*Author: Mingtau Li
+*Description: Log In Page
+*Users can log in or register for accounts on this page
+*user input is compared with data from database
+*/
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -40,11 +48,6 @@ include 'navbar.php';
 		define('DBUSER','cecs323o29');
 		define('DBPASS','nijeek');
 
-		/*define('DBHOST','localhost'); //test
-		define('DBNAME','cecs323o29');  //test
-		define('DBUSER','root');        //test
-		define('DBPASS','password');    //test  */
-
 		//initialize and sanitize inputs
 		$username = trim($_POST['loginusername']);
 		$password = trim($_POST['loginpassword']);
@@ -66,8 +69,6 @@ include 'navbar.php';
 				}
 				//check if username and password matches
 				if($username==$dbusername && $password==$dbpassword){
-					/*echo "Login successful! Go to the <a href='member.php'>member page</a><br>";*/
-					/*echo "Click <a href='logout.php'>here</a> to log out";*/
 					$_SESSION['loginusername']=$dbusername; //set our session
 					$_SESSION['fname'] = $dbfname;
 					$_SESSION['lname'] = $dblname;
@@ -146,21 +147,9 @@ $to = $forgottenEmail;
 $subject = 'Your ChinaStarlite Credentials';
 $email = $forgottenEmail;
 $messsage = "Username:".$forgotEmailUsername."\n Password:".$forgotEmailPassword."";
-/*$body = <<<EMAIL
-$msg
-
-EMAIL;*/
-
 $header = 'minijordon@gmail.com';
 
 	mail($to, $subject, $message, $header);
-
-
-					//mail($forgottenEmail,"Your ChinaStarlite Credentials",$msg);
-
-				//	$msg = "Username:".$forgotEmailUsername."\n Password:".$forgotEmailPassword."";
-				//	mail($forgottenEmail,"Your ChinaStarlite Credentials",$msg);
-
 
 				}
 				mysqli_free_result($query);

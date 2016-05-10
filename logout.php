@@ -1,4 +1,11 @@
 #!/usr/local/php5/bin/php-cgi
+<?php 
+/**
+*Author: Mingtau Li
+*Description: Logout page
+*Used to end user state and redirects user to index page
+*/
+?>
 <!doctype html>
 <html lang="en">
 <head>

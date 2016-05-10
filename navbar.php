@@ -1,3 +1,11 @@
+<?php
+/**
+*Author: Mingtau Li
+*Contributors: Kevin Duong (smart detection for user state)
+*Description: navigation bar called by php includes
+*Changes in size and design depending on screen size and mouse scroll
+*/
+?>
 <?php @ob_start(); ?>
 <nav>
     <p class="absolute right">Call Us: +1 (562) 123-4567</p>
@@ -69,45 +77,8 @@
         });
     }
 
-
- /*   function reverseNavOrder(){
-        var $menuItems = document.getElementById("primary");
-        var $i = $menuItems.childNodes.length;
-        var $tags = document.querySelectorAll('nav > ul > li');
-        //var $tags = $menuItems.getElementsByTagName('NAV')[0].getElementsByTagName('LI');
-            //alert($tags[2].getElementsByTagName('a')[0].innerHTML);
-          if(window.innerWidth<=1057){
-           
-            $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
-            $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
-            $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
-            $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
-            while ($i--){
-                $menuItems.appendChild($menuItems.childNodes[$i]);
-            }
-            $tags = document.querySelectorAll('nav > ul > li');
-       
-        }else{
-            if($tags[2].getElementsByTagName('a')[0].innerHTML != 'Sign In' || $tags[2].getElementsByTagName('a')[0].innerHTML == "undefined"){
-                $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
-                $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
-                $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
-                $menuItems.insertBefore($menuItems.firstChild, $menuItems.lastChild);
-                while ($i--){
-                    $menuItems.appendChild($menuItems.childNodes[$i]);
-                }
-            $tags = document.querySelectorAll('nav > ul > li');
-            }
-        }
-       //return window.innerWidth;
-
-       // alert($tags[2].innerHTML.indexOf('Sign In') > -1);
-    }
-*/
-    function dropDownMenu(){
+     function dropDownMenu(){
         var dropdown = document.querySelector("nav > ul > li.menu > img");
-        /*var dropdown = document.getElementsByClassName('menu')[0];*/
-       // alert(dropdown.tagName);
         if(window.innerWidth>740){
             dropdown.style.display = 'none';
         }else{
