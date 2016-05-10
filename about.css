@@ -1,3 +1,7 @@
+/**
+*Author: Rohit Sehdev
+*Description: css for about page
+*/
 .upper {
     list-style-type: none;
     margin: 0;
@@ -5,7 +9,7 @@
     overflow: hidden;
 	text-align: center;
 	font-size: 3em;
-   
+
 }
 
 .sub{
@@ -21,18 +25,18 @@
     padding: .5em;
     text-decoration: none;
 	font-weight: bold;
-	
+
 }
 
-.sub:last-child { 
-	border-right: none 
+.sub:last-child {
+	border-right: none
 }
 
 
 #ourStory{
 	color: #B80606;
 	font-size:1.7em;
-	
+
 }
 
 #locations{
@@ -43,12 +47,12 @@
 #locations:hover{
 	color: #B80606 !important;
 
-	
+
 }
 
 #ourStory:hover{
 	color: #B80606 !important;
-	
+
 }
 
 
@@ -61,7 +65,7 @@
 	padding-bottom:3em;
 	color: white;
 	background-color: black;
-	
+
 }
 .border{
 	margin: auto;
@@ -73,14 +77,14 @@
 	overflow:auto;
 	display:none;
 
-	
-	
+
+
 }
 
 #locationOptions{
 	padding-top: 3em;
 	float: left;
-	
+
 }
 
 .actualLocations{
@@ -96,7 +100,7 @@
 }
 
 .subActualLocations:last-child{
-	border-bottom: none 
+	border-bottom: none
 }
 
 
@@ -104,26 +108,26 @@
 	color: #B80606;
 	text-decoration: none;
 	font-size: 2.5em;
-	
-	
+
+
 }
 
 #longbeachLink{
 	color: black;
 	text-decoration: none;
 	font-size: 1.5em;
-	
+
 }
 
 #hongkongLink:hover{
 	color: #B80606 !important;
 
-	
+
 }
 
 #longbeachLink:hover{
 	color: #B80606 !important;
-	
+
 }
 
 #locationsBlock{
@@ -132,10 +136,10 @@
 }
 
 #hongkong{
-	
+
 	padding-top: 3em;
 	padding-left: 15em;
-	
+
 }
 
 #longbeach{
@@ -158,7 +162,7 @@ figure{
 #fieldsets{
 	padding-left:3em;
 	padding-right:3em;
-	
+
 	display: -webkit-flex; /* Safari */
 	display: -ms-flex: 1;
     display: flex;
@@ -181,7 +185,7 @@ fieldset{
 	text-align: center;
 	font-size: 1.5em;
 	font-weight:bold;
-	
+
 }
 
 @media only screen and (max-width: 1004px) {
@@ -219,5 +223,3 @@ fieldset{
 		display:inline-block;
 	}
 }
-
-

@@ -1,3 +1,7 @@
+/**
+*Author: Kevin Duong
+*Description: Tabs from scratch for order page
+*/
 $(document).ready(function() {
 
   $("#ChickenTab").click(function(){

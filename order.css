@@ -1,3 +1,7 @@
+/*
+*Author: Kevin Duong
+*Description: css for order and confirmation page
+*/
 * {
 	margin-bottom: 0;
 }
@@ -11,7 +15,7 @@
 }
 
 .wrapper {
-  background: #6BCFFA;
+
 	margin-left: 10%;
 	margin-right: 10%;
   min-height: 100vh;
@@ -27,7 +31,8 @@
 }
 
 .tabs li {
-	background: white;
+	background: black;
+	color: white;
 	padding: 10px 30px 10px 30px;
   border-style: groove solid 1px black;
 	border:1px solid black;
@@ -35,11 +40,11 @@
 }
 
 .tabs li.active {
-	  background: #6BCFFA;
+	  background: #B3000C;
 }
 
 .tabs li:hover {
-	  background: #6BCFFA;
+	  background: #B3000C;
 }
 
 .hide {
@@ -83,7 +88,8 @@ dd {
 	float: right;
 	padding-right: 5%;
 	padding-left: 5%;
-	background: orange;
+	background: black;
+	color: white;
 	min-height: 100vh;
 	height: 100%;
 }
@@ -93,11 +99,11 @@ dd {
 }
 
 .menu a {
-	color: red;
+	color: #B3000C;
 }
 
 .menu a:visited {
-	color: red;
+	color: #B3000C;
 }
 
 .typeHr {

@@ -1,4 +1,8 @@
 /*Borrowed FROM W3SCHOOLS*/
+/**
+*Author: Kevin Duong
+*Description: modal and cart javascript functionality
+*/
 // Get the modal
 var modal = document.getElementById('myModal');
 var subTotal = document.getElementById('subTotal');

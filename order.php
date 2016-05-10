@@ -1,4 +1,10 @@
 #!/usr/local/php5/bin/php-cgi
+<!--
+/**
+*Author: Kevin Duong
+*Description: Order page
+*/
+-->
 <!DOCTYPE html>
 <?php
   $connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o29","nijeek","cecs323o29");

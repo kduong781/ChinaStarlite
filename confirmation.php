@@ -1,5 +1,11 @@
 #!/usr/local/php5/bin/php-cgi
 <!DOCTYPE HTML>
+<!--
+/**
+*Author: Kevin Duong
+*Description: Confirmation page
+*/
+-->
 <html>
 <head>
 <style>
