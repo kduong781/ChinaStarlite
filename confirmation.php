@@ -206,36 +206,28 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
 		echo '<div id="main">';
 
 
-    foreach($_GET as $key => $val) {
-        if($val == "Submit") {
-
-        }else {
-          $sql = "SELECT * FROM menu WHERE menuid=".substr($val,0,4);
-          $result = mysqli_query($connection, $sql);
-          if ($result=mysqli_query($connection,$sql))
-          {
-          // Fetch one and one row
-          while ($row=mysqli_fetch_assoc($result))
-            {
-                echo "x".substr($val,4)." ".$row['foodName']." ".$row['price']."</br> ";
-            }
-            mysqli_free_result($result);
-          }
-        }
-    }
 
 ?>
 <div id="itemConfirm">
  <h3>Items</h3>
 <?php
 foreach($_GET as $key => $val) {
-	if($val == "Submit") {
+    if($val == "Submit") {
 
-	}else {
-		echo "$val </br>";
-	}
+    }else {
+      $sql = "SELECT * FROM menu WHERE menuid=".substr($val,0,4);
+      $result = mysqli_query($connection, $sql);
+      if ($result=mysqli_query($connection,$sql))
+      {
+      // Fetch one and one row
+      while ($row=mysqli_fetch_assoc($result))
+        {
+            echo "x".substr($val,4)." ".$row['foodName']." ".$row['price']."</br> ";
+        }
+        mysqli_free_result($result);
+      }
+    }
 }
-
 ?>
 </div>
 <?php
