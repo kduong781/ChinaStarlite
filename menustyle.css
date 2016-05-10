@@ -1,0 +1,189 @@
+/************************************
+Style Sheet for menu.php
+
+author: Khai Nguyen
+description: Format the menu contents
+*************************************/
+
+#content
+{
+   background-color: #FFFFFF;
+   padding: 20px 10px;
+   overflow: auto;
+}
+
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+ 
+    /*----- Tab Links -----*/
+    /* Clearfix */
+    /*
+	.tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+	*/
+	
+	.tab-links {
+		float: left;
+		margin: 4px 0 0 0;
+		width: 130px;
+	}
+	
+    .tab-links li {
+        margin:0px 5px;
+        float:left;
+        list-style:none;
+    }
+ 
+        .tab-links a {
+					  margin-top: 5px;
+            padding:10px 13px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#B3000C;
+            font-size:16px;
+            font-weight:600;
+            color:#FFFBFB;
+            transition:all linear 0.15s;
+			      width: 70px;
+        }
+ 
+        .tab-links a:hover {
+            background:#5C0E00;
+            text-decoration:none;
+        }
+ 
+    li.active a, li.active a:hover {
+        background:#FFFFFF;
+        color:black;
+		text-decoration:none;
+    }
+ 
+    /*----- Content of Tabs -----*/
+    /*
+	.tab-content {
+        padding:15px;
+        border-radius:3px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        background:#fff;
+    }
+	*/
+	
+	.tab-content {
+	    min-height: 300px;
+        margin: 0 1em 0 6.25em;
+        padding:20px;
+        border-radius:3px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        background:#fff;
+		
+	}
+	
+	.tab-content hr {
+		width: 98%;
+		color:#4B0C00;
+	}
+	
+	.tab-content span {
+		float:right;
+		
+	}
+
+	.tab-content p {
+		font-weight: bold;
+		color:#4B0C00;
+	}
+	
+	.promotionImages {
+		display:inline;
+		position: relative;
+		padding-left:2.5em;
+		
+	}
+	
+	.promotionImages p {
+		display:inline;
+		padding: 5em 1.2em 1.2em 5em;
+	}
+
+	.promotionImages img {
+		padding: 1em 0em 0em 1em;
+	}
+	
+	.promotionImages2  {
+		display:inline;
+		position: relative;
+		padding-left:1.2em;
+		
+	}
+	.promotionImages2 p {
+		display:inline;
+		padding: 4.2em 0.5em 0.5em 4.2em;
+	}
+	.promotionImages2 img{
+		padding: 1em 1em 1em 1em;
+	}
+	
+	.promotionImages3 {
+		display:inline;
+		position: relative;
+		padding-left:2em;
+		
+	}
+	
+	.promotionImages3 p {
+		display:inline;
+		padding: 5em 1em 1em 5.5em;
+	}
+
+	.promotionImages3 img {
+		padding: 1em 1em 0em 1em;
+	}
+	
+	.promotionImages4 {
+		display:inline;
+		position: relative;
+		padding-left:1em;
+		
+	}
+	
+	.promotionImages4 p {
+		display:inline;
+		padding: 3em 4.5em 1em 3em;
+	}
+
+	.promotionImages4 img {
+		padding: 1em 1.5em 0em 1em;
+	}
+	
+	.menuDetail {
+		padding: 1em 0em 0em 0em;
+		font-size: 0.8em;
+		color: #783F00;
+	}
+	
+	.food {
+		color:#4B0C00;
+		padding-top:1em;
+		font-style:italic;
+		font-family: "Myriad pro Semibold";
+	}
+	
+	#tab1 div,#tab2 div,#tab3 div,#tab4 div {
+        
+		margin: 0 1em 0 1em;
+		
+    }
+	
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
