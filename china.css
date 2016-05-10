@@ -3,7 +3,6 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    /*background-size: 90%;*/
 }
 
 *{
@@ -52,8 +51,6 @@ margin:0 0 0 3em;
  	-ms-transition: all 0.3s;
  	-o-transition: all 0.3s;
  	transition: all 0.3s;
-/*position: absolute;*/  /*this will make nav logo pop out of its container if it has to*/
-/*background: #010214;*/ /*provides good contrast, but looks ugly*/
 
 }
 
@@ -67,8 +64,6 @@ nav ul li.left img{
 
 nav ul li.right{
 	margin: 4.5em 0 0;
-	/*border-top: 1px solid #FDFDCE;*/
-	/*border-bottom: 1px solid #FDFDCE;*/
 	-webkit-transition: all 0.3s;
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
@@ -87,15 +82,8 @@ nav ul li.right a{						/*this controls how the nav menu links look, excluding t
  	transition: all 0.3s;
 }
 
-/*nav ul li:last-child{					make lines stick out in the nav links
-	padding-left: 5em;
-}
-*/
-
 nav ul li a.active{
 	background: #0B0B0B;/*dark black*/
-	/*border-right: 1px solid white;
-	border-left: 1px solid white;*/
 }
 
 nav ul li.menu{
@@ -164,7 +152,6 @@ ul li.secondary{			/*removes ul bullets from social media links*/
 ul li img.social{
 	margin-right: 2em;
 	border-radius: 25px;
-	/*box-shadow: inset -1px -1px 1px rgba(255,255,255,0.5),inset 1px 1px 1px rgba(255,255,255,0.1) ;*/
 	-webkit-transition: all 0.3s;
  	-moz-transition: all 0.3s;
  	-ms-transition: all 0.3s;
@@ -269,7 +256,6 @@ h3.clear{
 
 #leftBarr{
 	margin: 1em 0 1em 0;
-	/*border: 1px solid yellow;*/
 	width: 67%;
 	float: left;
 }
@@ -299,57 +285,52 @@ h3.clear{
 	padding: 0.5em;
 }
 
-/*#leftBarr .floatingBoxLeft p{
-	padding: 0 1em 1em 1em;
-	width: 95%;
-}*/
-
 #leftBarr .floatingBoxLeft ul li{
 	border-bottom: 1px solid black;
 	padding: 0.5em;
 	list-style: none;
 }
 
-#leftBarr .floatingBoxLeft.announcements h4{
+#leftBarr .announcements h4{
 	background: rgba(255,0,198,0.5);
+	margin:0;
+	padding: 0.5em 0 0.5em 0;
 }
 
-#leftBarr .floatingBoxLeft.announcements{
+#leftBarr .announcements{
 	border: 3px solid #FF00D2;
 	overflow: auto;
+	width: 95%;
 }
 
-#leftBarr .floatingBoxLeft.announcements img{
+#leftBarr .announcements img{
 	width: 10em;
 	margin: 0 1em 1em 1em;
 	border: 2px solid black;
 }
 
-#leftBarr .floatingBoxLeft.announcements p{
+#leftBarr .announcements p{
 	margin-top: 1.5em;
 }
 
 #rightBarr{
 	margin: 1em 0 1em 0;
 	margin-bottom: 1em;
-	/*border: 1px solid blue;*/
 	width: 27%;
-	/*height: 300px;*/
 	float: right;
 }
 
 .floatingBoxRight{
 	width: 100%;
-	/*height: 200px;*/
 	margin-bottom: 1.5em;
 }
 
-.floatingBoxRight.progress{
+.progress{
 	border: 3px solid orange;
 }
 
 
-.floatingBoxRight.progress h3{
+.progress h3{
 	background: rgba(255,192,0,0.5);
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
@@ -357,32 +338,36 @@ h3.clear{
 	margin-top:0;
 }
 
-.floatingBoxRight.progress p{
+.progress p{
 	padding: 0 0.5em 0 0.5em;
 	font-weight: 400;
 }
 
-.floatingBoxRight #progressBar{
-	height: 30px;
+#rightBarr #progressbar{
+	height: 30px !important;
 	width: 90%;
-	margin: 2em auto 0 auto;
+	margin: 2em auto 0 auto !important;
 	background:#EAEAEA;
+	display: block !important;
 }
 
-.floatingBoxRight #progressBar #progress{
-	height: 30px;
+#progress{
+	height: 30px !important;
 	width: 1%;
 	background: #02C033;
+	display: block !important;
+	margin-top: 2em;
+	margin-left: 0.2em;
 }
 
-.floatingBoxRight #progressBar #progress #progressAmount{
+#progressAmount{
 	color: black;
 	padding-top: 0.3em;
 	font-weight: bold;
 
 }
 
-.floatingBoxRight #progressBar #progress #light{
+#light{
 	height: 30px;
 	background:  #02C033; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient( #02C033, white); /* For Safari 5.1 to 6.0 */
@@ -391,7 +376,7 @@ h3.clear{
     background: linear-gradient( #02C033, white); /* Standard syntax */
 }
 
-.floatingBoxRight #dealname{
+#dealName{
 	padding: 0.3em 0.6em 0 0.6em;
 	font-weight: bold;
 }
@@ -537,8 +522,6 @@ form{
 }
 
 label.terms{
-
-	display: absolute;
 	padding: 0;
 	width: 16em;
 	text-align: center;
@@ -634,7 +617,6 @@ label.terms{
 
 .msgBox{
 	display: inline;
-	/*background: rgba(255,0,0,0.6);*/
 	padding: 0.5em;
 }
 
@@ -729,9 +711,7 @@ label.terms{
 
 #settingsContent{
 	clear: both;
-	/*border: 1px solid black;*/
 	overflow: hidden;
-	/*height: 300px;*/
 	padding: 0 1em 0 1em;
 }
 
@@ -791,7 +771,6 @@ label.terms{
 	padding:0.5em;
 	cursor: pointer;
 	border-radius: 10px;
-/*	box-shadow: 2px 5px 2px black;*/
 }
 
 footer{
@@ -922,7 +901,6 @@ footer ul li a:hover{
 	}
 
 	nav .absolute{
-		/*display: none;*/
 		display:inline-block;
 		position:absolute;
 		margin-top: 205px;

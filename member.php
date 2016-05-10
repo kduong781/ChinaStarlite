@@ -21,10 +21,7 @@ $memberMsg = '';
 	if($_SESSION['loginusername']){
 		$memberMsg = "<img src='images/settings.png' alt='settings'> Settings";
 		echo "Welcome, ".$_SESSION['loginusername']."<br>";
-	}else{
-		$memberMsg = "<a href='login.php'>Sign In</a>";
-		echo"You must be logged in to view this page<br>";
-	}
+	
 	echo "<div id='button' class='right settings'>".$memberMsg."</div>";
 	?>
 
@@ -340,6 +337,7 @@ var usernames = [];
 		<h3>Your progress:</h3>
 			You are <?php echo $pointsleft; ?> points away from your next deal!
 		</p>
+		<br><br>
 		<div id="progressbar">
 			<div id="progress">
 				<div id="light">
@@ -383,15 +381,22 @@ var usernames = [];
 
 	</div><!-- end floatingBoxRightdealBreakdown -->
 </div><!-- end right -->
-</div><!-- end content -->
-</main>
-</div><!-- end wrapper -->
 <script>
 	var progressbar = document.getElementById('progress');
 	progressbar.style.width = "<?php echo $progressPercentage.'%' ?>";
 </script>
-<script src='js/settings.js'></script>
+<?php 
+}else{
+		$memberMsg = "<a href='login.php'>Sign In</a>";
+		echo"You must be logged in to view this page<br>";
+		echo "<div id='button' class='right'>".$memberMsg."</div>";
+	}
+?>
+</div><!-- end content -->
+</main>
+</div><!-- end wrapper -->
 <?php mysqli_close($connection); ?>
+<script src='js/settings.js'></script>
 <?php include 'footer.php'; ?>
 </body>
 </html>
