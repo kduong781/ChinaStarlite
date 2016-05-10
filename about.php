@@ -1,10 +1,10 @@
+#!/usr/local/php5/bin/php-cgi
 <!--
 /**
 *Author: Rohit Sehdev
 *Description: about page
 */
 -->
-#!/usr/local/php5/bin/php-cgi
 <?php 
 /**
 *Author: Rohit Sehdev
