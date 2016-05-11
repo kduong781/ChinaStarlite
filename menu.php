@@ -9,7 +9,6 @@
 
 $connection = mysqli_connect("cecs-db01.coe.csulb.edu","cecs323o29","nijeek","cecs323o29");
 $error = mysqli_connect_error();
-mysqli_set_charset($connection,"utf8");
 
 if ($error != null) {
   $output = "<p>Unable to connect to database<p>" . $error;
