@@ -338,6 +338,6 @@ if ($error != null) {
 </div><!-- end content -->
 </main>
 <?php include 'footer.php' ?>
-<script type="text/javascript" src="menuscript.js"></script>
+<script type="text/javascript" src="js/menuscript.js"></script>
 </body>
 </html>
