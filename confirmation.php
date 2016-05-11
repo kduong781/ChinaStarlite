@@ -222,7 +222,7 @@ foreach($_GET as $key => $val) {
       // Fetch one and one row
       while ($row=mysqli_fetch_assoc($result))
         {
-            echo "x".substr($val,4)." ".$row['foodName']." ".$row['price']*substr($val,4)."<br> ";
+            echo "x".substr($val,4)." ".$row['foodName']." $".$row['price']*substr($val,4)."<br> ";
         }
         mysqli_free_result($result);
       }
