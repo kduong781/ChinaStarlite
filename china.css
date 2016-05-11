@@ -854,10 +854,15 @@ footer ul li a:hover{
     font-weight: bold;
 }
 
-
-
-
-
+.studentmsg{
+	padding: 0.3em;
+    left:40%;
+	position: absolute;
+	color: white;
+	font-weight:bold;
+	background: rgba(0,0,0,0.3);
+	z-index: 1000;
+}
 
 /*------------------media queries------------------------------------------*/
 @media screen and (max-width: 1293px){

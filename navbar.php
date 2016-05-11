@@ -7,6 +7,7 @@
 */
 ?>
 <?php @ob_start(); ?>
+<div class="studentmsg">Student Project -- not a commercial site.</div>
 <nav>
     <p class="absolute right">Call Us: +1 (562) 123-4567</p>
     <ul id="primary">
