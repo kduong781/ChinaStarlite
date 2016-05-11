@@ -342,7 +342,7 @@ var usernames = [];
 </div><!-- end left -->
 <div id="rightBarr">
 	<div class="floatingBoxRight progress">
-		<h3>Your progress:</h3>
+		<h3>Your progress</h3>
 			You are <?php echo $pointsleft; ?> points away from your next deal!
 		</p>
 		<div id="progressbar">
@@ -355,7 +355,7 @@ var usernames = [];
 		<div id="dealName"><?php echo $currentDeal; ?></div><!-- end dealName -->
 	</div><!-- end floatingBoxRight progress -->
 	<div class="floatingBoxRight dealBreakdown">
-		<h3>Deals:</h3>
+		<h3>Deals</h3>
 		<p class='dealdescription'>Collect points by ordering with us or buying from our restaurant to get your hands on some great deals!</p>
 		<small class="red">*Deals not redeemable for cash</small>
 		<br>

@@ -94,7 +94,7 @@ include 'navbar.php';
 			</form>
 			<div id="registerInfo">
 				<h2>Create An Account With Us</h2>
-				<div name="SignUp" id="signUp">
+				<div id="signUp">
 					<a href="register.php">Sign Up</a>
 
 				</div><!-- end signup --><br>
