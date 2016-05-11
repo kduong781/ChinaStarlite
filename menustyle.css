@@ -161,6 +161,10 @@ description: Format the menu contents
 		padding: 1em 1.5em 0em 1em;
 	}
 	
+	.promotionImages,.promotionImages2,.promotionImages3,.promotionImages4 {
+		display:inline;
+		text-align: center;                //Add this please
+	}
 	.menuDetail {
 		padding: 1em 0em 0em 0em;
 		font-size: 0.8em;
