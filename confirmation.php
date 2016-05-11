@@ -145,17 +145,17 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
       echo "<div id='main'>";
       echo "<h1>Order Confirmation (Pickup)</h1>";
       				echo "<div class='orderInfo'><fieldset><legend>Order Information</legend>";
-      echo "<div class='orderCont'>Congratulations ". $_GET['firstname']  ." " . $_GET['lastname'] . " on completing your order!</br>";
-      echo "Please make sure the information you have inputted is correct: </br>";
+      echo "<div class='orderCont'>Congratulations ". $_GET['firstname']  ." " . $_GET['lastname'] . " on completing your order!<br>";
+      echo "Please make sure the information you have inputted is correct: <br>";
       foreach($_POST as $key => $val) {
           if($key == "firstname") {
-            echo "First name: $val </br>";
+            echo "First name: $val <br>";
             fwrite($myfile, "First name: $val \n");
           }else if($key == "lastname") {
-            echo "Last name: $val </br>";
+            echo "Last name: $val <br>";
             fwrite($myfile, "Last name: $val \n");
           }else if($key == "email"){
-            echo "Email: $val </br>";
+            echo "Email: $val <br>";
             fwrite($myfile, "Email: $val \n");
           }else if($key == "street"){
 
@@ -164,20 +164,20 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
           }else if($key == "zip"){
 
           }else if($key == "item"){
-            echo "Item: $val </br>";
+            echo "Item: $val <br>";
             fwrite($myfile, "Item: $val \n");
           }
       }
 
 			if (isset($_SESSION['loginusername'])) {
-				echo "Username: ". $_SESSION['loginusername']."</br>";
+				echo "Username: ". $_SESSION['loginusername']."<br>";
 				if(isset($_SESSION['fname']) ){
-					echo "First Name: ". $_SESSION['fname']."</br>";
+					echo "First Name: ". $_SESSION['fname']."<br>";
 				}
 				if(isset($_SESSION['lname']) ){
-						echo "Last Name: ". $_SESSION['lname']."</br>";
+						echo "Last Name: ". $_SESSION['lname']."<br>";
 				}if(isset($_SESSION['email']) ){
-					echo "Email: ". $_SESSION['email']."</br>";
+					echo "Email: ". $_SESSION['email']."<br>";
 			///		echo "INSERT INTO cecs323o29.orders VALUES(NULL,". $_SESSION['id'].",".$date.",".substr($val,0,4).",".substr($val,4).")"; //, $date, substr($val,0,4), substr($val,4))";
 								//echo "INSERT INTO orders VALUES ";//"(NULL, ";//.$_SESSION['id'].",";//. $date.",". substr($val,0,4).",". substr($val,4).")";
 				}
@@ -193,7 +193,7 @@ if((isset($_POST['submit']) && $firstnameErr == "" && $lastnameErr == "" && $ema
             // Fetch one and one row
             while ($row=mysqli_fetch_assoc($result))
               {
-                  echo "x".substr($val,4)." ".$row['foodName']." $".$row['price']."</br> ";
+                  echo "x".substr($val,4)." ".$row['foodName']." $".$row['price']."<br> ";
               }
               mysqli_free_result($result);
             }
@@ -222,7 +222,7 @@ foreach($_GET as $key => $val) {
       // Fetch one and one row
       while ($row=mysqli_fetch_assoc($result))
         {
-            echo "x".substr($val,4)." ".$row['foodName']." ".$row['price']."</br> ";
+            echo "x".substr($val,4)." ".$row['foodName']." ".$row['price']."<br> ";
         }
         mysqli_free_result($result);
       }
@@ -266,7 +266,7 @@ foreach($_GET as $key => $val) {
 		 if($val == "Submit") {
 
 		 }else {
-			 echo "$val </br>";
+			 echo "$val <br>";
 		 }
 	 }
 */
