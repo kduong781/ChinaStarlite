@@ -22,13 +22,13 @@ function openModal(x) {
 	var navPlacement = document.getElementById('navPlacement');
 	 nav.className="smaller";
      navPlacement.style.height=nav.clientHeight;
-  var btn = document.getElementById("modal-".concat(x));
+  var btn = document.getElementsByClassName(x)[0];
   modal = btn;
   btn.style.display = "block";
 }
 
 function closeModal(x) {
-  var btn = document.getElementById("modal-".concat(x));
+  var btn = document.getElementsByClassName(x)[0];
   btn.style.display = "none";
 }
 
@@ -36,11 +36,11 @@ function addItem(name, price, id, menuid) {
    var re = /^[1-9]{1}[0-9]{0,1}$/;
    var cartList = document.getElementById("cartList");
    var li = document.createElement('li');
-   var quantity = document.getElementById(id).value;
+   var quantity = document.getElementsByClassName(id)[0].value;
    if(re.test(quantity)) {
      price = price * quantity;
      li.innerHTML = "<button class='remove' onclick='removeItem("+listNumber+","+price +")'>Remove</button>" + "x" + quantity + " " + name  + " <span class='price'>$" + parseFloat(price).toFixed(2) + "</span>"
-      + "<input type='hidden' name='" + listNumber+ "'value='" + menuid + quantity + "'></input>";
+      + "<input type='hidden' name='" + listNumber+ "'value='" + menuid + quantity + "'>";
      li.id = listNumber;
      listNumber++;
      cartList.parentNode.insertBefore(li,cartList);

@@ -65,7 +65,7 @@
     <div class="menu">
       <span class="menuTitle">Chicken</span>
       <hr class="typeHr">
-      <dl>
+
         <?php
             $sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Chicken'";
             $result = mysqli_query($connection, $sql);
@@ -81,13 +81,13 @@
                 $id = $row["menuid"];
                 $url =$row["url"];
                 $description = $row["description"];
-                echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
-                echo "<dd>".$description . "</dd>";
+                echo "<h3><a href='#' onclick=openModal(".$id.")>".$name."</a> </h3>";
+                echo "<p>".$description . "</p>";
 
                 ?>
 
                 <!-- The Modal -->
-                <div id="modal-<?php echo $id;?>" class="modal">
+                <div class="modal <?php echo $id;?>">
 
                   <!-- Modal content -->
                   <div class="modal-content">
@@ -97,13 +97,13 @@
                     </div>
                     <div class="modal-body">
                       <p><?php echo $name . " $" . round($price,2);?></p>
-                      <img src="<?php echo $url;?>"></img>
+                      <img src="<?php echo $url;?>" alt="<?php echo $description;?>">
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
-                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
+                      <input pattern="[0-9]{1,2}" class="quantity-<?php echo $id;?>" type="text" value="1">
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)">
                     </div>
                   </div>
 
@@ -114,7 +114,7 @@
 							mysqli_free_result($result);
 						}
 				 ?>
-			</dl>
+
 		</div>
 	</div>
 
@@ -133,7 +133,7 @@
 		<div class="menu">
 			<span class="menuTitle">Chicken</span>
       <hr class="typeHr">
-      <dl>
+
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Chicken'";
 						$result = mysqli_query($connection, $sql);
@@ -148,13 +148,13 @@
                 $url = $row["url"];
                 $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
-								echo "<dd>".$description . "</dd>";
+								echo "<h3><a href='#' onclick=openModal(".$id.")>".$name."</a> </h3>";
+								echo "<p>".$description . "</p>";
 
                 ?>
 
                 <!-- The Modal -->
-                <div id="modal-<?php echo $id;?>" class="modal">
+                <div class="modal <?php echo $id;?>">
 
                   <!-- Modal content -->
                   <div class="modal-content">
@@ -164,13 +164,13 @@
                     </div>
                     <div class="modal-body">
                       <p><?php echo $name . " $" . round($price,2);?></p>
-                      <img src="<?php echo $url;?>"></img>
+                      <img src="<?php echo $url;?>" alt="<?php echo $description;?>">
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
-                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
+                      <input pattern="[0-9]{1,2}" class="quantity-<?php echo $id;?>" type="text" value="1">
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)">
                     </div>
                   </div>
 
@@ -181,7 +181,7 @@
 							mysqli_free_result($result);
 						}
 				 ?>
-			</dl>
+
 	  </div>
 	</div>
 
@@ -189,7 +189,7 @@
 		<div class="menu">
 			<span class="menuTitle">Dinner</span>
       <hr class="typeHr">
-      <dl>
+
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Beef'";
 						$result = mysqli_query($connection, $sql);
@@ -204,13 +204,13 @@
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
-								echo "<dd>".$description . "</dd>";
+								echo "<h3><a href='#' onclick=openModal(".$id.")>".$name."</a> </h3>";
+								echo "<p>".$description . "</p>";
 
                 ?>
 
                 <!-- The Modal -->
-                <div id="modal-<?php echo $id;?>" class="modal">
+                <div class="modal <?php echo $id;?>">
 
                   <!-- Modal content -->
                   <div class="modal-content">
@@ -220,13 +220,13 @@
                     </div>
                     <div class="modal-body">
                       <p><?php echo $name . " $" . round($price,2);?></p>
-                      <img src="<?php echo $url;?>"></img>
+                      <img src="<?php echo $url;?>" alt="<?php echo $description;?>">
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
-                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
+                      <input pattern="[0-9]{1,2}" class="quantity-<?php echo $id;?>" type="text" value="1">
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)">
                     </div>
                   </div>
 
@@ -237,7 +237,7 @@
 							mysqli_free_result($result);
 						}
 				 ?>
-			</dl>
+
 	  </div>
 	</div>
 
@@ -245,7 +245,7 @@
 		<div class="menu">
 			<span class="menuTitle">Pork</span>
       <hr class="typeHr">
-      <dl>
+
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Pork'";
 						$result = mysqli_query($connection, $sql);
@@ -260,13 +260,13 @@
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
-								echo "<dd>".$description . "</dd>";
+								echo "<h3><a href='#' onclick=openModal(".$id.")>".$name."</a> </h3>";
+								echo "<p>".$description . "</p>";
 
                 ?>
 
                 <!-- The Modal -->
-                <div id="modal-<?php echo $id;?>" class="modal">
+                <div class="modal <?php echo $id;?>">
 
                   <!-- Modal content -->
                   <div class="modal-content">
@@ -276,13 +276,13 @@
                     </div>
                     <div class="modal-body">
                       <p><?php echo $name . " $" . round($price,2);?></p>
-                      <img src="<?php echo $url;?>"></img>
+                      <img src="<?php echo $url;?>" alt="<?php echo $description;?>">
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
-                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
+                      <input pattern="[0-9]{1,2}" class="quantity-<?php echo $id;?>" type="text" value="1">
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)">
                     </div>
                   </div>
 
@@ -293,7 +293,7 @@
 							mysqli_free_result($result);
 						}
 				 ?>
-			</dl>
+
 		</div>
 	</div>
 
@@ -301,7 +301,7 @@
 		<div class="menu">
 			<span class="menuTitle">Drinks</span>
       <hr class="typeHr">
-      <dl>
+
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Drinks'";
 						$result = mysqli_query($connection, $sql);
@@ -316,13 +316,13 @@
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
-								echo "<dd>".$description . "</dd>";
+								echo "<h3><a href='#' onclick=openModal(".$id.")>".$name."</a> </h3>";
+								echo "<p>".$description . "</p>";
 
                 ?>
 
                 <!-- The Modal -->
-                <div id="modal-<?php echo $id;?>" class="modal">
+                <div class="modal <?php echo $id;?>">
 
                   <!-- Modal content -->
                   <div class="modal-content">
@@ -332,13 +332,13 @@
                     </div>
                     <div class="modal-body">
                       <p><?php echo $name . " $" . round($price,2);?></p>
-                      <img src="<?php echo $url;?>"></img>
+                      <img src="<?php echo $url;?>" alt="<?php echo $description;?>">
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
-                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
+                      <input pattern="[0-9]{1,2}" class="quantity-<?php echo $id;?>" type="text" value="1">
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)">
                     </div>
                   </div>
 
@@ -349,7 +349,7 @@
 							mysqli_free_result($result);
 						}
 				 ?>
-			</dl>
+
 	  </div>
 	</div>
 
@@ -357,7 +357,7 @@
 		<div class="menu">
 			<span class="menuTitle">Seafood</span>
       <hr class="typeHr">
-      <dl>
+
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Seafood'";
 						$result = mysqli_query($connection, $sql);
@@ -372,13 +372,13 @@
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
-								echo "<dd>".$description . "</dd>";
+								echo "<h3><a href='#' onclick=openModal(".$id.")>".$name."</a> </h3>";
+								echo "<p>".$description . "</p>";
 
                 ?>
 
                 <!-- The Modal -->
-                <div id="modal-<?php echo $id;?>" class="modal">
+                <div class="modal <?php echo $id;?>">
 
                   <!-- Modal content -->
                   <div class="modal-content">
@@ -388,13 +388,13 @@
                     </div>
                     <div class="modal-body">
                       <p><?php echo $name . " $" . round($price,2);?></p>
-                      <img src="<?php echo $url;?>"></img>
+                      <img src="<?php echo $url;?>" alt="<?php echo $description;?>">
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
-                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
+                      <input pattern="[0-9]{1,2}" class="quantity-<?php echo $id;?>" type="text" value="1">
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)">
                     </div>
                   </div>
 
@@ -405,7 +405,7 @@
 							mysqli_free_result($result);
 						}
 				 ?>
-			</dl>
+
 	  </div>
 	</div>
 
@@ -413,7 +413,7 @@
 		<div class="menu">
 			<span class="menuTitle">Soup</span>
       <hr class="typeHr">
-      <dl>
+
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Soup'";
 						$result = mysqli_query($connection, $sql);
@@ -428,13 +428,13 @@
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
-								echo "<dd>".$description . "</dd>";
+								echo "<h3><a href='#' onclick=openModal(".$id.")>".$name."</a> </h3>";
+								echo "<p>".$description . "</p>";
 
                 ?>
 
                 <!-- The Modal -->
-                <div id="modal-<?php echo $id;?>" class="modal">
+                <div class="modal <?php echo $id;?>">
 
                   <!-- Modal content -->
                   <div class="modal-content">
@@ -444,13 +444,13 @@
                     </div>
                     <div class="modal-body">
                       <p><?php echo $name . " $" . round($price,2);?></p>
-                      <img src="<?php echo $url;?>"></img>
+                      <img src="<?php echo $url;?>" alt="<?php echo $description;?>">
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
-                      <input pattern="[0-9]{1,2}"id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
+                      <input pattern="[0-9]{1,2}" class="quantity-<?php echo $id;?>" type="text" value="1">
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)">
                     </div>
                   </div>
 
@@ -461,7 +461,7 @@
 							mysqli_free_result($result);
 						}
 				 ?>
-			</dl>
+
 		</div>
 	</div>
 
@@ -469,7 +469,7 @@
 		<div class="menu">
 			<span class="menuTitle">Appetizer</span>
       <hr class="typeHr">
-      <dl>
+
 				<?php
 						$sql = "SELECT * FROM cecs323o29.menu WHERE menutype='Appetizer'";
 						$result = mysqli_query($connection, $sql);
@@ -484,13 +484,13 @@
 								$price = $row["price"];
                 $id = $row["menuid"];
 								$description = $row["description"];
-								echo "<dt><a href='#' onclick=openModal(".$id.")>".$name."</a> </dt>";
-								echo "<dd>".$description . "</dd>";
+								echo "<h3><a href='#' onclick=openModal(".$id.")>".$name."</a> </h3>";
+								echo "<p>".$description . "</p>";
 
                 ?>
 
                 <!-- The Modal -->
-                <div id="modal-<?php echo $id;?>" class="modal">
+                <div class="modal <?php echo $id;?>">
 
                   <!-- Modal content -->
                   <div class="modal-content">
@@ -500,13 +500,13 @@
                     </div>
                     <div class="modal-body">
                       <p><?php echo $name . " $" . round($price,2);?></p>
-                      <img src="<?php echo $url;?>"></img>
+                      <img src="<?php echo $url;?>" alt="<?php echo $description;?>">
                       <p><?php echo $description;?></p>
                     </div>
                     <div class="modal-footer">
                       <h3>Quantity: </h3>
-                      <input pattern="[1-9]{1}[0-9]{0,1}" required oninvalid="this.setCustomValidity('Please input a positive integer (Max 2 digits)')" id="quantity-<?php echo $id;?>" type="text" value="1"></input>
-                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)"></input>
+                      <input pattern="[1-9]{1}[0-9]{0,1}" required oninvalid="this.setCustomValidity('Please input a positive integer (Max 2 digits)')"  class="quantity-<?php echo $id;?>" type="text" value="1">
+                      <input type="button" value="Add to Cart" onclick="addItem('<?php echo $name;?>',<?php echo $price;?>,'quantity-<?php echo $id;?>',<?php echo $id;?>)">
                     </div>
                   </div>
 
@@ -517,7 +517,7 @@
 							mysqli_free_result($result);
 						}
 				 ?>
-			</dl>
+
 		</div>
 	</div>
 </div>
