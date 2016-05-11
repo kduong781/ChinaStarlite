@@ -78,8 +78,8 @@ description: Format the menu contents
 	    min-height: 300px;
         margin: 0 1em 0 6.25em;
         padding:20px;
-        /*border-radius:3px;
-        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);*/
+        //border-radius:3px;
+        //box-shadow:-1px 1px 1px 1px rgba(0,0,0,0.15);
         background:#fff;
 		
 	}
@@ -99,72 +99,31 @@ description: Format the menu contents
 		color:#4B0C00;
 	}
 	
-	.promotionImages {
-		display:inline;
-		position: relative;
-		padding-left:2.5em;
-		
-	}
-	
-	.promotionImages p {
-		display:inline;
-		padding: 5em 1.2em 1.2em 5em;
-	}
-
-	.promotionImages img {
-		padding: 1em 0em 0em 1em;
-	}
-	
-	.promotionImages2  {
-		display:inline;
-		position: relative;
-		padding-left:1.2em;
-		
-	}
-	.promotionImages2 p {
-		display:inline;
-		padding: 4.2em 0.5em 0.5em 4.2em;
-	}
-	.promotionImages2 img{
-		padding: 1em 1em 1em 1em;
-	}
-	
-	.promotionImages3 {
-		display:inline;
-		position: relative;
-		padding-left:2em;
-		
-	}
-	
-	.promotionImages3 p {
-		display:inline;
-		padding: 5em 1em 1em 5.5em;
-	}
-
-	.promotionImages3 img {
-		padding: 1em 1em 0em 1em;
-	}
-	
-	.promotionImages4 {
-		display:inline;
-		position: relative;
-		padding-left:1em;
-		
-	}
-	
-	.promotionImages4 p {
-		display:inline;
-		padding: 3em 4.5em 1em 3em;
-	}
-
-	.promotionImages4 img {
-		padding: 1em 1.5em 0em 1em;
-	}
-	
 	.promotionImages,.promotionImages2,.promotionImages3,.promotionImages4 {
 		display:inline;
-		text-align: center;                //Add this please
+		text-align: center;
 	}
+	
+	.promotionImages div {
+		float:left;
+		padding: 1em 0.6em 0.5em 0.9em;
+	}
+	
+	.promotionImages2 div {
+		float:left;
+		padding: 1em 0.5em 0.5em 0.65em;
+	}
+	
+	.promotionImages3 div {
+		float:left;
+		padding: 1em 0.6em 0.5em 0.9em;
+	}
+	
+	.promotionImages4 div {
+		float:left;
+		padding: 1em 0.6em 0.5em 0.9em;
+	}
+	
 	.menuDetail {
 		padding: 1em 0em 0em 0em;
 		font-size: 0.8em;
@@ -179,9 +138,7 @@ description: Format the menu contents
 	}
 	
 	#tab1 div,#tab2 div,#tab3 div,#tab4 div {
-        
 		margin: 0 1em 0 1em;
-		
     }
 	
         .tab {
