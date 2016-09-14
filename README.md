@@ -1,2 +1,2 @@
 # ChinaStarlite
-demo: web.csulb.edu/~kduong3/ChinaStarlite/ 
+demo: http://web.csulb.edu/~mli/chinaStarlite/index.php
